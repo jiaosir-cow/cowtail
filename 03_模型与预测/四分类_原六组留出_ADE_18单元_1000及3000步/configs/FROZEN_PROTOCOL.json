@@ -1,0 +1,8 @@
+{
+  "units": 36,
+  "folds": 6,
+  "fixed_endpoints": [
+    1000,
+    3000
+  ]
+}

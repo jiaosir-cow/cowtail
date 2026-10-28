@@ -1,0 +1,13 @@
+﻿group,windows,walking_windows,events,walking_events,class_standing_windows,class_lying_windows,class_walking_windows,class_feeding_windows
+cowA,6342,97,209,56,2041,2034,97,2170
+cowC,328,20,17,9,39,211,20,58
+cowD,554,7,11,3,194,353,7,0
+COW_OTHER,6114,69,163,32,2342,2989,69,714
+cowB,5512,74,127,23,1368,2060,74,2010
+COW_OTHER,5216,69,124,24,1726,2531,69,890
+COW_OTHER,4845,46,130,19,1220,1964,46,1615
+All retained,28911,382,781,166,8930,12142,382,7457
+Previous COW_OTHER,19841,246,486,91,6412,9006,246,4177
+Previous COW_OTHER,1563,10,51,6,222,538,10,793
+Previous COW_OTHER,283,2,7,1,22,0,2,259
+Pooled ALL_POOL (old and new identical),21687,258,544,98,6656,9544,258,5229

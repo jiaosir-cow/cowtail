@@ -1,0 +1,4 @@
+﻿group,method,mean_of_all_5_budget_f1_means,min_budget_f1_mean,max_budget_f1_mean,mean_of_all_5_budget_accuracy_means,mean_within_budget_f1_std,worst_single_replicate_f1,best_group_budget_count,positive_paired_replicates_vs_scratch,positive_mean_budgets_vs_scratch,note
+cowB,scratch,0.5353483858383834,0.3573798902776031,0.6763427400772991,0.611381228834059,0.0995347225508433,0.1976822051328821,4,0,0,"descriptive across heterogeneous budgets, not an unbiased selected-model estimate"
+cowB,act,0.5830424484993494,0.4759699769377629,0.6402249564266983,0.6898403483309143,0.0813030021067297,0.4141749225499924,5,10,4,"descriptive across heterogeneous budgets, not an unbiased selected-model estimate"
+cowB,ufro,0.5390631179430836,0.4347477295526215,0.659025810157636,0.6273343009192065,0.1098094364146327,0.2395002514554357,4,8,3,"descriptive across heterogeneous budgets, not an unbiased selected-model estimate"

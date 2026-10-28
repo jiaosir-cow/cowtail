@@ -1,0 +1,52 @@
+{
+  "models": {
+    "jbb_seed0": {
+      "source": "jbb",
+      "archive_seed": 0
+    },
+    "act_seed0": {
+      "source": "act",
+      "archive_seed": 0
+    },
+    "ufro_seed0": {
+      "source": "ufro",
+      "archive_seed": 0
+    },
+    "multi_seed0": {
+      "source": "multi",
+      "archive_seed": 0
+    },
+    "jbb_seed1": {
+      "source": "jbb",
+      "archive_seed": 1
+    },
+    "act_seed1": {
+      "source": "act",
+      "archive_seed": 1
+    },
+    "ufro_seed1": {
+      "source": "ufro",
+      "archive_seed": 1
+    },
+    "multi_seed1": {
+      "source": "multi",
+      "archive_seed": 1
+    },
+    "jbb_seed2": {
+      "source": "jbb",
+      "archive_seed": 2
+    },
+    "act_seed2": {
+      "source": "act",
+      "archive_seed": 2
+    },
+    "ufro_seed2": {
+      "source": "ufro",
+      "archive_seed": 2
+    },
+    "multi_seed2": {
+      "source": "multi",
+      "archive_seed": 2
+    }
+  }
+}

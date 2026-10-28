@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "reviewed_utc": "2026-10-27T11:10:34.880046+00:00",
+  "reviewer": "independent_new_group_review",
+  "execution": "local raw probability argmax and metrics only; no torch/model inference/training/GPU",
+  "scope": {
+    "original_input_windows": 29790,
+    "new_mapping_windows": 28911,
+    "legacy_B_test_windows": 21687,
+    "prediction_units_independently_recomputed": 30,
+    "methods": [
+      "act",
+      "scratch"
+    ],
+    "budgets_percent": [
+      5,
+      10,
+      25,
+      50,
+      100
+    ],
+    "replicates": [
+      0,
+      1,
+      2
+    ],
+    "endpoint_steps": 1000,
+    "metric_rows_checked": 240,
+    "class_rows_checked": 960,
+    "mean_std_rows_checked": 80,
+    "new_groups": [
+      "COW_OTHER",
+      "cowB",
+      "COW_OTHER",
+      "COW_OTHER"
+    ],
+    "reference_old_groups": [
+      "COW_OTHER",
+      "COW_OTHER",
+      "COW_OTHER"
+    ],
+    "additional_reference": "all",
+    "not_independently_recomputed": [
+      "UFRO",
+      "f01 cowA/D/E",
+      "event_balanced_window metrics"
+    ]
+  },
+  "mapping_checks": {
+    "window_id_join_one_to_one": true,
+    "legacy_truth_equals_new_target4_all_28911": true,
+    "f02_indices_all_legacy_21074_1": true,
+    "all_test_indices_equal_across_30_units": true,
+    "class_order": [
+      "standing",
+      "lying",
+      "walking",
+      "feeding"
+    ],
+    "argmax_rule_fixed": true
+  },
+  "max_absolute_errors": {
+    "by_replicate": {
+      "accuracy": 1.1102230246251565e-16,
+      "macro_f1_four": 9.71445146547012e-17,
+      "mcc": 8.326672684688674e-17
+    },
+    "by_class": {
+      "precision": 1.1102230246251565e-16,
+      "recall": 1.1102230246251565e-16,
+      "f1": 1.1102230246251565e-16,
+      "window_support": 0.0
+    },
+    "mean_and_sample_std_ddof1": {
+      "accuracy_mean": 8.326672684688674e-17,
+      "accuracy_std": 9.540979117872439e-17,
+      "macro_f1_four_mean": 8.326672684688674e-17,
+      "macro_f1_four_std": 9.71445146547012e-17,
+      "mcc_mean": 8.326672684688674e-17,
+      "mcc_std": 9.71445146547012e-17
+    },
+    "overall": 1.1102230246251565e-16
+  },
+  "source_input_files_read": 63,
+  "source_unchanged_before_after": true,
+  "interpretation": [
+    "cowB has highest ACT mean four-class macro F1 among four new groups at all five budgets.",
+    "At 10 percent all four groups improve on paired Scratch mean, but absolute macro F1 remains 45 to 53 percent and seed instability is material.",
+    "ACT loses to Scratch mean macro F1 in all four new groups at 50 percent, so no universal superiority claim.",
+    "New partitions do not increase independent animal count and cannot improve pooled predictions.",
+    "These are 1000-step surviving predictions; historical complete archive was invalidated by user deletion of 3000-step outputs.",
+    "Case selection is retrospective descriptive evidence; retain all groups and budgets in results."
+  ],
+  "feeding_recall_primary_each_replicate": [
+    {
+      "group": "COW_OTHER",
+      "replicate": 0,
+      "recall": 0.5070028011204482,
+      "f1": 0.4760026298487837
+    },
+    {
+      "group": "COW_OTHER",
+      "replicate": 1,
+      "recall": 0.3543417366946779,
+      "f1": 0.14432401597261837
+    },
+    {
+      "group": "COW_OTHER",
+      "replicate": 2,
+      "recall": 0.21568627450980393,
+      "f1": 0.28651162790697676
+    },
+    {
+      "group": "cowB",
+      "replicate": 0,
+      "recall": 0.2671641791044776,
+      "f1": 0.39895988112927194
+    },
+    {
+      "group": "cowB",
+      "replicate": 1,
+      "recall": 0.608457711442786,
+      "f1": 0.5864301126828099
+    },
+    {
+      "group": "cowB",
+      "replicate": 2,
+      "recall": 0.020398009950248756,
+      "f1": 0.039556198745779064
+    },
+    {
+      "group": "COW_OTHER",
+      "replicate": 0,
+      "recall": 0.3595505617977528,
+      "f1": 0.38163387000596305
+    },
+    {
+      "group": "COW_OTHER",
+      "replicate": 1,
+      "recall": 0.7067415730337079,
+      "f1": 0.43665393960430404
+    },
+    {
+      "group": "COW_OTHER",
+      "replicate": 2,
+      "recall": 0.04943820224719101,
+      "f1": 0.06951026856240126
+    },
+    {
+      "group": "COW_OTHER",
+      "replicate": 0,
+      "recall": 0.022291021671826627,
+      "f1": 0.03831825439063331
+    },
+    {
+      "group": "COW_OTHER",
+      "replicate": 1,
+      "recall": 0.3690402476780186,
+      "f1": 0.41217150760719223
+    },
+    {
+      "group": "COW_OTHER",
+      "replicate": 2,
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  ]
+}

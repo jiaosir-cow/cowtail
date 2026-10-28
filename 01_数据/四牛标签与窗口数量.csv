@@ -1,0 +1,5 @@
+﻿display_cow,windows,eligible_intervals,canonical_annotations,body_state_annotations,independently_verified_identity,sensor_input,STANDING,LYING,WALKING,FEEDING
+cowA,6342,209,281,242,False,"float32 tri-axial acceleration, 256 samples/window",2041,2034,97,2170
+cowB,5512,127,148,133,False,"float32 tri-axial acceleration, 256 samples/window",1368,2060,74,2010
+cowC,328,17,24,20,False,"float32 tri-axial acceleration, 256 samples/window",39,211,20,58
+cowD,554,11,15,12,False,"float32 tri-axial acceleration, 256 samples/window",194,353,7,0

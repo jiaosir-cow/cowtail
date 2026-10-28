@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "unit": {
+    "unit_id": "f01_s1_b100_act",
+    "fold_id": "f01",
+    "test_cow": "COWID_02",
+    "replicate": 1,
+    "percent": 100,
+    "method": "act",
+    "budget_dir": "inputs/budgets/f01/rep01/p100",
+    "fold_dir": "inputs/folds/f01",
+    "target_seed": 20271009,
+    "checkpoint": "inputs/checkpoints/act_seed1.pt"
+  },
+  "binding": {},
+  "parameter_count": 828,
+  "train_interval_count": 645,
+  "train_window_count": 22566,
+  "test_window_count": 7224,
+  "endpoint_steps": [
+    1000
+  ],
+  "selection_rule": "none; both predetermined fixed endpoints retained",
+  "held_out_scoring": false,
+  "source_checkpoint_unchanged": true,
+  "pacing": {
+    "batches": 3058,
+    "busy_seconds": 38.105203609447926,
+    "idle_seconds": 38.105203609447926
+  },
+  "finished_utc": "2026-09-09T03:05:29.360828+00:00",
+  "storage_cleanup_note": "3000-step data removed at user request on 2026-10-07; historical completion checks are no longer valid for the original full artifact set.",
+  "integrity_status": "invalidated_by_user_cleanup"
+}

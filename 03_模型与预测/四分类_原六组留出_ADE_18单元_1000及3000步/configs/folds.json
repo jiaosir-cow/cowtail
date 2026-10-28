@@ -1,0 +1,44 @@
+{
+  "f01": {
+    "test_cow": "COWID_04",
+    "cow_alias": "cowA",
+    "test_window_count": 6342,
+    "test_interval_count": 209,
+    "legacy_recording_groups_overlap_train_test": true
+  },
+  "f02": {
+    "test_cow": "COWID_05",
+    "cow_alias": "COW_OTHER",
+    "test_window_count": 19841,
+    "test_interval_count": 486,
+    "legacy_recording_groups_overlap_train_test": true
+  },
+  "f03": {
+    "test_cow": "COWID_01",
+    "cow_alias": "COW_OTHER",
+    "test_window_count": 1563,
+    "test_interval_count": 51,
+    "legacy_recording_groups_overlap_train_test": true
+  },
+  "f04": {
+    "test_cow": "COWID_06",
+    "cow_alias": "cowC",
+    "test_window_count": 328,
+    "test_interval_count": 17,
+    "legacy_recording_groups_overlap_train_test": true
+  },
+  "f05": {
+    "test_cow": "COWID_07",
+    "cow_alias": "cowD",
+    "test_window_count": 554,
+    "test_interval_count": 11,
+    "legacy_recording_groups_overlap_train_test": true
+  },
+  "f06": {
+    "test_cow": "COWID_08",
+    "cow_alias": "COW_OTHER",
+    "test_window_count": 283,
+    "test_interval_count": 7,
+    "legacy_recording_groups_overlap_train_test": true
+  }
+}

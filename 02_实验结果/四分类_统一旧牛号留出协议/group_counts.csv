@@ -1,0 +1,5 @@
+﻿version,group,windows,events,supported_classes,standing_windows,standing_events,lying_windows,lying_events,walking_windows,walking_events,feeding_windows,feeding_events
+new,cowA,6342,209,4,2041,67,2034,23,97,56,2170,63
+new,cowC,328,17,4,39,2,211,3,20,9,58,3
+new,cowD,554,11,3,194,4,353,4,7,3,0,0
+new,cowB,5512,127,4,1368,47,2060,18,74,23,2010,39

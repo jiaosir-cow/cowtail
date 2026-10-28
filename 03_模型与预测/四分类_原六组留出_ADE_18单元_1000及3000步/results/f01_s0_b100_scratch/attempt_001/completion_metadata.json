@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "unit": {
+    "unit_id": "f01_s0_b100_scratch",
+    "fold_id": "f01",
+    "test_cow": "COWID_04",
+    "replicate": 0,
+    "percent": 100,
+    "method": "scratch",
+    "budget_dir": "inputs/budgets/f01/rep00/p100",
+    "fold_dir": "inputs/folds/f01",
+    "target_seed": 20270909,
+    "checkpoint": null
+  },
+  "binding": {},
+  "parameter_count": 828,
+  "train_interval_count": 572,
+  "train_window_count": 22569,
+  "test_window_count": 6342,
+  "endpoint_steps": [
+    1000,
+    3000
+  ],
+  "selection_rule": "none; both predetermined fixed endpoints retained",
+  "held_out_scoring": false,
+  "source_checkpoint_unchanged": true,
+  "pacing": {
+    "batches": 3050,
+    "busy_seconds": 41.49122060001173,
+    "idle_seconds": 124.47366180003519
+  },
+  "finished_utc": "2026-10-19T14:54:25.060526+00:00"
+}

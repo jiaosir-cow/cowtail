@@ -1,0 +1,84 @@
+{
+  "status": "COMPLETE",
+  "unit_id": "l01_s0_act",
+  "mode": "formal",
+  "unit": {
+    "unit_id": "l01_s0_act",
+    "fold_id": "l01",
+    "source": "act",
+    "replicate": 0,
+    "target_seed": 20371025
+  },
+  "split": {
+    "train_windows": 27720,
+    "test_windows": 13200,
+    "disjoint_identity_keys": [
+      "cow_id",
+      "legacy_cow_id"
+    ],
+    "train_sessions": 42,
+    "test_sessions": 20
+  },
+  "source_checkpoint": {
+    "metadata": {
+      "elapsed_seconds": 9.905044800019823,
+      "matched_optimizer_steps": 1600,
+      "seed": 0,
+      "source": "act",
+      "source_seed": 144833600
+    },
+    "positive_class_index": 1,
+    "positive_class_basis": "archived binary walking source model; margin=logit[1]-logit[0]"
+  },
+  "guard": {
+    "name": "Local\\DATASET_X",
+    "membership_verified": true,
+    "pid": 36656
+  },
+  "device": "NVIDIA GeForce RTX 3090",
+  "torch_version": "2.12.1+cu130",
+  "numpy_version": "2.4.6",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "trainable_parameter_count": 16,
+  "trainable_names": [
+    "feature_bn.weight",
+    "feature_bn.bias"
+  ],
+  "frozen_state_unchanged": true,
+  "checkpoint_reload_checks": {
+    "bn_moments": {
+      "prediction_reload_exact": true
+    },
+    "100": {
+      "prediction_reload_exact": true
+    },
+    "300": {
+      "prediction_reload_exact": true
+    },
+    "1000": {
+      "prediction_reload_exact": true
+    }
+  },
+  "affine_changed": true,
+  "affine_delta_l2": 0.08737324178218842,
+  "target_labels_read": false,
+  "truth_metrics_computed": false,
+  "training_corruptions": [
+    "gaussian",
+    "spikes",
+    "packetloss",
+    "burst",
+    "clipping"
+  ],
+  "training_severity": "low_only",
+  "rotation_seen_during_training": false,
+  "evaluation_seed": 74103,
+  "frozen_feature_cache": true,
+  "prediction_condition_count": 13,
+  "formal_prediction_artifact_count": 78,
+  "steps": 1000,
+  "elapsed_seconds": 99.30588030815125,
+  "compute_seconds": 13.086186002474278,
+  "pacing_sleep_seconds": 52.34474400989711,
+  "peak_cuda_allocated_bytes": 67855872
+}

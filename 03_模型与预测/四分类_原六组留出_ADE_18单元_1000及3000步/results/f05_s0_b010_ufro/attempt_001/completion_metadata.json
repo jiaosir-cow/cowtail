@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "unit": {
+    "unit_id": "f05_s0_b010_ufro",
+    "fold_id": "f05",
+    "test_cow": "COWID_07",
+    "replicate": 0,
+    "percent": 10,
+    "method": "ufro",
+    "budget_dir": "inputs/budgets/f05/rep00/p010",
+    "fold_dir": "inputs/folds/f05",
+    "target_seed": 20310909,
+    "checkpoint": "inputs/checkpoints/ufro_seed0.pt"
+  },
+  "binding": {},
+  "parameter_count": 828,
+  "train_interval_count": 77,
+  "train_window_count": 3886,
+  "test_window_count": 554,
+  "endpoint_steps": [
+    1000,
+    3000
+  ],
+  "selection_rule": "none; both predetermined fixed endpoints retained",
+  "held_out_scoring": false,
+  "source_checkpoint_unchanged": true,
+  "pacing": {
+    "batches": 3006,
+    "busy_seconds": 48.08993460024794,
+    "idle_seconds": 144.26980380074383
+  },
+  "finished_utc": "2026-10-19T16:06:12.930318+00:00"
+}

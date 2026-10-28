@@ -1,0 +1,17 @@
+{
+  "display_cow": "cowA",
+  "windows": 6342,
+  "eligible_intervals": 209,
+  "canonical_annotations": 281,
+  "body_state_annotations": 242,
+  "sessions": 17,
+  "class_window_support": {
+    "STANDING": 2041,
+    "LYING": 2034,
+    "WALKING": 97,
+    "FEEDING": 2170
+  },
+  "missing_truth_classes": [],
+  "independently_verified_identity": false,
+  "sensor_input": "float32 tri-axial acceleration, 256 samples/window"
+}

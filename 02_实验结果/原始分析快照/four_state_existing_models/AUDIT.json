@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "scope": "existing 1000-step predictions only; no training, no inference, no GPU",
+  "units": 90,
+  "held_out_prediction_windows_per_condition": 28911,
+  "new_groups": [
+    "cowA",
+    "cowC",
+    "cowD",
+    "COW_OTHER",
+    "cowB",
+    "COW_OTHER",
+    "COW_OTHER"
+  ],
+  "old_groups": [
+    "cowA",
+    "COW_OTHER",
+    "COW_OTHER",
+    "cowC",
+    "cowD",
+    "COW_OTHER"
+  ],
+  "unit_grid": {
+    "folds": [
+      "f01",
+      "f02"
+    ],
+    "budgets": [
+      5,
+      10,
+      25,
+      50,
+      100
+    ],
+    "methods": [
+      "scratch",
+      "act",
+      "ufro"
+    ],
+    "replicates": [
+      0,
+      1,
+      2
+    ]
+  },
+  "verified_artifact_count": 540,
+  "inputs": {
+    "original_windows": {},
+    "truth": {},
+    "new_mapping": {},
+    "units": {}
+  },
+  "all_prediction_hashes_match_preserved_receipts": true,
+  "all_probabilities_finite_and_normalized": true,
+  "window_and_label_mapping_unchanged": true,
+  "all_units_no_test_train_window_event_legacy_identity_overlap": true,
+  "all_sessions_intact": true,
+  "new_old_union_all_scores_exactly_equal": true,
+  "new_old_invariance_conditions": 90,
+  "four_class_macro_f1": "all four fixed labels; undefined class F1=0",
+  "supported_macro_f1": "only classes with truth support; cowD has three",
+  "replicate_std": "sample standard deviation, ddof=1; three paired training repeats, not biological replication",
+  "whole_cohort": "pooled predictions from original f01/f02 held-out models, not a single checkpoint",
+  "historical_full_archive_audit": "NOT CLAIMED; 3000-step historical cleanup invalidated original all-artifact receipts",
+  "outputs": {
+    "group_counts.csv": {
+      "rows": 13
+    },
+    "metrics_by_replicate.csv": {
+      "rows": 1350
+    },
+    "metrics_mean_std.csv": {
+      "rows": 450
+    },
+    "class_metrics_by_replicate.csv": {
+      "rows": 5400
+    },
+    "class_metrics_mean_std.csv": {
+      "rows": 1800
+    },
+    "confusion_by_replicate.csv": {
+      "rows": 21600
+    },
+    "paired_deltas_vs_scratch.csv": {
+      "rows": 900
+    },
+    "paired_deltas_mean_std.csv": {
+      "rows": 300
+    },
+    "group_stability_summary.csv": {
+      "rows": 12
+    },
+    "new_old_pool_invariance.csv": {
+      "rows": 90
+    },
+    "verified_prediction_manifest.csv": {
+      "rows": 540
+    },
+    "training_support.csv": {
+      "rows": 90
+    }
+  }
+}

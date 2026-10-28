@@ -1,0 +1,8 @@
+﻿index,session_id,layer,label,code,en,type,evidence,t_start_rel_ms,t_end_rel_ms,reviewed_start_ms,reviewed_end_ms,duration_ms,frame_start,frame_end,t_start_wall_bj,t_end_wall_bj,note
+1,SESSION_18,body_state,躺卧,LYING,lying,interval,两者,0,577183,0,577183,577183,0,28818,SESSION_895,SESSION_896,
+2,SESSION_18,body_state,躺卧,LYING,lying,interval,两者,613034,1613474,613034,1613474,1000440,30606,80553,SESSION_897,SESSION_898,
+3,SESSION_18,body_state,躺卧,LYING,lying,interval,两者,1615060,2333488,1615060,2333488,718428,80633,116497,SESSION_899,SESSION_900,
+4,SESSION_18,posture_transition,起立过程,STANDING_UP,standing up,interval,两者,2391690,2429333,2391690,2429333,37643,119402,121279,SESSION_901,SESSION_902,
+5,SESSION_18,body_state,站立,STANDING,standing,interval,两者,2429333,2621019,2429333,2621019,191686,121279,130850,SESSION_902,SESSION_903,
+6,SESSION_18,body_state,站立,STANDING,standing,interval,两者,2622320,2644565,2622320,2644565,22245,130915,132022,SESSION_904,SESSION_905,
+7,SESSION_18,body_state,站立,STANDING,standing,interval,两者,2660070,3572554,2660070,3572554,912484,132798,178352,SESSION_906,SESSION_907,

@@ -1,0 +1,32 @@
+{
+  "step": 3000,
+  "endpoint": "SENSITIVITY",
+  "state_order": [
+    "standing",
+    "lying",
+    "walking",
+    "feeding"
+  ],
+  "head_order": [
+    "posture",
+    "walking",
+    "feeding"
+  ],
+  "head_class_order": [
+    [
+      "upright",
+      "lying"
+    ],
+    [
+      "non_walking",
+      "walking"
+    ],
+    [
+      "standing",
+      "feeding"
+    ]
+  ],
+  "test_window_count": 554,
+  "held_out_label_access": false,
+  "held_out_scoring": false
+}

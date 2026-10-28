@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "formal_units": 36,
+  "endpoint_count": 72,
+  "metric_row_count": 144,
+  "per_class_row_count": 576,
+  "bundle": "PATH_X",
+  "archive_members_verified": 936,
+  "frozen_artifact_count": 94,
+  "receipt_gate_before_truth_reconstruction": true,
+  "truth_basis": "reconstruction_from_six_frozen_fold_labels",
+  "truth_cross_check": "Each row has five identical known labels and one held-out -1 matching its frozen cow ID",
+  "original_truth_supplied": false,
+  "primary_endpoint": "step1000/window",
+  "sensitivity_endpoint": "step3000; no test-based endpoint selection",
+  "class_order": [
+    "standing",
+    "lying",
+    "walking",
+    "feeding"
+  ],
+  "computational_repetitions": 1,
+  "replicate_index": 0,
+  "legacy_recording_groups_overlap_train_test": true,
+  "scope_definitions": {
+    "all_six_fixed4_diagnostic": "Six revised-ID folds, equal cow weights; fixed four labels with absent-class F1=0; diagnostic, not complete four-class validation",
+    "complete_four_class_A_to_D": "Four folds with all four truth classes; E/F excluded only from this declared complete-class scope",
+    "all_six_supported_classes": "Six folds; per-cow F1 mean over truth-supported classes, retaining all four outputs; E/F class sets differ; descriptive",
+    "mcc": "Multiclass MCC retains four output categories; complete-only MCC is null on E/F; supported-class F1 does not alter MCC",
+    "interval_balanced_window": "Each window weight is 1/(retained windows in its original interval); each interval total weight=1; not interval classification",
+    "missing_truth_classes": "E feeding and F lying recall are null; their fixed-class F1=0 is a convention, not observed recall",
+    "unsupported_predictions": "Predictions of absent truth classes remain errors; no output removal or renormalization"
+  },
+  "limits": [
+    "User-attested field identity correction; not independently verified six-animal generalization",
+    "One computational seed; no population significance, confidence interval, or human-time-saving claim",
+    "Checkpoint bytes hash-verified but not executed or re-inferred by this scorer",
+    "All formal positive and negative results retained; all original bundle files remain unchanged"
+  ],
+  "outputs": {
+    "metrics.csv": {
+      "rows": 144
+    },
+    "per_cow_metrics.csv": {
+      "rows": 144
+    },
+    "per_class.csv": {
+      "rows": 576
+    },
+    "confusion_matrices.csv": {
+      "rows": 2304
+    },
+    "equal_cow_summary.csv": {
+      "rows": 72
+    },
+    "paired_differences.csv": {
+      "rows": 144
+    },
+    "identity_and_coverage.csv": {
+      "rows": 6
+    },
+    "label_budgets.csv": {
+      "rows": 12
+    },
+    "reconstructed_test_truth.csv": {
+      "rows": 28911
+    },
+    "bundle_inventory.csv": {
+      "rows": 936
+    }
+  },
+  "completed_utc": "2026-10-20T03:52:04.124716+00:00"
+}

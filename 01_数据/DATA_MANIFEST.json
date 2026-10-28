@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "array_shape": [
+    12736,
+    3,
+    256
+  ],
+  "windows": 12736,
+  "eligible_intervals": 364,
+  "canonical_annotations": 468,
+  "sources_unchanged": true,
+  "numeric_sensor_values_unchanged": true,
+  "label_values_unchanged": true,
+  "session_or_event_crosses_display_cases": false,
+  "display_name_only_changed": true,
+  "class_order": [
+    "STANDING",
+    "LYING",
+    "WALKING",
+    "FEEDING"
+  ],
+  "cases": [
+    {
+      "display_cow": "cowA",
+      "windows": 6342,
+      "eligible_intervals": 209,
+      "canonical_annotations": 281,
+      "body_state_annotations": 242,
+      "sessions": 17,
+      "class_window_support": {
+        "STANDING": 2041,
+        "LYING": 2034,
+        "WALKING": 97,
+        "FEEDING": 2170
+      },
+      "missing_truth_classes": [],
+      "independently_verified_identity": false,
+      "sensor_input": "float32 tri-axial acceleration, 256 samples/window"
+    },
+    {
+      "display_cow": "cowB",
+      "windows": 5512,
+      "eligible_intervals": 127,
+      "canonical_annotations": 148,
+      "body_state_annotations": 133,
+      "sessions": 11,
+      "class_window_support": {
+        "STANDING": 1368,
+        "LYING": 2060,
+        "WALKING": 74,
+        "FEEDING": 2010
+      },
+      "missing_truth_classes": [],
+      "independently_verified_identity": false,
+      "sensor_input": "float32 tri-axial acceleration, 256 samples/window"
+    },
+    {
+      "display_cow": "cowC",
+      "windows": 328,
+      "eligible_intervals": 17,
+      "canonical_annotations": 24,
+      "body_state_annotations": 20,
+      "sessions": 2,
+      "class_window_support": {
+        "STANDING": 39,
+        "LYING": 211,
+        "WALKING": 20,
+        "FEEDING": 58
+      },
+      "missing_truth_classes": [],
+      "independently_verified_identity": false,
+      "sensor_input": "float32 tri-axial acceleration, 256 samples/window"
+    },
+    {
+      "display_cow": "cowD",
+      "windows": 554,
+      "eligible_intervals": 11,
+      "canonical_annotations": 15,
+      "body_state_annotations": 12,
+      "sessions": 1,
+      "class_window_support": {
+        "STANDING": 194,
+        "LYING": 353,
+        "WALKING": 7,
+        "FEEDING": 0
+      },
+      "missing_truth_classes": [
+        "FEEDING"
+      ],
+      "independently_verified_identity": false,
+      "sensor_input": "float32 tri-axial acceleration, 256 samples/window"
+    }
+  ]
+}

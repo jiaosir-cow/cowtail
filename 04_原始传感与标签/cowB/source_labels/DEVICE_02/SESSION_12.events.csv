@@ -1,0 +1,3 @@
+﻿index,session_id,layer,label,code,en,type,evidence,t_start_rel_ms,t_end_rel_ms,reviewed_start_ms,reviewed_end_ms,duration_ms,frame_start,frame_end,t_start_wall_bj,t_end_wall_bj,note
+1,SESSION_12,posture_transition,卧倒过程,LYING_DOWN,lying down,interval,两者,1558736,1565552,1558736,1565552,6816,77819,78155,SESSION_914,SESSION_915,
+2,SESSION_12,posture_transition,起立过程,STANDING_UP,standing up,interval,两者,2862651,2877578,2862651,2877578,14927,142915,143660,SESSION_916,SESSION_917,

@@ -1,0 +1,12 @@
+{
+  "basis": "user_attested_field_records_2026-10-18",
+  "cow_alias_to_id": {
+    "Cow A": "COWID_04",
+    "Cow B": "COWID_05",
+    "Cow C": "COWID_01",
+    "Cow D": "COWID_06",
+    "Cow E": "COWID_07",
+    "Cow F": "COWID_08"
+  },
+  "legacy_ids_preserved_in_window_index": true
+}

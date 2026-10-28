@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "created_at_utc": "2026-10-27T10:44:01.304233+00:00",
+  "all_retained_windows": 28911,
+  "mapping_one_to_one": true,
+  "groups": [
+    "cowA",
+    "cowC",
+    "cowD",
+    "COW_OTHER",
+    "cowB",
+    "COW_OTHER",
+    "COW_OTHER"
+  ],
+  "model_sources": [
+    "jbb",
+    "act",
+    "ufro",
+    "multi"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "completed_archived_units_verified": 24,
+  "source_hash_records": 2106,
+  "output_rows": 144,
+  "summary_rows": 48,
+  "partition_changes_pooled_predictions_or_metrics": false,
+  "uses_new_training": false,
+  "uses_target_labels_for_fit_or_threshold": false,
+  "evaluation_kind": "retrospective regrouping of previously examined test records",
+  "task": "binary walking versus nonwalking, not four-state"
+}

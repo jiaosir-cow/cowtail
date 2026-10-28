@@ -1,0 +1,29 @@
+{
+  "window_support": {
+    "standing": 8736,
+    "lying": 11789,
+    "walking": 375,
+    "feeding": 7457
+  },
+  "budget": {
+    "fold_id": "f05",
+    "test_cow": "COWID_07",
+    "replicate": 0,
+    "nominal_percent": 100,
+    "available_event_count": 770,
+    "selected_event_count": 770,
+    "selected_window_count": 28357,
+    "actual_event_fraction": 1.0,
+    "original_interval_duration_ms": 158349861.0,
+    "selected_class_support": {
+      "0": 8736,
+      "1": 11789,
+      "2": 375,
+      "3": 7457
+    },
+    "uses_class_for_selection": false,
+    "missing_class_redraw": false
+  },
+  "train_window_count": 28357,
+  "test_window_count": 554
+}

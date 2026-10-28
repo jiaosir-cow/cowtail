@@ -1,0 +1,674 @@
+{
+  "f01_s0_jbb": {
+    "unit_id": "f01_s0_jbb",
+    "fold_id": "f01",
+    "source": "jbb",
+    "replicate": 0,
+    "target_seed": 20271025
+  },
+  "f01_s0_act": {
+    "unit_id": "f01_s0_act",
+    "fold_id": "f01",
+    "source": "act",
+    "replicate": 0,
+    "target_seed": 20271025
+  },
+  "f01_s0_ufro": {
+    "unit_id": "f01_s0_ufro",
+    "fold_id": "f01",
+    "source": "ufro",
+    "replicate": 0,
+    "target_seed": 20271025
+  },
+  "f01_s0_multi": {
+    "unit_id": "f01_s0_multi",
+    "fold_id": "f01",
+    "source": "multi",
+    "replicate": 0,
+    "target_seed": 20271025
+  },
+  "f01_s1_jbb": {
+    "unit_id": "f01_s1_jbb",
+    "fold_id": "f01",
+    "source": "jbb",
+    "replicate": 1,
+    "target_seed": 20271125
+  },
+  "f01_s1_act": {
+    "unit_id": "f01_s1_act",
+    "fold_id": "f01",
+    "source": "act",
+    "replicate": 1,
+    "target_seed": 20271125
+  },
+  "f01_s1_ufro": {
+    "unit_id": "f01_s1_ufro",
+    "fold_id": "f01",
+    "source": "ufro",
+    "replicate": 1,
+    "target_seed": 20271125
+  },
+  "f01_s1_multi": {
+    "unit_id": "f01_s1_multi",
+    "fold_id": "f01",
+    "source": "multi",
+    "replicate": 1,
+    "target_seed": 20271125
+  },
+  "f01_s2_jbb": {
+    "unit_id": "f01_s2_jbb",
+    "fold_id": "f01",
+    "source": "jbb",
+    "replicate": 2,
+    "target_seed": 20271225
+  },
+  "f01_s2_act": {
+    "unit_id": "f01_s2_act",
+    "fold_id": "f01",
+    "source": "act",
+    "replicate": 2,
+    "target_seed": 20271225
+  },
+  "f01_s2_ufro": {
+    "unit_id": "f01_s2_ufro",
+    "fold_id": "f01",
+    "source": "ufro",
+    "replicate": 2,
+    "target_seed": 20271225
+  },
+  "f01_s2_multi": {
+    "unit_id": "f01_s2_multi",
+    "fold_id": "f01",
+    "source": "multi",
+    "replicate": 2,
+    "target_seed": 20271225
+  },
+  "f02_s0_jbb": {
+    "unit_id": "f02_s0_jbb",
+    "fold_id": "f02",
+    "source": "jbb",
+    "replicate": 0,
+    "target_seed": 20281025
+  },
+  "f02_s0_act": {
+    "unit_id": "f02_s0_act",
+    "fold_id": "f02",
+    "source": "act",
+    "replicate": 0,
+    "target_seed": 20281025
+  },
+  "f02_s0_ufro": {
+    "unit_id": "f02_s0_ufro",
+    "fold_id": "f02",
+    "source": "ufro",
+    "replicate": 0,
+    "target_seed": 20281025
+  },
+  "f02_s0_multi": {
+    "unit_id": "f02_s0_multi",
+    "fold_id": "f02",
+    "source": "multi",
+    "replicate": 0,
+    "target_seed": 20281025
+  },
+  "f02_s1_jbb": {
+    "unit_id": "f02_s1_jbb",
+    "fold_id": "f02",
+    "source": "jbb",
+    "replicate": 1,
+    "target_seed": 20281125
+  },
+  "f02_s1_act": {
+    "unit_id": "f02_s1_act",
+    "fold_id": "f02",
+    "source": "act",
+    "replicate": 1,
+    "target_seed": 20281125
+  },
+  "f02_s1_ufro": {
+    "unit_id": "f02_s1_ufro",
+    "fold_id": "f02",
+    "source": "ufro",
+    "replicate": 1,
+    "target_seed": 20281125
+  },
+  "f02_s1_multi": {
+    "unit_id": "f02_s1_multi",
+    "fold_id": "f02",
+    "source": "multi",
+    "replicate": 1,
+    "target_seed": 20281125
+  },
+  "f02_s2_jbb": {
+    "unit_id": "f02_s2_jbb",
+    "fold_id": "f02",
+    "source": "jbb",
+    "replicate": 2,
+    "target_seed": 20281225
+  },
+  "f02_s2_act": {
+    "unit_id": "f02_s2_act",
+    "fold_id": "f02",
+    "source": "act",
+    "replicate": 2,
+    "target_seed": 20281225
+  },
+  "f02_s2_ufro": {
+    "unit_id": "f02_s2_ufro",
+    "fold_id": "f02",
+    "source": "ufro",
+    "replicate": 2,
+    "target_seed": 20281225
+  },
+  "f02_s2_multi": {
+    "unit_id": "f02_s2_multi",
+    "fold_id": "f02",
+    "source": "multi",
+    "replicate": 2,
+    "target_seed": 20281225
+  },
+  "f03_s0_jbb": {
+    "unit_id": "f03_s0_jbb",
+    "fold_id": "f03",
+    "source": "jbb",
+    "replicate": 0,
+    "target_seed": 20291025
+  },
+  "f03_s0_act": {
+    "unit_id": "f03_s0_act",
+    "fold_id": "f03",
+    "source": "act",
+    "replicate": 0,
+    "target_seed": 20291025
+  },
+  "f03_s0_ufro": {
+    "unit_id": "f03_s0_ufro",
+    "fold_id": "f03",
+    "source": "ufro",
+    "replicate": 0,
+    "target_seed": 20291025
+  },
+  "f03_s0_multi": {
+    "unit_id": "f03_s0_multi",
+    "fold_id": "f03",
+    "source": "multi",
+    "replicate": 0,
+    "target_seed": 20291025
+  },
+  "f03_s1_jbb": {
+    "unit_id": "f03_s1_jbb",
+    "fold_id": "f03",
+    "source": "jbb",
+    "replicate": 1,
+    "target_seed": 20291125
+  },
+  "f03_s1_act": {
+    "unit_id": "f03_s1_act",
+    "fold_id": "f03",
+    "source": "act",
+    "replicate": 1,
+    "target_seed": 20291125
+  },
+  "f03_s1_ufro": {
+    "unit_id": "f03_s1_ufro",
+    "fold_id": "f03",
+    "source": "ufro",
+    "replicate": 1,
+    "target_seed": 20291125
+  },
+  "f03_s1_multi": {
+    "unit_id": "f03_s1_multi",
+    "fold_id": "f03",
+    "source": "multi",
+    "replicate": 1,
+    "target_seed": 20291125
+  },
+  "f03_s2_jbb": {
+    "unit_id": "f03_s2_jbb",
+    "fold_id": "f03",
+    "source": "jbb",
+    "replicate": 2,
+    "target_seed": 20291225
+  },
+  "f03_s2_act": {
+    "unit_id": "f03_s2_act",
+    "fold_id": "f03",
+    "source": "act",
+    "replicate": 2,
+    "target_seed": 20291225
+  },
+  "f03_s2_ufro": {
+    "unit_id": "f03_s2_ufro",
+    "fold_id": "f03",
+    "source": "ufro",
+    "replicate": 2,
+    "target_seed": 20291225
+  },
+  "f03_s2_multi": {
+    "unit_id": "f03_s2_multi",
+    "fold_id": "f03",
+    "source": "multi",
+    "replicate": 2,
+    "target_seed": 20291225
+  },
+  "f04_s0_jbb": {
+    "unit_id": "f04_s0_jbb",
+    "fold_id": "f04",
+    "source": "jbb",
+    "replicate": 0,
+    "target_seed": 20301025
+  },
+  "f04_s0_act": {
+    "unit_id": "f04_s0_act",
+    "fold_id": "f04",
+    "source": "act",
+    "replicate": 0,
+    "target_seed": 20301025
+  },
+  "f04_s0_ufro": {
+    "unit_id": "f04_s0_ufro",
+    "fold_id": "f04",
+    "source": "ufro",
+    "replicate": 0,
+    "target_seed": 20301025
+  },
+  "f04_s0_multi": {
+    "unit_id": "f04_s0_multi",
+    "fold_id": "f04",
+    "source": "multi",
+    "replicate": 0,
+    "target_seed": 20301025
+  },
+  "f04_s1_jbb": {
+    "unit_id": "f04_s1_jbb",
+    "fold_id": "f04",
+    "source": "jbb",
+    "replicate": 1,
+    "target_seed": 20301125
+  },
+  "f04_s1_act": {
+    "unit_id": "f04_s1_act",
+    "fold_id": "f04",
+    "source": "act",
+    "replicate": 1,
+    "target_seed": 20301125
+  },
+  "f04_s1_ufro": {
+    "unit_id": "f04_s1_ufro",
+    "fold_id": "f04",
+    "source": "ufro",
+    "replicate": 1,
+    "target_seed": 20301125
+  },
+  "f04_s1_multi": {
+    "unit_id": "f04_s1_multi",
+    "fold_id": "f04",
+    "source": "multi",
+    "replicate": 1,
+    "target_seed": 20301125
+  },
+  "f04_s2_jbb": {
+    "unit_id": "f04_s2_jbb",
+    "fold_id": "f04",
+    "source": "jbb",
+    "replicate": 2,
+    "target_seed": 20301225
+  },
+  "f04_s2_act": {
+    "unit_id": "f04_s2_act",
+    "fold_id": "f04",
+    "source": "act",
+    "replicate": 2,
+    "target_seed": 20301225
+  },
+  "f04_s2_ufro": {
+    "unit_id": "f04_s2_ufro",
+    "fold_id": "f04",
+    "source": "ufro",
+    "replicate": 2,
+    "target_seed": 20301225
+  },
+  "f04_s2_multi": {
+    "unit_id": "f04_s2_multi",
+    "fold_id": "f04",
+    "source": "multi",
+    "replicate": 2,
+    "target_seed": 20301225
+  },
+  "f05_s0_jbb": {
+    "unit_id": "f05_s0_jbb",
+    "fold_id": "f05",
+    "source": "jbb",
+    "replicate": 0,
+    "target_seed": 20311025
+  },
+  "f05_s0_act": {
+    "unit_id": "f05_s0_act",
+    "fold_id": "f05",
+    "source": "act",
+    "replicate": 0,
+    "target_seed": 20311025
+  },
+  "f05_s0_ufro": {
+    "unit_id": "f05_s0_ufro",
+    "fold_id": "f05",
+    "source": "ufro",
+    "replicate": 0,
+    "target_seed": 20311025
+  },
+  "f05_s0_multi": {
+    "unit_id": "f05_s0_multi",
+    "fold_id": "f05",
+    "source": "multi",
+    "replicate": 0,
+    "target_seed": 20311025
+  },
+  "f05_s1_jbb": {
+    "unit_id": "f05_s1_jbb",
+    "fold_id": "f05",
+    "source": "jbb",
+    "replicate": 1,
+    "target_seed": 20311125
+  },
+  "f05_s1_act": {
+    "unit_id": "f05_s1_act",
+    "fold_id": "f05",
+    "source": "act",
+    "replicate": 1,
+    "target_seed": 20311125
+  },
+  "f05_s1_ufro": {
+    "unit_id": "f05_s1_ufro",
+    "fold_id": "f05",
+    "source": "ufro",
+    "replicate": 1,
+    "target_seed": 20311125
+  },
+  "f05_s1_multi": {
+    "unit_id": "f05_s1_multi",
+    "fold_id": "f05",
+    "source": "multi",
+    "replicate": 1,
+    "target_seed": 20311125
+  },
+  "f05_s2_jbb": {
+    "unit_id": "f05_s2_jbb",
+    "fold_id": "f05",
+    "source": "jbb",
+    "replicate": 2,
+    "target_seed": 20311225
+  },
+  "f05_s2_act": {
+    "unit_id": "f05_s2_act",
+    "fold_id": "f05",
+    "source": "act",
+    "replicate": 2,
+    "target_seed": 20311225
+  },
+  "f05_s2_ufro": {
+    "unit_id": "f05_s2_ufro",
+    "fold_id": "f05",
+    "source": "ufro",
+    "replicate": 2,
+    "target_seed": 20311225
+  },
+  "f05_s2_multi": {
+    "unit_id": "f05_s2_multi",
+    "fold_id": "f05",
+    "source": "multi",
+    "replicate": 2,
+    "target_seed": 20311225
+  },
+  "f06_s0_jbb": {
+    "unit_id": "f06_s0_jbb",
+    "fold_id": "f06",
+    "source": "jbb",
+    "replicate": 0,
+    "target_seed": 20321025
+  },
+  "f06_s0_act": {
+    "unit_id": "f06_s0_act",
+    "fold_id": "f06",
+    "source": "act",
+    "replicate": 0,
+    "target_seed": 20321025
+  },
+  "f06_s0_ufro": {
+    "unit_id": "f06_s0_ufro",
+    "fold_id": "f06",
+    "source": "ufro",
+    "replicate": 0,
+    "target_seed": 20321025
+  },
+  "f06_s0_multi": {
+    "unit_id": "f06_s0_multi",
+    "fold_id": "f06",
+    "source": "multi",
+    "replicate": 0,
+    "target_seed": 20321025
+  },
+  "f06_s1_jbb": {
+    "unit_id": "f06_s1_jbb",
+    "fold_id": "f06",
+    "source": "jbb",
+    "replicate": 1,
+    "target_seed": 20321125
+  },
+  "f06_s1_act": {
+    "unit_id": "f06_s1_act",
+    "fold_id": "f06",
+    "source": "act",
+    "replicate": 1,
+    "target_seed": 20321125
+  },
+  "f06_s1_ufro": {
+    "unit_id": "f06_s1_ufro",
+    "fold_id": "f06",
+    "source": "ufro",
+    "replicate": 1,
+    "target_seed": 20321125
+  },
+  "f06_s1_multi": {
+    "unit_id": "f06_s1_multi",
+    "fold_id": "f06",
+    "source": "multi",
+    "replicate": 1,
+    "target_seed": 20321125
+  },
+  "f06_s2_jbb": {
+    "unit_id": "f06_s2_jbb",
+    "fold_id": "f06",
+    "source": "jbb",
+    "replicate": 2,
+    "target_seed": 20321225
+  },
+  "f06_s2_act": {
+    "unit_id": "f06_s2_act",
+    "fold_id": "f06",
+    "source": "act",
+    "replicate": 2,
+    "target_seed": 20321225
+  },
+  "f06_s2_ufro": {
+    "unit_id": "f06_s2_ufro",
+    "fold_id": "f06",
+    "source": "ufro",
+    "replicate": 2,
+    "target_seed": 20321225
+  },
+  "f06_s2_multi": {
+    "unit_id": "f06_s2_multi",
+    "fold_id": "f06",
+    "source": "multi",
+    "replicate": 2,
+    "target_seed": 20321225
+  },
+  "l01_s0_jbb": {
+    "unit_id": "l01_s0_jbb",
+    "fold_id": "l01",
+    "source": "jbb",
+    "replicate": 0,
+    "target_seed": 20371025
+  },
+  "l01_s0_act": {
+    "unit_id": "l01_s0_act",
+    "fold_id": "l01",
+    "source": "act",
+    "replicate": 0,
+    "target_seed": 20371025
+  },
+  "l01_s0_ufro": {
+    "unit_id": "l01_s0_ufro",
+    "fold_id": "l01",
+    "source": "ufro",
+    "replicate": 0,
+    "target_seed": 20371025
+  },
+  "l01_s0_multi": {
+    "unit_id": "l01_s0_multi",
+    "fold_id": "l01",
+    "source": "multi",
+    "replicate": 0,
+    "target_seed": 20371025
+  },
+  "l01_s1_jbb": {
+    "unit_id": "l01_s1_jbb",
+    "fold_id": "l01",
+    "source": "jbb",
+    "replicate": 1,
+    "target_seed": 20371125
+  },
+  "l01_s1_act": {
+    "unit_id": "l01_s1_act",
+    "fold_id": "l01",
+    "source": "act",
+    "replicate": 1,
+    "target_seed": 20371125
+  },
+  "l01_s1_ufro": {
+    "unit_id": "l01_s1_ufro",
+    "fold_id": "l01",
+    "source": "ufro",
+    "replicate": 1,
+    "target_seed": 20371125
+  },
+  "l01_s1_multi": {
+    "unit_id": "l01_s1_multi",
+    "fold_id": "l01",
+    "source": "multi",
+    "replicate": 1,
+    "target_seed": 20371125
+  },
+  "l01_s2_jbb": {
+    "unit_id": "l01_s2_jbb",
+    "fold_id": "l01",
+    "source": "jbb",
+    "replicate": 2,
+    "target_seed": 20371225
+  },
+  "l01_s2_act": {
+    "unit_id": "l01_s2_act",
+    "fold_id": "l01",
+    "source": "act",
+    "replicate": 2,
+    "target_seed": 20371225
+  },
+  "l01_s2_ufro": {
+    "unit_id": "l01_s2_ufro",
+    "fold_id": "l01",
+    "source": "ufro",
+    "replicate": 2,
+    "target_seed": 20371225
+  },
+  "l01_s2_multi": {
+    "unit_id": "l01_s2_multi",
+    "fold_id": "l01",
+    "source": "multi",
+    "replicate": 2,
+    "target_seed": 20371225
+  },
+  "l02_s0_jbb": {
+    "unit_id": "l02_s0_jbb",
+    "fold_id": "l02",
+    "source": "jbb",
+    "replicate": 0,
+    "target_seed": 20381025
+  },
+  "l02_s0_act": {
+    "unit_id": "l02_s0_act",
+    "fold_id": "l02",
+    "source": "act",
+    "replicate": 0,
+    "target_seed": 20381025
+  },
+  "l02_s0_ufro": {
+    "unit_id": "l02_s0_ufro",
+    "fold_id": "l02",
+    "source": "ufro",
+    "replicate": 0,
+    "target_seed": 20381025
+  },
+  "l02_s0_multi": {
+    "unit_id": "l02_s0_multi",
+    "fold_id": "l02",
+    "source": "multi",
+    "replicate": 0,
+    "target_seed": 20381025
+  },
+  "l02_s1_jbb": {
+    "unit_id": "l02_s1_jbb",
+    "fold_id": "l02",
+    "source": "jbb",
+    "replicate": 1,
+    "target_seed": 20381125
+  },
+  "l02_s1_act": {
+    "unit_id": "l02_s1_act",
+    "fold_id": "l02",
+    "source": "act",
+    "replicate": 1,
+    "target_seed": 20381125
+  },
+  "l02_s1_ufro": {
+    "unit_id": "l02_s1_ufro",
+    "fold_id": "l02",
+    "source": "ufro",
+    "replicate": 1,
+    "target_seed": 20381125
+  },
+  "l02_s1_multi": {
+    "unit_id": "l02_s1_multi",
+    "fold_id": "l02",
+    "source": "multi",
+    "replicate": 1,
+    "target_seed": 20381125
+  },
+  "l02_s2_jbb": {
+    "unit_id": "l02_s2_jbb",
+    "fold_id": "l02",
+    "source": "jbb",
+    "replicate": 2,
+    "target_seed": 20381225
+  },
+  "l02_s2_act": {
+    "unit_id": "l02_s2_act",
+    "fold_id": "l02",
+    "source": "act",
+    "replicate": 2,
+    "target_seed": 20381225
+  },
+  "l02_s2_ufro": {
+    "unit_id": "l02_s2_ufro",
+    "fold_id": "l02",
+    "source": "ufro",
+    "replicate": 2,
+    "target_seed": 20381225
+  },
+  "l02_s2_multi": {
+    "unit_id": "l02_s2_multi",
+    "fold_id": "l02",
+    "source": "multi",
+    "replicate": 2,
+    "target_seed": 20381225
+  }
+}

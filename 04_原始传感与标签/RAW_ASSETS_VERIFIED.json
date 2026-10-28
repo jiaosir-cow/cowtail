@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-27T11:28:03.550058+00:00",
+  "sensor_session_count": 31,
+  "canonical_annotation_count": 468,
+  "source_events_csv_count": 38,
+  "source_events_meta_count": 38,
+  "copied_asset_count": 107,
+  "canonical_source_row_match_count": 468,
+  "source_and_destination_hash_mismatch_count": 0,
+  "missing_required_assets": [],
+  "raw_json_schema_observed": {
+    "top_level_keys": [
+      "configs",
+      "create_by",
+      "create_time",
+      "device",
+      "imu",
+      "motion",
+      "temperature",
+      "uid",
+      "update_by",
+      "update_time",
+      "version"
+    ],
+    "imu_encoding": "encoded string; axis decoding not independently revalidated in this packaging operation"
+  },
+  "notes": [
+    "Original sensor JSON, original CSV, and original events_meta bytes are copied unchanged.",
+    "Display aliases do not replace source animal identifiers or prove independent animal identity.",
+    "Canonical labels include source row selection and adjudication; source CSVs may contain additional rows not selected in the canonical table.",
+    "Derived per-event clips, videos, software environments and caches are not necessary for this full-session raw archive and are not copied."
+  ],
+  "display_names_updated_only": true
+}

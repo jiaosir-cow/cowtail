@@ -1,0 +1,263 @@
+[
+  {
+    "step": 100,
+    "mean_over_last_updates": 100,
+    "total": 1.3820713365077972,
+    "posture": 0.6610178330540657,
+    "walking": 0.05052798168733716,
+    "feeding": 0.6705255252122879,
+    "gradient_norm_before_clip": 2.413129931688309
+  },
+  {
+    "step": 200,
+    "mean_over_last_updates": 100,
+    "total": 0.8065507364273071,
+    "posture": 0.28296281076967716,
+    "walking": 0.0171856556693092,
+    "feeding": 0.5064022725820542,
+    "gradient_norm_before_clip": 3.177649587392807
+  },
+  {
+    "step": 300,
+    "mean_over_last_updates": 100,
+    "total": 0.5733154454827308,
+    "posture": 0.060159187093377114,
+    "walking": 0.012489626975730061,
+    "feeding": 0.5006666326522827,
+    "gradient_norm_before_clip": 3.80157602250576
+  },
+  {
+    "step": 400,
+    "mean_over_last_updates": 100,
+    "total": 0.5112476441264152,
+    "posture": 0.0220204028300941,
+    "walking": 0.010717714648344555,
+    "feeding": 0.4785095265507698,
+    "gradient_norm_before_clip": 3.9125184750556947
+  },
+  {
+    "step": 500,
+    "mean_over_last_updates": 100,
+    "total": 0.4934942261874676,
+    "posture": 0.011469397079199552,
+    "walking": 0.007310067993821576,
+    "feeding": 0.4747147613763809,
+    "gradient_norm_before_clip": 3.1431029814481737
+  },
+  {
+    "step": 600,
+    "mean_over_last_updates": 100,
+    "total": 0.4929345539212227,
+    "posture": 0.0074834675953025,
+    "walking": 0.0072791142313508314,
+    "feeding": 0.4781719726324081,
+    "gradient_norm_before_clip": 3.252354761362076
+  },
+  {
+    "step": 700,
+    "mean_over_last_updates": 100,
+    "total": 0.4745361687242985,
+    "posture": 0.0045556959604437,
+    "walking": 0.009250610734161455,
+    "feeding": 0.4607298631966114,
+    "gradient_norm_before_clip": 5.088510903120041
+  },
+  {
+    "step": 800,
+    "mean_over_last_updates": 100,
+    "total": 0.4761062084138393,
+    "posture": 0.004229654782975558,
+    "walking": 0.005096756274870131,
+    "feeding": 0.46677979931235314,
+    "gradient_norm_before_clip": 3.196690551638603
+  },
+  {
+    "step": 900,
+    "mean_over_last_updates": 100,
+    "total": 0.47786069542169574,
+    "posture": 0.004025831181788817,
+    "walking": 0.002846009507484268,
+    "feeding": 0.4709888541698456,
+    "gradient_norm_before_clip": 3.2421658420562744
+  },
+  {
+    "step": 1000,
+    "mean_over_last_updates": 100,
+    "total": 0.4571925486624241,
+    "posture": 0.004945142433134606,
+    "walking": 0.003509338831208879,
+    "feeding": 0.4487380684912205,
+    "gradient_norm_before_clip": 3.187663428783417
+  },
+  {
+    "step": 1100,
+    "mean_over_last_updates": 100,
+    "total": 0.46644685342907904,
+    "posture": 0.002889302203548141,
+    "walking": 0.006347332769946661,
+    "feeding": 0.4572102177143097,
+    "gradient_norm_before_clip": 4.3269190782308575
+  },
+  {
+    "step": 1200,
+    "mean_over_last_updates": 100,
+    "total": 0.4615038964152336,
+    "posture": 0.002939473443620955,
+    "walking": 0.005609266497922363,
+    "feeding": 0.452955155223608,
+    "gradient_norm_before_clip": 4.5771543145179745
+  },
+  {
+    "step": 1300,
+    "mean_over_last_updates": 100,
+    "total": 0.4733033706247807,
+    "posture": 0.0019537480853614396,
+    "walking": 0.002174011237657396,
+    "feeding": 0.469175610691309,
+    "gradient_norm_before_clip": 3.685083590745926
+  },
+  {
+    "step": 1400,
+    "mean_over_last_updates": 100,
+    "total": 0.4453465710580349,
+    "posture": 0.002303899861581158,
+    "walking": 0.002296939505104092,
+    "feeding": 0.4407457326352596,
+    "gradient_norm_before_clip": 3.8867933240532877
+  },
+  {
+    "step": 1500,
+    "mean_over_last_updates": 100,
+    "total": 0.45688110396265985,
+    "posture": 0.0011449215507309419,
+    "walking": 0.004203538343099353,
+    "feeding": 0.4515326444804668,
+    "gradient_norm_before_clip": 4.048294599354267
+  },
+  {
+    "step": 1600,
+    "mean_over_last_updates": 100,
+    "total": 0.4648889000713825,
+    "posture": 0.0021167365534347483,
+    "walking": 0.011980301048588445,
+    "feeding": 0.4507918632030487,
+    "gradient_norm_before_clip": 5.808236194849014
+  },
+  {
+    "step": 1700,
+    "mean_over_last_updates": 100,
+    "total": 0.4858375108242035,
+    "posture": 0.0032722548307356192,
+    "walking": 0.003161388389107742,
+    "feeding": 0.47940386936068535,
+    "gradient_norm_before_clip": 4.85403282225132
+  },
+  {
+    "step": 1800,
+    "mean_over_last_updates": 100,
+    "total": 0.4554506255686283,
+    "posture": 0.002671994620177429,
+    "walking": 0.003150203327422787,
+    "feeding": 0.44962842658162117,
+    "gradient_norm_before_clip": 6.224792402982712
+  },
+  {
+    "step": 1900,
+    "mean_over_last_updates": 100,
+    "total": 0.473878116607666,
+    "posture": 0.0022178617015924827,
+    "walking": 0.00457020637628375,
+    "feeding": 0.46709004789590836,
+    "gradient_norm_before_clip": 5.616539230942726
+  },
+  {
+    "step": 2000,
+    "mean_over_last_updates": 100,
+    "total": 0.4802113623917103,
+    "posture": 0.0013320160830062378,
+    "walking": 0.0032298009816986452,
+    "feeding": 0.4756495445966721,
+    "gradient_norm_before_clip": 6.555509060025215
+  },
+  {
+    "step": 2100,
+    "mean_over_last_updates": 100,
+    "total": 0.4734179797768593,
+    "posture": 0.001315353841473552,
+    "walking": 0.006057681577076437,
+    "feeding": 0.46604494616389275,
+    "gradient_norm_before_clip": 5.557248251438141
+  },
+  {
+    "step": 2200,
+    "mean_over_last_updates": 100,
+    "total": 0.45272864356637,
+    "posture": 0.001991809750215907,
+    "walking": 0.0030722717744356485,
+    "feeding": 0.44766456171870234,
+    "gradient_norm_before_clip": 4.421830450892449
+  },
+  {
+    "step": 2300,
+    "mean_over_last_updates": 100,
+    "total": 0.4442135913670063,
+    "posture": 0.001523600575292221,
+    "walking": 0.0025921409094371486,
+    "feeding": 0.44009784862399104,
+    "gradient_norm_before_clip": 4.754368683099747
+  },
+  {
+    "step": 2400,
+    "mean_over_last_updates": 100,
+    "total": 0.46195987522602083,
+    "posture": 0.0012992684534810905,
+    "walking": 0.004781755098329086,
+    "feeding": 0.4558788503706455,
+    "gradient_norm_before_clip": 5.3884406274557115
+  },
+  {
+    "step": 2500,
+    "mean_over_last_updates": 100,
+    "total": 0.4458313272893429,
+    "posture": 0.009697650839971175,
+    "walking": 0.00549508550871451,
+    "feeding": 0.43063858985900877,
+    "gradient_norm_before_clip": 6.301719254851341
+  },
+  {
+    "step": 2600,
+    "mean_over_last_updates": 100,
+    "total": 0.4342093776166439,
+    "posture": 0.005320030321840931,
+    "walking": 0.001932327927543156,
+    "feeding": 0.42695701763033866,
+    "gradient_norm_before_clip": 5.9437956047058105
+  },
+  {
+    "step": 2700,
+    "mean_over_last_updates": 100,
+    "total": 0.4632063773274422,
+    "posture": 0.0007737228052565114,
+    "walking": 0.004056546995325334,
+    "feeding": 0.4583761055767536,
+    "gradient_norm_before_clip": 3.945604413151741
+  },
+  {
+    "step": 2800,
+    "mean_over_last_updates": 100,
+    "total": 0.43874043971300125,
+    "posture": 0.0006389312840474304,
+    "walking": 0.005442009088128543,
+    "feeding": 0.4326594990491867,
+    "gradient_norm_before_clip": 5.068905114531517
+  },
+  {
+    "step": 2900,
+    "mean_over_last_updates": 100,
+    "total": 0.4187957964837551,
+    "posture": 0.0033939863772639,
+    "walking": 0.008650315375862192,
+    "feeding": 0.40675149343907835,
+    "gradient_norm_before_clip": 7.82782051384449
+  }
+]

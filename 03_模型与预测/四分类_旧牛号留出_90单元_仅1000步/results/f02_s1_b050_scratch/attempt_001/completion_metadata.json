@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "unit": {
+    "unit_id": "f02_s1_b050_scratch",
+    "fold_id": "f02",
+    "test_cow": "COWID_03",
+    "replicate": 1,
+    "percent": 50,
+    "method": "scratch",
+    "budget_dir": "inputs/budgets/f02/rep01/p050",
+    "fold_dir": "inputs/folds/f02",
+    "target_seed": 20281009,
+    "checkpoint": null
+  },
+  "binding": {},
+  "parameter_count": 828,
+  "train_interval_count": 169,
+  "train_window_count": 3939,
+  "test_window_count": 21687,
+  "endpoint_steps": [
+    1000
+  ],
+  "selection_rule": "none; both predetermined fixed endpoints retained",
+  "held_out_scoring": false,
+  "source_checkpoint_unchanged": true,
+  "pacing": {
+    "batches": 3170,
+    "busy_seconds": 38.766822803532705,
+    "idle_seconds": 38.766822803532705
+  },
+  "finished_utc": "2026-09-09T02:48:05.009066+00:00",
+  "storage_cleanup_note": "3000-step data removed at user request on 2026-10-07; historical completion checks are no longer valid for the original full artifact set.",
+  "integrity_status": "invalidated_by_user_cleanup"
+}

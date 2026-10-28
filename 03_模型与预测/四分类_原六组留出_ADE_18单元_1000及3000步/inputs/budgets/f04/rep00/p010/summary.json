@@ -1,0 +1,19 @@
+{
+  "fold_id": "f04",
+  "test_cow": "COWID_06",
+  "replicate": 0,
+  "nominal_percent": 10,
+  "available_event_count": 764,
+  "selected_event_count": 77,
+  "selected_window_count": 3054,
+  "actual_event_fraction": 0.10078534031413612,
+  "original_interval_duration_ms": 17023393.0,
+  "selected_class_support": {
+    "0": 768,
+    "1": 1511,
+    "2": 25,
+    "3": 750
+  },
+  "uses_class_for_selection": false,
+  "missing_class_redraw": false
+}

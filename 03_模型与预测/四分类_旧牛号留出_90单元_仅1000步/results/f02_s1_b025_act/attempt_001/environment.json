@@ -1,0 +1,19 @@
+{
+  "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:12:53) [MSC v.1942 64 bit (AMD64)]",
+  "torch": "2.12.1+cu130",
+  "numpy": "2.3.5",
+  "cuda_runtime": "13.0",
+  "device": "cuda:0",
+  "device_name": "NVIDIA GeForce RTX 3090",
+  "guard": {
+    "name": "Local\\DATASET_X",
+    "membership_verified": true,
+    "pid": 27712
+  },
+  "precision": "FP32; no AMP/TF32/compile",
+  "intraop_threads": 2,
+  "interop_threads": 1,
+  "cuda_allocator_limit_gib": 2,
+  "gpu_duty": 0.5,
+  "started_utc": "2026-09-09T02:59:46.603251+00:00"
+}

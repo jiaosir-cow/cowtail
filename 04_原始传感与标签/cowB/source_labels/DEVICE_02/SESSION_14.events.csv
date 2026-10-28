@@ -1,0 +1,2 @@
+﻿index,session_id,layer,label,code,en,type,evidence,t_start_rel_ms,t_end_rel_ms,reviewed_start_ms,reviewed_end_ms,duration_ms,frame_start,frame_end,t_start_wall_bj,t_end_wall_bj,note
+1,SESSION_14,objective_event,排尿,URINATION,urination,interval,两者,888912,919120,888912,919120,30208,44382,45888,SESSION_918,SESSION_919,

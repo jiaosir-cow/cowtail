@@ -1,0 +1,58 @@
+{
+  "window_support": {
+    "standing": 716,
+    "lying": 1175,
+    "walking": 78,
+    "feeding": 453
+  },
+  "budget": {
+    "fold_id": "f01",
+    "fold_number": 1,
+    "test_cow": "COWID_02",
+    "replicate": 0,
+    "nominal_percent": 10,
+    "available_event_count": 645,
+    "selected_event_count": 65,
+    "actual_event_fraction": 0.10077519379844961,
+    "selected_window_count": 2422,
+    "test_window_count": 7224,
+    "original_interval_duration_ms": 13505000.0,
+    "selected_class_support": {
+      "STANDING": 716,
+      "LYING": 1175,
+      "WALKING": 78,
+      "FEEDING": 453
+    },
+    "selected_event_class_support": {
+      "STANDING": 20,
+      "LYING": 9,
+      "WALKING": 21,
+      "FEEDING": 15
+    },
+    "missing_selected_classes": [],
+    "batches_shape": [
+      3000,
+      32
+    ],
+    "batch_dtype": "int32",
+    "event_order_seedsequence": [
+      20260909,
+      1,
+      0,
+      101
+    ],
+    "batch_seedsequence": [
+      20260909,
+      1,
+      0,
+      10,
+      202
+    ],
+    "sampler": "uniform selected original event, then uniform retained event window",
+    "uses_class_for_selection": false,
+    "missing_class_redraw": false,
+    "budget_dir": "inputs/budgets/f01/rep00/p010"
+  },
+  "train_window_count": 2422,
+  "test_window_count": 7224
+}

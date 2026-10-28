@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "formal": [
+    {
+      "unit_id": "f01_s0_jbb"
+    },
+    {
+      "unit_id": "f01_s0_act"
+    },
+    {
+      "unit_id": "f01_s0_ufro"
+    },
+    {
+      "unit_id": "f01_s0_multi"
+    },
+    {
+      "unit_id": "f01_s1_jbb"
+    },
+    {
+      "unit_id": "f01_s1_act"
+    },
+    {
+      "unit_id": "f01_s1_ufro"
+    },
+    {
+      "unit_id": "f01_s1_multi"
+    },
+    {
+      "unit_id": "f01_s2_jbb"
+    },
+    {
+      "unit_id": "f01_s2_act"
+    },
+    {
+      "unit_id": "f01_s2_ufro"
+    },
+    {
+      "unit_id": "f01_s2_multi"
+    },
+    {
+      "unit_id": "f02_s0_jbb"
+    },
+    {
+      "unit_id": "f02_s0_act"
+    },
+    {
+      "unit_id": "f02_s0_ufro"
+    },
+    {
+      "unit_id": "f02_s0_multi"
+    },
+    {
+      "unit_id": "f02_s1_jbb"
+    },
+    {
+      "unit_id": "f02_s1_act"
+    },
+    {
+      "unit_id": "f02_s1_ufro"
+    },
+    {
+      "unit_id": "f02_s1_multi"
+    },
+    {
+      "unit_id": "f02_s2_jbb"
+    },
+    {
+      "unit_id": "f02_s2_act"
+    },
+    {
+      "unit_id": "f02_s2_ufro"
+    },
+    {
+      "unit_id": "f02_s2_multi"
+    },
+    {
+      "unit_id": "f03_s0_jbb"
+    },
+    {
+      "unit_id": "f03_s0_act"
+    },
+    {
+      "unit_id": "f03_s0_ufro"
+    },
+    {
+      "unit_id": "f03_s0_multi"
+    },
+    {
+      "unit_id": "f03_s1_jbb"
+    },
+    {
+      "unit_id": "f03_s1_act"
+    },
+    {
+      "unit_id": "f03_s1_ufro"
+    },
+    {
+      "unit_id": "f03_s1_multi"
+    },
+    {
+      "unit_id": "f03_s2_jbb"
+    },
+    {
+      "unit_id": "f03_s2_act"
+    },
+    {
+      "unit_id": "f03_s2_ufro"
+    },
+    {
+      "unit_id": "f03_s2_multi"
+    },
+    {
+      "unit_id": "f04_s0_jbb"
+    },
+    {
+      "unit_id": "f04_s0_act"
+    },
+    {
+      "unit_id": "f04_s0_ufro"
+    },
+    {
+      "unit_id": "f04_s0_multi"
+    },
+    {
+      "unit_id": "f04_s1_jbb"
+    },
+    {
+      "unit_id": "f04_s1_act"
+    },
+    {
+      "unit_id": "f04_s1_ufro"
+    },
+    {
+      "unit_id": "f04_s1_multi"
+    },
+    {
+      "unit_id": "f04_s2_jbb"
+    },
+    {
+      "unit_id": "f04_s2_act"
+    },
+    {
+      "unit_id": "f04_s2_ufro"
+    },
+    {
+      "unit_id": "f04_s2_multi"
+    },
+    {
+      "unit_id": "f05_s0_jbb"
+    },
+    {
+      "unit_id": "f05_s0_act"
+    },
+    {
+      "unit_id": "f05_s0_ufro"
+    },
+    {
+      "unit_id": "f05_s0_multi"
+    },
+    {
+      "unit_id": "f05_s1_jbb"
+    },
+    {
+      "unit_id": "f05_s1_act"
+    },
+    {
+      "unit_id": "f05_s1_ufro"
+    },
+    {
+      "unit_id": "f05_s1_multi"
+    },
+    {
+      "unit_id": "f05_s2_jbb"
+    },
+    {
+      "unit_id": "f05_s2_act"
+    },
+    {
+      "unit_id": "f05_s2_ufro"
+    },
+    {
+      "unit_id": "f05_s2_multi"
+    },
+    {
+      "unit_id": "f06_s0_jbb"
+    },
+    {
+      "unit_id": "f06_s0_act"
+    },
+    {
+      "unit_id": "f06_s0_ufro"
+    },
+    {
+      "unit_id": "f06_s0_multi"
+    },
+    {
+      "unit_id": "f06_s1_jbb"
+    },
+    {
+      "unit_id": "f06_s1_act"
+    },
+    {
+      "unit_id": "f06_s1_ufro"
+    },
+    {
+      "unit_id": "f06_s1_multi"
+    },
+    {
+      "unit_id": "f06_s2_jbb"
+    },
+    {
+      "unit_id": "f06_s2_act"
+    },
+    {
+      "unit_id": "f06_s2_ufro"
+    },
+    {
+      "unit_id": "f06_s2_multi"
+    },
+    {
+      "unit_id": "l01_s0_jbb"
+    },
+    {
+      "unit_id": "l01_s0_act"
+    },
+    {
+      "unit_id": "l01_s0_ufro"
+    },
+    {
+      "unit_id": "l01_s0_multi"
+    },
+    {
+      "unit_id": "l01_s1_jbb"
+    },
+    {
+      "unit_id": "l01_s1_act"
+    },
+    {
+      "unit_id": "l01_s1_ufro"
+    },
+    {
+      "unit_id": "l01_s1_multi"
+    },
+    {
+      "unit_id": "l01_s2_jbb"
+    },
+    {
+      "unit_id": "l01_s2_act"
+    },
+    {
+      "unit_id": "l01_s2_ufro"
+    },
+    {
+      "unit_id": "l01_s2_multi"
+    },
+    {
+      "unit_id": "l02_s0_jbb"
+    },
+    {
+      "unit_id": "l02_s0_act"
+    },
+    {
+      "unit_id": "l02_s0_ufro"
+    },
+    {
+      "unit_id": "l02_s0_multi"
+    },
+    {
+      "unit_id": "l02_s1_jbb"
+    },
+    {
+      "unit_id": "l02_s1_act"
+    },
+    {
+      "unit_id": "l02_s1_ufro"
+    },
+    {
+      "unit_id": "l02_s1_multi"
+    },
+    {
+      "unit_id": "l02_s2_jbb"
+    },
+    {
+      "unit_id": "l02_s2_act"
+    },
+    {
+      "unit_id": "l02_s2_ufro"
+    },
+    {
+      "unit_id": "l02_s2_multi"
+    }
+  ],
+  "smoke": [
+    {
+      "unit_id": "f01_s0_act"
+    }
+  ]
+}

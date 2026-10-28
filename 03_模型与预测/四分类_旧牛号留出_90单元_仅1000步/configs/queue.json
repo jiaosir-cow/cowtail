@@ -1,0 +1,1828 @@
+[
+  {
+    "label": "gpu_smoke",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--gpu-smoke",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b010_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b010_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b010_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b010_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b010_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b010_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b100_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b100_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b100_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b100_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b100_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b100_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b005_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b005_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b005_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b005_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b005_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b005_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b010_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b010_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b010_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b010_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b010_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b010_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b010_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b010_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b010_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b010_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b010_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b010_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b010_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b010_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b010_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b010_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b010_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b010_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b050_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b050_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b050_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b050_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b050_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b050_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b005_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b005_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b005_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b005_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b005_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b005_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b050_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b050_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b050_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b050_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b050_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b050_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b010_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b010_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b010_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b010_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b010_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b010_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b025_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b025_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b025_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b025_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b025_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b025_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b100_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b100_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b100_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b100_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b100_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b100_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b050_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b050_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b050_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b050_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b050_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b050_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b010_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b010_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b010_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b010_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b010_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b010_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b005_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b005_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b005_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b005_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b005_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b005_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b100_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b100_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b100_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b100_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b100_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b100_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b025_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b025_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b025_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b025_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s2_b025_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s2_b025_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b050_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b050_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b050_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b050_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b050_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b050_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b050_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b050_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b050_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b050_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b050_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b050_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b025_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b025_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b025_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b025_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b025_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b025_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b025_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b025_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b025_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b025_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b025_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b025_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b100_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b100_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b100_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b100_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b100_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b100_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b005_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b005_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b005_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b005_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b005_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b005_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b005_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b005_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b005_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b005_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b005_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b005_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b050_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b050_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b050_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b050_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b050_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b050_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b025_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b025_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b025_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b025_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s0_b025_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s0_b025_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b100_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b100_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b100_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b100_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s1_b100_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s1_b100_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b005_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b005_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b005_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b005_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s1_b005_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s1_b005_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b100_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b100_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b100_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b100_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f02_s2_b100_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f02_s2_b100_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b025_act",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b025_act",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b025_scratch",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b025_scratch",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "f01_s0_b025_ufro",
+    "lane": "gpu",
+    "gpu": true,
+    "script": "PATH_X",
+    "arguments": [
+      "--unit",
+      "f01_s0_b025_ufro",
+      "--device",
+      "cuda"
+    ],
+    "cwd": "PATH_X",
+    "requires": [
+      "gpu_smoke"
+    ],
+    "threads": 2,
+    "gpu_allocator_gib": 2,
+    "gpu_pacing_duty": 0.5
+  },
+  {
+    "label": "finalize_predictions",
+    "lane": "gate",
+    "gpu": false,
+    "script": "PATH_X",
+    "arguments": [],
+    "cwd": "PATH_X",
+    "requires": [
+      "f01_s0_b005_scratch",
+      "f01_s0_b005_act",
+      "f01_s0_b005_ufro",
+      "f01_s0_b010_scratch",
+      "f01_s0_b010_act",
+      "f01_s0_b010_ufro",
+      "f01_s0_b025_scratch",
+      "f01_s0_b025_act",
+      "f01_s0_b025_ufro",
+      "f01_s0_b050_scratch",
+      "f01_s0_b050_act",
+      "f01_s0_b050_ufro",
+      "f01_s0_b100_scratch",
+      "f01_s0_b100_act",
+      "f01_s0_b100_ufro",
+      "f01_s1_b005_scratch",
+      "f01_s1_b005_act",
+      "f01_s1_b005_ufro",
+      "f01_s1_b010_scratch",
+      "f01_s1_b010_act",
+      "f01_s1_b010_ufro",
+      "f01_s1_b025_scratch",
+      "f01_s1_b025_act",
+      "f01_s1_b025_ufro",
+      "f01_s1_b050_scratch",
+      "f01_s1_b050_act",
+      "f01_s1_b050_ufro",
+      "f01_s1_b100_scratch",
+      "f01_s1_b100_act",
+      "f01_s1_b100_ufro",
+      "f01_s2_b005_scratch",
+      "f01_s2_b005_act",
+      "f01_s2_b005_ufro",
+      "f01_s2_b010_scratch",
+      "f01_s2_b010_act",
+      "f01_s2_b010_ufro",
+      "f01_s2_b025_scratch",
+      "f01_s2_b025_act",
+      "f01_s2_b025_ufro",
+      "f01_s2_b050_scratch",
+      "f01_s2_b050_act",
+      "f01_s2_b050_ufro",
+      "f01_s2_b100_scratch",
+      "f01_s2_b100_act",
+      "f01_s2_b100_ufro",
+      "f02_s0_b005_scratch",
+      "f02_s0_b005_act",
+      "f02_s0_b005_ufro",
+      "f02_s0_b010_scratch",
+      "f02_s0_b010_act",
+      "f02_s0_b010_ufro",
+      "f02_s0_b025_scratch",
+      "f02_s0_b025_act",
+      "f02_s0_b025_ufro",
+      "f02_s0_b050_scratch",
+      "f02_s0_b050_act",
+      "f02_s0_b050_ufro",
+      "f02_s0_b100_scratch",
+      "f02_s0_b100_act",
+      "f02_s0_b100_ufro",
+      "f02_s1_b005_scratch",
+      "f02_s1_b005_act",
+      "f02_s1_b005_ufro",
+      "f02_s1_b010_scratch",
+      "f02_s1_b010_act",
+      "f02_s1_b010_ufro",
+      "f02_s1_b025_scratch",
+      "f02_s1_b025_act",
+      "f02_s1_b025_ufro",
+      "f02_s1_b050_scratch",
+      "f02_s1_b050_act",
+      "f02_s1_b050_ufro",
+      "f02_s1_b100_scratch",
+      "f02_s1_b100_act",
+      "f02_s1_b100_ufro",
+      "f02_s2_b005_scratch",
+      "f02_s2_b005_act",
+      "f02_s2_b005_ufro",
+      "f02_s2_b010_scratch",
+      "f02_s2_b010_act",
+      "f02_s2_b010_ufro",
+      "f02_s2_b025_scratch",
+      "f02_s2_b025_act",
+      "f02_s2_b025_ufro",
+      "f02_s2_b050_scratch",
+      "f02_s2_b050_act",
+      "f02_s2_b050_ufro",
+      "f02_s2_b100_scratch",
+      "f02_s2_b100_act",
+      "f02_s2_b100_ufro"
+    ],
+    "threads": 2
+  }
+]

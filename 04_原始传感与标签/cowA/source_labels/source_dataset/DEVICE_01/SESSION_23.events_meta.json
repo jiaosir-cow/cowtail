@@ -1,0 +1,11 @@
+{
+  "tool": "牛尾环九轴桌面标注工具",
+  "project_version": 4,
+  "device": "DEVICE_01",
+  "imu_version": 2,
+  "acc_scale_divisor": 4096,
+  "sampling_hz": 50.0,
+  "gap_count": 59,
+  "resting_g": 1.9834887168029751,
+  "align_method": "pin"
+}

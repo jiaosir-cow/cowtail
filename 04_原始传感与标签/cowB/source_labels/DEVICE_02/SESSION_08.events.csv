@@ -1,0 +1,2 @@
+﻿index,session_id,layer,label,code,en,type,evidence,t_start_rel_ms,t_end_rel_ms,reviewed_start_ms,reviewed_end_ms,duration_ms,frame_start,frame_end,t_start_wall_bj,t_end_wall_bj,note
+1,SESSION_08,objective_event,排便,DEFECATION,defecation,interval,两者,319357,338117,319357,338117,18760,15944,16882,SESSION_912,SESSION_913,

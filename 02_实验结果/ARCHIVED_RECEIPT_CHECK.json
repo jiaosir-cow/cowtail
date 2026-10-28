@@ -1,0 +1,9 @@
+{
+  "status": "PASS_FOR_PRESENT_FILES",
+  "legacy_1000_step_artifacts_verified": 540,
+  "six_group_output_artifacts_verified": 306,
+  "six_group_missing_historical_outputs": [],
+  "six_group_selected_input_bindings_verified": true,
+  "source_only_clean_artifacts_verified": 24,
+  "limits": "Missing historical endpoints disclosed; no full original COMPLETE receipt validity claim for partial archives"
+}

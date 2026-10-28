@@ -1,0 +1,13 @@
+﻿display_case,asset_kind,file_count,total_bytes
+cowA,sensor_json,17,89456394
+cowA,source_events_csv,17,58466
+cowA,source_events_meta,17,8768
+cowB,sensor_json,11,58001571
+cowB,source_events_csv,18,34270
+cowB,source_events_meta,18,9315
+cowC,sensor_json,2,10524268
+cowC,source_events_csv,2,5107
+cowC,source_events_meta,2,1030
+cowD,sensor_json,1,5262150
+cowD,source_events_csv,1,3153
+cowD,source_events_meta,1,516

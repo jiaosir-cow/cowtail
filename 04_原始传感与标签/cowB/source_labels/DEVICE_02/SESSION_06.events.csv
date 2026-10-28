@@ -1,0 +1,2 @@
+﻿index,session_id,layer,label,code,en,type,evidence,t_start_rel_ms,t_end_rel_ms,reviewed_start_ms,reviewed_end_ms,duration_ms,frame_start,frame_end,t_start_wall_bj,t_end_wall_bj,note
+1,SESSION_06,posture_transition,起立过程,STANDING_UP,standing up,interval,两者,2308628,2317372,2308628,2317372,8744,115252,115689,SESSION_910,SESSION_911,

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "question": "Can public collar knowledge provide a label-free tail behavior reference and improve synthetic-corruption robustness without sacrificing clean recognition?",
+  "model_module": "source/model_paper_kernel8.py",
+  "task": "binary walking/nonwalking",
+  "positive_class": 1,
+  "input_shape": [
+    40920,
+    3,
+    256
+  ],
+  "human_training_labels": 0,
+  "heldout_labels_uploaded": false,
+  "steps": 1000,
+  "endpoints": [
+    100,
+    300,
+    1000
+  ],
+  "primary_endpoint": 1000,
+  "train_batch": 32,
+  "eval_batch": 128,
+  "lr": 0.001,
+  "anchor_weight": 1.0,
+  "affine_weight": 0.001,
+  "gradient_clip": 1.0,
+  "gpu_memory_gib": 1,
+  "duty_cycle": 0.2,
+  "threads": 2,
+  "methods": [
+    "frozen_step0000",
+    "median3_step0000",
+    "bn_moments_step0000",
+    "adapted_step0100",
+    "adapted_step0300",
+    "adapted_step1000"
+  ],
+  "corruption_units": "Reconstruct g from normalized window times saved scale_g; corrupt in g, then repeat original per-window median-vector-norm normalization.",
+  "conditions": [
+    "clean",
+    "gaussian_low",
+    "gaussian_high",
+    "spikes_low",
+    "spikes_high",
+    "packetloss_low",
+    "packetloss_high",
+    "burst_low",
+    "burst_high",
+    "clipping_low",
+    "clipping_high",
+    "rotation_low",
+    "rotation_high"
+  ],
+  "corruptions": {
+    "gaussian": {
+      "std_g": [
+        0.01,
+        0.05
+      ]
+    },
+    "spikes": {
+      "component_fraction": [
+        0.005,
+        0.02
+      ],
+      "amplitude_g": [
+        0.5,
+        2
+      ]
+    },
+    "packetloss": {
+      "frame_fraction": [
+        0.01,
+        0.1
+      ],
+      "repair": "linear_interpolation"
+    },
+    "burst": {
+      "frames": [
+        8,
+        32
+      ],
+      "repair": "linear_interpolation"
+    },
+    "clipping": {
+      "absolute_limit_g": [
+        1.5,
+        0.75
+      ]
+    },
+    "rotation": {
+      "axis": "y",
+      "degrees": [
+        15,
+        45
+      ]
+    }
+  },
+  "training_corruption_families": [
+    "gaussian",
+    "spikes",
+    "packetloss",
+    "burst",
+    "clipping"
+  ],
+  "training_severity": "low",
+  "test_corruption_rng": "Fixed global realization seed74103 per row, family and severity; independent of training stream; shared across all source types, source seeds, methods and endpoints.",
+  "bn_moments": "Exact population variance over unlabeled training-window feature vectors; no gradients.",
+  "consistency": "Teacher source fixed; student encoder/classifier/BN running statistics fixed, only16 BN affine parameters train. Teacher-clean vs student-corrupted KL + clean-anchor KL + affine-source L2.",
+  "selection": "No confidence filtering, entropy-only objective, class balancing or test-based checkpoint/source/cow selection.",
+  "primary_metric": "Equal-cow walking AP, after mean over3 source seeds per cow; primary comparisons at1000 on12 corrupted conditions and clean separately.",
+  "clean_retention_reporting": "Always show clean AP change beside corruption AP change; no result-driven tolerance chosen.",
+  "secondary_metrics": [
+    "binary macro-F1",
+    "MCC",
+    "walking precision",
+    "walking recall",
+    "specificity",
+    "prevalence",
+    "RMS ranking AP"
+  ],
+  "scoring_weightings": [
+    "window",
+    "original_interval_balanced_window_on_known_truth"
+  ],
+  "scope_limits": [
+    "Retrospective previously researched data, identities user-attested.",
+    "Three acceleration axes only; no hardware/9axis/crossspecies calibration validation.",
+    "Synthetic artifacts test response to specified corruption; no claim they reproduce actual observed hardware faults.",
+    "Training is label-free, final accuracy assessment requires held-out human truth.",
+    "No guarantee that more updates, higher confidence or consistency loss reduction means better behavior recognition."
+  ],
+  "references": [
+    {
+      "title": "AdaBN",
+      "url": "httpPATH_X"
+    },
+    {
+      "title": "On Pitfalls of Test-Time Adaptation",
+      "url": "httpPATH_X"
+    }
+  ],
+  "evaluation_seed_base": 74103,
+  "optimizer": "Adam"
+}

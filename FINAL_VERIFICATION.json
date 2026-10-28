@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "verified_at_utc": "2026-10-27T11:46:49.146643+00:00",
+  "verified_content_files": 1939,
+  "verified_content_bytes": 757134621,
+  "display_names": [
+    "cowA",
+    "cowB",
+    "cowC",
+    "cowD"
+  ],
+  "windows": 12736,
+  "eligible_intervals": 364,
+  "canonical_annotations": 468,
+  "sensor_sessions": 31,
+  "original_sensor_and_label_assets": 107,
+  "source_copy_checks": "PASS; source before/copy/source after hashes unchanged",
+  "portable_four_state_recomputation": {
+    "units": 90,
+    "metric_rows": 360,
+    "metrics_per_row": 4,
+    "max_absolute_error": 1.1102230246251565e-16
+  },
+  "selected_sensor_values_exactly_match_archived_source": true,
+  "training_executed": false,
+  "inference_executed": false,
+  "missing_truth_classes": {
+    "cowD": [
+      "FEEDING"
+    ]
+  },
+  "original_files_untouched": true,
+  "root": "This folder is self-contained for the included four-state recomputation; numpy/pandas/scikit-learn required",
+  "sequential_rename_confirmed_by_user": true
+}

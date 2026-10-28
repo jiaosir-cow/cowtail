@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "unit": {
+    "unit_id": "f01_s1_b050_ufro",
+    "fold_id": "f01",
+    "test_cow": "COWID_02",
+    "replicate": 1,
+    "percent": 50,
+    "method": "ufro",
+    "budget_dir": "inputs/budgets/f01/rep01/p050",
+    "fold_dir": "inputs/folds/f01",
+    "target_seed": 20271009,
+    "checkpoint": "inputs/checkpoints/ufro_seed1.pt"
+  },
+  "binding": {},
+  "parameter_count": 828,
+  "train_interval_count": 323,
+  "train_window_count": 10367,
+  "test_window_count": 7224,
+  "endpoint_steps": [
+    1000
+  ],
+  "selection_rule": "none; both predetermined fixed endpoints retained",
+  "held_out_scoring": false,
+  "source_checkpoint_unchanged": true,
+  "pacing": {
+    "batches": 3058,
+    "busy_seconds": 38.04247900377959,
+    "idle_seconds": 38.04247900377959
+  },
+  "finished_utc": "2026-09-09T02:00:32.936645+00:00",
+  "storage_cleanup_note": "3000-step data removed at user request on 2026-10-07; historical completion checks are no longer valid for the original full artifact set.",
+  "integrity_status": "invalidated_by_user_cleanup"
+}

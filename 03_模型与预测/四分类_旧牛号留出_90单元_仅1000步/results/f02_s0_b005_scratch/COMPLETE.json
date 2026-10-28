@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "unit_id": "f02_s0_b005_scratch",
+  "attempt": "attempt_001",
+  "binding": {},
+  "parameter_count": 828,
+  "train_interval_count": 17,
+  "train_window_count": 282,
+  "test_window_count": 21687,
+  "endpoint_steps": [
+    1000
+  ],
+  "precision": "FP32",
+  "guard": {
+    "name": "Local\\DATASET_X",
+    "membership_verified": true,
+    "pid": 18752
+  },
+  "storage_cleanup_note": "3000-step data removed at user request on 2026-10-07; historical completion checks are no longer valid for the original full artifact set.",
+  "integrity_status": "invalidated_by_user_cleanup"
+}

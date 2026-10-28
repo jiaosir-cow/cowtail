@@ -1,0 +1,138 @@
+{
+  "f01": {
+    "fold_id": "f01",
+    "split_kind": "revised_id",
+    "test_cows": [
+      "COWID_04"
+    ],
+    "test_aliases": [
+      "cowA"
+    ],
+    "train_windows": 29700,
+    "test_windows": 11220,
+    "train_sessions": 45,
+    "test_sessions": 17,
+    "train_indices": "inputs/folds/f01/train_indices.npy",
+    "test_indices": "inputs/folds/f01/test_indices.npy"
+  },
+  "f02": {
+    "fold_id": "f02",
+    "split_kind": "revised_id",
+    "test_cows": [
+      "COWID_05"
+    ],
+    "test_aliases": [
+      "COW_OTHER"
+    ],
+    "train_windows": 15840,
+    "test_windows": 25080,
+    "train_sessions": 24,
+    "test_sessions": 38,
+    "train_indices": "inputs/folds/f02/train_indices.npy",
+    "test_indices": "inputs/folds/f02/test_indices.npy"
+  },
+  "f03": {
+    "fold_id": "f03",
+    "split_kind": "revised_id",
+    "test_cows": [
+      "COWID_01"
+    ],
+    "test_aliases": [
+      "COW_OTHER"
+    ],
+    "train_windows": 38940,
+    "test_windows": 1980,
+    "train_sessions": 59,
+    "test_sessions": 3,
+    "train_indices": "inputs/folds/f03/train_indices.npy",
+    "test_indices": "inputs/folds/f03/test_indices.npy"
+  },
+  "f04": {
+    "fold_id": "f04",
+    "split_kind": "revised_id",
+    "test_cows": [
+      "COWID_06"
+    ],
+    "test_aliases": [
+      "cowC"
+    ],
+    "train_windows": 39600,
+    "test_windows": 1320,
+    "train_sessions": 60,
+    "test_sessions": 2,
+    "train_indices": "inputs/folds/f04/train_indices.npy",
+    "test_indices": "inputs/folds/f04/test_indices.npy"
+  },
+  "f05": {
+    "fold_id": "f05",
+    "split_kind": "revised_id",
+    "test_cows": [
+      "COWID_07"
+    ],
+    "test_aliases": [
+      "cowD"
+    ],
+    "train_windows": 40260,
+    "test_windows": 660,
+    "train_sessions": 61,
+    "test_sessions": 1,
+    "train_indices": "inputs/folds/f05/train_indices.npy",
+    "test_indices": "inputs/folds/f05/test_indices.npy"
+  },
+  "f06": {
+    "fold_id": "f06",
+    "split_kind": "revised_id",
+    "test_cows": [
+      "COWID_08"
+    ],
+    "test_aliases": [
+      "COW_OTHER"
+    ],
+    "train_windows": 40260,
+    "test_windows": 660,
+    "train_sessions": 61,
+    "test_sessions": 1,
+    "train_indices": "inputs/folds/f06/train_indices.npy",
+    "test_indices": "inputs/folds/f06/test_indices.npy"
+  },
+  "l01": {
+    "fold_id": "l01",
+    "split_kind": "legacy_20201-3",
+    "test_cows": [
+      "COWID_04",
+      "COWID_06",
+      "COWID_07"
+    ],
+    "test_aliases": [
+      "cowA",
+      "cowC",
+      "cowD"
+    ],
+    "train_windows": 27720,
+    "test_windows": 13200,
+    "train_sessions": 42,
+    "test_sessions": 20,
+    "train_indices": "inputs/folds/l01/train_indices.npy",
+    "test_indices": "inputs/folds/l01/test_indices.npy"
+  },
+  "l02": {
+    "fold_id": "l02",
+    "split_kind": "legacy_21074-1",
+    "test_cows": [
+      "COWID_05",
+      "COWID_01",
+      "COWID_08"
+    ],
+    "test_aliases": [
+      "COW_OTHER",
+      "COW_OTHER",
+      "COW_OTHER"
+    ],
+    "train_windows": 13200,
+    "test_windows": 27720,
+    "train_sessions": 20,
+    "test_sessions": 42,
+    "train_indices": "inputs/folds/l02/train_indices.npy",
+    "test_indices": "inputs/folds/l02/test_indices.npy"
+  }
+}

@@ -1,0 +1,1527 @@
+{
+  "status": "complete",
+  "schema_version": 1,
+  "completed_at_utc": "2026-09-09T01:20:08.836606+00:00",
+  "array_shape": [
+    29790,
+    3,
+    256
+  ],
+  "array_dtype": "float32",
+  "window_count": 29790,
+  "eligible_event_count": 882,
+  "original_body_event_count": 974,
+  "excluded_original_body_event_count": 92,
+  "class_order": [
+    "STANDING",
+    "LYING",
+    "WALKING",
+    "FEEDING"
+  ],
+  "window_class_support": {
+    "STANDING": 9240,
+    "LYING": 12245,
+    "WALKING": 681,
+    "FEEDING": 7624
+  },
+  "eligible_event_class_support": {
+    "STANDING": 320,
+    "LYING": 122,
+    "WALKING": 254,
+    "FEEDING": 186
+  },
+  "folds": [
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "train_cows": [
+        "COWID_03",
+        "COWID_12",
+        "COWID_13",
+        "COWID_14",
+        "COWID_10",
+        "COWID_11",
+        "COWID_15"
+      ],
+      "available_event_count": 645,
+      "available_window_count": 22566,
+      "test_event_count": 237,
+      "test_window_count": 7224,
+      "validation_event_count": 0,
+      "fold_dir": "inputs/folds/f01"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "train_cows": [
+        "COWID_02",
+        "COWID_12",
+        "COWID_13",
+        "COWID_14",
+        "COWID_10",
+        "COWID_11",
+        "COWID_15"
+      ],
+      "available_event_count": 338,
+      "available_window_count": 8103,
+      "test_event_count": 544,
+      "test_window_count": 21687,
+      "validation_event_count": 0,
+      "fold_dir": "inputs/folds/f02"
+    }
+  ],
+  "budgets": [
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 0,
+      "nominal_percent": 5,
+      "available_event_count": 645,
+      "selected_event_count": 33,
+      "actual_event_fraction": 0.05116279069767442,
+      "selected_window_count": 1315,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 7330126.0,
+      "selected_class_support": {
+        "STANDING": 255,
+        "LYING": 775,
+        "WALKING": 59,
+        "FEEDING": 226
+      },
+      "selected_event_class_support": {
+        "STANDING": 11,
+        "LYING": 5,
+        "WALKING": 10,
+        "FEEDING": 7
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        0,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        0,
+        5,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep00/p005"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 0,
+      "nominal_percent": 10,
+      "available_event_count": 645,
+      "selected_event_count": 65,
+      "actual_event_fraction": 0.10077519379844961,
+      "selected_window_count": 2422,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 13505000.0,
+      "selected_class_support": {
+        "STANDING": 716,
+        "LYING": 1175,
+        "WALKING": 78,
+        "FEEDING": 453
+      },
+      "selected_event_class_support": {
+        "STANDING": 20,
+        "LYING": 9,
+        "WALKING": 21,
+        "FEEDING": 15
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        0,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        0,
+        10,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep00/p010"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 0,
+      "nominal_percent": 25,
+      "available_event_count": 645,
+      "selected_event_count": 162,
+      "actual_event_fraction": 0.25116279069767444,
+      "selected_window_count": 5538,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 31017375.0,
+      "selected_class_support": {
+        "STANDING": 1334,
+        "LYING": 2396,
+        "WALKING": 166,
+        "FEEDING": 1642
+      },
+      "selected_event_class_support": {
+        "STANDING": 57,
+        "LYING": 21,
+        "WALKING": 46,
+        "FEEDING": 38
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        0,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        0,
+        25,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep00/p025"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 0,
+      "nominal_percent": 50,
+      "available_event_count": 645,
+      "selected_event_count": 323,
+      "actual_event_fraction": 0.5007751937984496,
+      "selected_window_count": 11622,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 64913434.0,
+      "selected_class_support": {
+        "STANDING": 3295,
+        "LYING": 4989,
+        "WALKING": 283,
+        "FEEDING": 3055
+      },
+      "selected_event_class_support": {
+        "STANDING": 117,
+        "LYING": 46,
+        "WALKING": 90,
+        "FEEDING": 70
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        0,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        0,
+        50,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep00/p050"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 0,
+      "nominal_percent": 100,
+      "available_event_count": 645,
+      "selected_event_count": 645,
+      "actual_event_fraction": 1.0,
+      "selected_window_count": 22566,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 126103875.0,
+      "selected_class_support": {
+        "STANDING": 6966,
+        "LYING": 9647,
+        "WALKING": 557,
+        "FEEDING": 5396
+      },
+      "selected_event_class_support": {
+        "STANDING": 247,
+        "LYING": 92,
+        "WALKING": 186,
+        "FEEDING": 120
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        0,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        0,
+        100,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep00/p100"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 1,
+      "nominal_percent": 5,
+      "available_event_count": 645,
+      "selected_event_count": 33,
+      "actual_event_fraction": 0.05116279069767442,
+      "selected_window_count": 896,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 5050240.0,
+      "selected_class_support": {
+        "STANDING": 460,
+        "LYING": 98,
+        "WALKING": 31,
+        "FEEDING": 307
+      },
+      "selected_event_class_support": {
+        "STANDING": 15,
+        "LYING": 1,
+        "WALKING": 10,
+        "FEEDING": 7
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        1,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        1,
+        5,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep01/p005"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 1,
+      "nominal_percent": 10,
+      "available_event_count": 645,
+      "selected_event_count": 65,
+      "actual_event_fraction": 0.10077519379844961,
+      "selected_window_count": 1547,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 8766520.0,
+      "selected_class_support": {
+        "STANDING": 755,
+        "LYING": 363,
+        "WALKING": 53,
+        "FEEDING": 376
+      },
+      "selected_event_class_support": {
+        "STANDING": 32,
+        "LYING": 4,
+        "WALKING": 20,
+        "FEEDING": 9
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        1,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        1,
+        10,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep01/p010"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 1,
+      "nominal_percent": 25,
+      "available_event_count": 645,
+      "selected_event_count": 162,
+      "actual_event_fraction": 0.25116279069767444,
+      "selected_window_count": 5126,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 28740276.0,
+      "selected_class_support": {
+        "STANDING": 1997,
+        "LYING": 1945,
+        "WALKING": 125,
+        "FEEDING": 1059
+      },
+      "selected_event_class_support": {
+        "STANDING": 68,
+        "LYING": 19,
+        "WALKING": 48,
+        "FEEDING": 27
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        1,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        1,
+        25,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep01/p025"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 1,
+      "nominal_percent": 50,
+      "available_event_count": 645,
+      "selected_event_count": 323,
+      "actual_event_fraction": 0.5007751937984496,
+      "selected_window_count": 10367,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 58059030.0,
+      "selected_class_support": {
+        "STANDING": 3448,
+        "LYING": 4084,
+        "WALKING": 310,
+        "FEEDING": 2525
+      },
+      "selected_event_class_support": {
+        "STANDING": 133,
+        "LYING": 37,
+        "WALKING": 97,
+        "FEEDING": 56
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        1,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        1,
+        50,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep01/p050"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 1,
+      "nominal_percent": 100,
+      "available_event_count": 645,
+      "selected_event_count": 645,
+      "actual_event_fraction": 1.0,
+      "selected_window_count": 22566,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 126103875.0,
+      "selected_class_support": {
+        "STANDING": 6966,
+        "LYING": 9647,
+        "WALKING": 557,
+        "FEEDING": 5396
+      },
+      "selected_event_class_support": {
+        "STANDING": 247,
+        "LYING": 92,
+        "WALKING": 186,
+        "FEEDING": 120
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        1,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        1,
+        100,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep01/p100"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 2,
+      "nominal_percent": 5,
+      "available_event_count": 645,
+      "selected_event_count": 33,
+      "actual_event_fraction": 0.05116279069767442,
+      "selected_window_count": 995,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 5575339.0,
+      "selected_class_support": {
+        "STANDING": 460,
+        "LYING": 258,
+        "WALKING": 13,
+        "FEEDING": 264
+      },
+      "selected_event_class_support": {
+        "STANDING": 17,
+        "LYING": 3,
+        "WALKING": 6,
+        "FEEDING": 7
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        2,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        2,
+        5,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep02/p005"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 2,
+      "nominal_percent": 10,
+      "available_event_count": 645,
+      "selected_event_count": 65,
+      "actual_event_fraction": 0.10077519379844961,
+      "selected_window_count": 1727,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 9690805.0,
+      "selected_class_support": {
+        "STANDING": 640,
+        "LYING": 526,
+        "WALKING": 59,
+        "FEEDING": 502
+      },
+      "selected_event_class_support": {
+        "STANDING": 30,
+        "LYING": 7,
+        "WALKING": 16,
+        "FEEDING": 12
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        2,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        2,
+        10,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep02/p010"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 2,
+      "nominal_percent": 25,
+      "available_event_count": 645,
+      "selected_event_count": 162,
+      "actual_event_fraction": 0.25116279069767444,
+      "selected_window_count": 5328,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 29775006.0,
+      "selected_class_support": {
+        "STANDING": 1474,
+        "LYING": 2294,
+        "WALKING": 132,
+        "FEEDING": 1428
+      },
+      "selected_event_class_support": {
+        "STANDING": 59,
+        "LYING": 24,
+        "WALKING": 48,
+        "FEEDING": 31
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        2,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        2,
+        25,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep02/p025"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 2,
+      "nominal_percent": 50,
+      "available_event_count": 645,
+      "selected_event_count": 323,
+      "actual_event_fraction": 0.5007751937984496,
+      "selected_window_count": 11071,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 61845935.0,
+      "selected_class_support": {
+        "STANDING": 2977,
+        "LYING": 4839,
+        "WALKING": 301,
+        "FEEDING": 2954
+      },
+      "selected_event_class_support": {
+        "STANDING": 116,
+        "LYING": 47,
+        "WALKING": 99,
+        "FEEDING": 61
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        2,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        2,
+        50,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep02/p050"
+    },
+    {
+      "fold_id": "f01",
+      "fold_number": 1,
+      "test_cow": "COWID_02",
+      "replicate": 2,
+      "nominal_percent": 100,
+      "available_event_count": 645,
+      "selected_event_count": 645,
+      "actual_event_fraction": 1.0,
+      "selected_window_count": 22566,
+      "test_window_count": 7224,
+      "original_interval_duration_ms": 126103875.0,
+      "selected_class_support": {
+        "STANDING": 6966,
+        "LYING": 9647,
+        "WALKING": 557,
+        "FEEDING": 5396
+      },
+      "selected_event_class_support": {
+        "STANDING": 247,
+        "LYING": 92,
+        "WALKING": 186,
+        "FEEDING": 120
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        1,
+        2,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        1,
+        2,
+        100,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f01/rep02/p100"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 0,
+      "nominal_percent": 5,
+      "available_event_count": 338,
+      "selected_event_count": 17,
+      "actual_event_fraction": 0.05029585798816568,
+      "selected_window_count": 282,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 1618339.0,
+      "selected_class_support": {
+        "STANDING": 46,
+        "LYING": 34,
+        "WALKING": 28,
+        "FEEDING": 174
+      },
+      "selected_event_class_support": {
+        "STANDING": 3,
+        "LYING": 1,
+        "WALKING": 9,
+        "FEEDING": 4
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        0,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        0,
+        5,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep00/p005"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 0,
+      "nominal_percent": 10,
+      "available_event_count": 338,
+      "selected_event_count": 34,
+      "actual_event_fraction": 0.10059171597633136,
+      "selected_window_count": 809,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 4579455.0,
+      "selected_class_support": {
+        "STANDING": 262,
+        "LYING": 34,
+        "WALKING": 40,
+        "FEEDING": 473
+      },
+      "selected_event_class_support": {
+        "STANDING": 10,
+        "LYING": 1,
+        "WALKING": 15,
+        "FEEDING": 8
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        0,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        0,
+        10,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep00/p010"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 0,
+      "nominal_percent": 25,
+      "available_event_count": 338,
+      "selected_event_count": 85,
+      "actual_event_fraction": 0.2514792899408284,
+      "selected_window_count": 2020,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 11439260.0,
+      "selected_class_support": {
+        "STANDING": 538,
+        "LYING": 499,
+        "WALKING": 81,
+        "FEEDING": 902
+      },
+      "selected_event_class_support": {
+        "STANDING": 23,
+        "LYING": 6,
+        "WALKING": 34,
+        "FEEDING": 22
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        0,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        0,
+        25,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep00/p025"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 0,
+      "nominal_percent": 50,
+      "available_event_count": 338,
+      "selected_event_count": 169,
+      "actual_event_fraction": 0.5,
+      "selected_window_count": 3901,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 22117704.0,
+      "selected_class_support": {
+        "STANDING": 1124,
+        "LYING": 880,
+        "WALKING": 201,
+        "FEEDING": 1696
+      },
+      "selected_event_class_support": {
+        "STANDING": 41,
+        "LYING": 12,
+        "WALKING": 74,
+        "FEEDING": 42
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        0,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        0,
+        50,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep00/p050"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 0,
+      "nominal_percent": 100,
+      "available_event_count": 338,
+      "selected_event_count": 338,
+      "actual_event_fraction": 1.0,
+      "selected_window_count": 8103,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 45819770.0,
+      "selected_class_support": {
+        "STANDING": 2584,
+        "LYING": 2701,
+        "WALKING": 423,
+        "FEEDING": 2395
+      },
+      "selected_event_class_support": {
+        "STANDING": 82,
+        "LYING": 32,
+        "WALKING": 156,
+        "FEEDING": 68
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        0,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        0,
+        100,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep00/p100"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 1,
+      "nominal_percent": 5,
+      "available_event_count": 338,
+      "selected_event_count": 17,
+      "actual_event_fraction": 0.05029585798816568,
+      "selected_window_count": 512,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 2873981.0,
+      "selected_class_support": {
+        "STANDING": 122,
+        "LYING": 156,
+        "WALKING": 7,
+        "FEEDING": 227
+      },
+      "selected_event_class_support": {
+        "STANDING": 6,
+        "LYING": 1,
+        "WALKING": 5,
+        "FEEDING": 5
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        1,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        1,
+        5,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep01/p005"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 1,
+      "nominal_percent": 10,
+      "available_event_count": 338,
+      "selected_event_count": 34,
+      "actual_event_fraction": 0.10059171597633136,
+      "selected_window_count": 1054,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 5914158.0,
+      "selected_class_support": {
+        "STANDING": 200,
+        "LYING": 468,
+        "WALKING": 26,
+        "FEEDING": 360
+      },
+      "selected_event_class_support": {
+        "STANDING": 10,
+        "LYING": 3,
+        "WALKING": 12,
+        "FEEDING": 9
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        1,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        1,
+        10,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep01/p010"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 1,
+      "nominal_percent": 25,
+      "available_event_count": 338,
+      "selected_event_count": 85,
+      "actual_event_fraction": 0.2514792899408284,
+      "selected_window_count": 2355,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 13246201.0,
+      "selected_class_support": {
+        "STANDING": 551,
+        "LYING": 798,
+        "WALKING": 71,
+        "FEEDING": 935
+      },
+      "selected_event_class_support": {
+        "STANDING": 20,
+        "LYING": 7,
+        "WALKING": 34,
+        "FEEDING": 24
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        1,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        1,
+        25,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep01/p025"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 1,
+      "nominal_percent": 50,
+      "available_event_count": 338,
+      "selected_event_count": 169,
+      "actual_event_fraction": 0.5,
+      "selected_window_count": 3939,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 22318456.0,
+      "selected_class_support": {
+        "STANDING": 1145,
+        "LYING": 1136,
+        "WALKING": 163,
+        "FEEDING": 1495
+      },
+      "selected_event_class_support": {
+        "STANDING": 40,
+        "LYING": 16,
+        "WALKING": 71,
+        "FEEDING": 42
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        1,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        1,
+        50,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep01/p050"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 1,
+      "nominal_percent": 100,
+      "available_event_count": 338,
+      "selected_event_count": 338,
+      "actual_event_fraction": 1.0,
+      "selected_window_count": 8103,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 45819770.0,
+      "selected_class_support": {
+        "STANDING": 2584,
+        "LYING": 2701,
+        "WALKING": 423,
+        "FEEDING": 2395
+      },
+      "selected_event_class_support": {
+        "STANDING": 82,
+        "LYING": 32,
+        "WALKING": 156,
+        "FEEDING": 68
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        1,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        1,
+        100,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep01/p100"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 2,
+      "nominal_percent": 5,
+      "available_event_count": 338,
+      "selected_event_count": 17,
+      "actual_event_fraction": 0.05029585798816568,
+      "selected_window_count": 310,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 1783643.0,
+      "selected_class_support": {
+        "STANDING": 120,
+        "LYING": 169,
+        "WALKING": 9,
+        "FEEDING": 12
+      },
+      "selected_event_class_support": {
+        "STANDING": 7,
+        "LYING": 3,
+        "WALKING": 6,
+        "FEEDING": 1
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        2,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        2,
+        5,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep02/p005"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 2,
+      "nominal_percent": 10,
+      "available_event_count": 338,
+      "selected_event_count": 34,
+      "actual_event_fraction": 0.10059171597633136,
+      "selected_window_count": 424,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 2491556.0,
+      "selected_class_support": {
+        "STANDING": 136,
+        "LYING": 169,
+        "WALKING": 30,
+        "FEEDING": 89
+      },
+      "selected_event_class_support": {
+        "STANDING": 9,
+        "LYING": 3,
+        "WALKING": 17,
+        "FEEDING": 5
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        2,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        2,
+        10,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep02/p010"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 2,
+      "nominal_percent": 25,
+      "available_event_count": 338,
+      "selected_event_count": 85,
+      "actual_event_fraction": 0.2514792899408284,
+      "selected_window_count": 1502,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 8619465.0,
+      "selected_class_support": {
+        "STANDING": 543,
+        "LYING": 352,
+        "WALKING": 91,
+        "FEEDING": 516
+      },
+      "selected_event_class_support": {
+        "STANDING": 22,
+        "LYING": 5,
+        "WALKING": 42,
+        "FEEDING": 16
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        2,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        2,
+        25,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep02/p025"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 2,
+      "nominal_percent": 50,
+      "available_event_count": 338,
+      "selected_event_count": 169,
+      "actual_event_fraction": 0.5,
+      "selected_window_count": 3564,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 20255144.0,
+      "selected_class_support": {
+        "STANDING": 1193,
+        "LYING": 941,
+        "WALKING": 158,
+        "FEEDING": 1272
+      },
+      "selected_event_class_support": {
+        "STANDING": 39,
+        "LYING": 15,
+        "WALKING": 74,
+        "FEEDING": 41
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        2,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        2,
+        50,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep02/p050"
+    },
+    {
+      "fold_id": "f02",
+      "fold_number": 2,
+      "test_cow": "COWID_03",
+      "replicate": 2,
+      "nominal_percent": 100,
+      "available_event_count": 338,
+      "selected_event_count": 338,
+      "actual_event_fraction": 1.0,
+      "selected_window_count": 8103,
+      "test_window_count": 21687,
+      "original_interval_duration_ms": 45819770.0,
+      "selected_class_support": {
+        "STANDING": 2584,
+        "LYING": 2701,
+        "WALKING": 423,
+        "FEEDING": 2395
+      },
+      "selected_event_class_support": {
+        "STANDING": 82,
+        "LYING": 32,
+        "WALKING": 156,
+        "FEEDING": 68
+      },
+      "missing_selected_classes": [],
+      "batches_shape": [
+        3000,
+        32
+      ],
+      "batch_dtype": "int32",
+      "event_order_seedsequence": [
+        20260909,
+        2,
+        2,
+        101
+      ],
+      "batch_seedsequence": [
+        20260909,
+        2,
+        2,
+        100,
+        202
+      ],
+      "sampler": "uniform selected original event, then uniform retained event window",
+      "uses_class_for_selection": false,
+      "missing_class_redraw": false,
+      "budget_dir": "inputs/budgets/f02/rep02/p100"
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "local_only_artifacts": [
+    "analysis/test_truth.csv"
+  ],
+  "retrospective_development_benchmark": true,
+  "human_time_measured": false,
+  "budget_unit": "original event_id with at least one fully contained sensor-defined window",
+  "no_validation_checkpoint_selection": true,
+  "other_fold_training_labels_exist_in_bundle": true,
+  "identity_note": "Original cow_id preserved; 23489 pair grouped conservatively for leakage only, not declared one animal."
+}

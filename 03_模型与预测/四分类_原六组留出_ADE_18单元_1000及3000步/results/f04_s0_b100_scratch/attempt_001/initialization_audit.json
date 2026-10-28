@@ -1,0 +1,314 @@
+{
+  "method": "scratch",
+  "target_seed": 20300909,
+  "parameter_count": 828,
+  "all_parameters_trainable": true,
+  "state_order": [
+    "standing",
+    "lying",
+    "walking",
+    "feeding"
+  ],
+  "copied_keys": [],
+  "keys": [
+    {
+      "key": "ccnn_linear.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        4,
+        3,
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "ccnn_nonlinear.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        4,
+        3,
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "nonlinear_convs.0.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        4,
+        4,
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "nonlinear_convs.1.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        4,
+        4,
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "nonlinear_convs.2.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        4,
+        4,
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "posture_bn.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "posture_bn.bias",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "posture_bn.running_mean",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "posture_bn.running_var",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "posture_bn.num_batches_tracked",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [],
+      "dtype": "torch.int64"
+    },
+    {
+      "key": "walking_bn.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "walking_bn.bias",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "walking_bn.running_mean",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "walking_bn.running_var",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "walking_bn.num_batches_tracked",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [],
+      "dtype": "torch.int64"
+    },
+    {
+      "key": "feeding_bn.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "feeding_bn.bias",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "feeding_bn.running_mean",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "feeding_bn.running_var",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "feeding_bn.num_batches_tracked",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [],
+      "dtype": "torch.int64"
+    },
+    {
+      "key": "posture_head.0.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        6,
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "posture_head.0.bias",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        6
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "posture_head.2.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        2,
+        6
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "posture_head.2.bias",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        2
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "walking_head.0.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        6,
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "walking_head.0.bias",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        6
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "walking_head.2.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        2,
+        6
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "walking_head.2.bias",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        2
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "feeding_head.0.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        6,
+        8
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "feeding_head.0.bias",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        6
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "feeding_head.2.weight",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        2,
+        6
+      ],
+      "dtype": "torch.float32"
+    },
+    {
+      "key": "feeding_head.2.bias",
+      "source_key": null,
+      "action": "fresh",
+      "shape": [
+        2
+      ],
+      "dtype": "torch.float32"
+    }
+  ],
+  "source_checkpoint": null
+}

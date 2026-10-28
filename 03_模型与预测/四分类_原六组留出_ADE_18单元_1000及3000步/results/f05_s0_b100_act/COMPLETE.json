@@ -1,0 +1,20 @@
+{
+  "status": "complete",
+  "unit_id": "f05_s0_b100_act",
+  "attempt": "attempt_001",
+  "binding": {},
+  "parameter_count": 828,
+  "train_interval_count": 770,
+  "train_window_count": 28357,
+  "test_window_count": 554,
+  "endpoint_steps": [
+    1000,
+    3000
+  ],
+  "precision": "FP32",
+  "guard": {
+    "name": "Local\\DATASET_X",
+    "membership_verified": true,
+    "pid": 51044
+  }
+}

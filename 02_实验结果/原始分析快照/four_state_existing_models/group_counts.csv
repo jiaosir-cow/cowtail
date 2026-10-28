@@ -1,0 +1,14 @@
+﻿version,group,windows,events,supported_classes,standing_windows,standing_events,lying_windows,lying_events,walking_windows,walking_events,feeding_windows,feeding_events
+new,cowA,6342,209,4,2041,67,2034,23,97,56,2170,63
+new,cowC,328,17,4,39,2,211,3,20,9,58,3
+new,cowD,554,11,3,194,4,353,4,7,3,0,0
+new,COW_OTHER,6114,163,4,2342,87,2989,29,69,32,714,15
+new,cowB,5512,127,4,1368,47,2060,18,74,23,2010,39
+new,COW_OTHER,5216,124,4,1726,56,2531,24,69,24,890,20
+new,COW_OTHER,4845,130,4,1220,48,1964,19,46,19,1615,44
+old,cowA,6342,209,4,2041,67,2034,23,97,56,2170,63
+old,COW_OTHER,19841,486,4,6412,222,9006,85,246,91,4177,88
+old,COW_OTHER,1563,51,4,222,15,538,5,10,6,793,25
+old,cowC,328,17,4,39,2,211,3,20,9,58,3
+old,cowD,554,11,3,194,4,353,4,7,3,0,0
+old,COW_OTHER,283,7,3,22,1,0,0,2,1,259,5
