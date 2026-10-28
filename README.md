@@ -15,7 +15,45 @@ loads a labelled window and the matching raw samples end to end.
 
 ---
 
-## Contents
+## Two datasets in one repository
+
+| | `01_数据`–`04_原始传感与标签` | `05_six_cows_full` |
+|---|---|---|
+| Scope | the held-out four-cow test subset | **the complete field data, training + test** |
+| Animals | 4 | 6 |
+| Windows | 12,736 | 28,911 |
+| Sessions | 31 | 62 |
+| Raw 9-axis | yes, all 31 sessions | only the 31 sessions shared with the subset |
+| Labels | 4 classes | 4 classes + `split` + `analysis_slice` |
+
+The four-cow folder is a strict subset of `05_six_cows_full`, but the names differ:
+the four-cow `cowB` is only an 11-session slice of six-cow `cowB`, and four-cow
+`cowC`/`cowD` are six-cow `cowD`/`cowE`. Always state which naming you use —
+see [`05_six_cows_full/cow_crosswalk.csv`](05_six_cows_full/cow_crosswalk.csv).
+
+## Six-cow dataset (`05_six_cows_full`)
+
+| Cow | Split | Windows | Sessions | STANDING | LYING | WALKING | FEEDING |
+|---|---|---:|---:|---:|---:|---:|---:|
+| `cowA` | train | 6,342 | 17 | 2,041 | 2,034 | 97 | 2,170 |
+| `cowB` | test | 19,841 | 38 | 6,412 | 9,006 | 246 | 4,177 |
+| `cowC` | test | 1,563 | 3 | 222 | 538 | 10 | 793 |
+| `cowD` | train | 328 | 2 | 39 | 211 | 20 | 58 |
+| `cowE` | train | 554 | 1 | 194 | 353 | 7 | 0 |
+| `cowF` | test | 283 | 1 | 22 | 0 | 2 | 259 |
+| **Total** | | **28,911** | **62** | 8,930 | 12,142 | 382 | 7,457 |
+
+`split` comes from the paper's fixed record buckets (`20201-3` for training,
+`21074-1` for testing) and was not tuned on results. `analysis_slice` preserves the
+seven reporting slices: `A`, `D`, `E` in training, and `B1`, `C1`, `F1`, `G1` inside
+the test bucket. Those four test slices are analytical groupings of one record
+bucket, **not four additional animals** — do not treat slice differences as
+individual differences.
+
+`cowE` has no `FEEDING` and `cowF` has no `LYING`; neither is a complete four-class
+validation animal.
+
+## Four-cow test subset (`01_数据`–`04`)
 
 | Cow | Sessions | Windows | STANDING | LYING | WALKING | FEEDING |
 |---|---:|---:|---:|---:|---:|---:|
@@ -29,10 +67,11 @@ loads a labelled window and the matching raw samples end to end.
 covers only 198 windows and its per-class scores are unstable.
 
 ```
-01_数据/                        window tables, labels, model-ready arrays
+01_数据/                        four-cow test subset: tables, labels, arrays
 02_实验结果/                    reported metrics, per class and per replicate
 03_模型与预测/                  archived predictions and unit-level metrics
 04_原始传感与标签/              raw 9-axis JSON + original label files
+05_six_cows_full/               complete six-cow field data (train + test)
 docs/                           data dictionary, label scheme, limitations
 code/                           loader, manifest generator, verification
 ```

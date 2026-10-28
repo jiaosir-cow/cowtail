@@ -254,3 +254,29 @@ cannot be linked to any earlier archive, recompute them with a salt (§8, item 6
 6. `window_id` / `event_id` predate anonymisation. Salted re-hashing is available on
    request and is recommended if the release must not be linkable to internal
    archives.
+
+---
+
+## 9. Six-cow dataset (`05_six_cows_full`)
+
+The complete field collection, 28,911 windows over 6 cows and 62 sessions. Same
+window contract as §4 (50 Hz, 256 samples, 5.12 s, per-window `scale_g`
+normalisation). Extra columns compared with §3:
+
+| column | meaning |
+|---|---|
+| `split` | `train` (record bucket 20201-3, 7,224 windows) or `test` (bucket 21074-1, 21,687 windows) |
+| `analysis_slice` | reporting group: `A`, `D`, `E` in training; `B1`, `C1`, `F1`, `G1` inside the test bucket |
+| `cow_id` | `cowA` … `cowF` |
+
+The four test slices are session-contiguous groupings of **one record bucket**, not
+four additional animals: `cowB` alone contributes 19,841 windows to that bucket, and
+`B1`/`C1`/`F1`/`G1` partition it. Do not treat slice differences as individual
+differences, and do not use slices as independent replicates.
+
+Naming differs from the four-cow subset in §1: four-cow `cowB` is the 11-session
+slice `C1` of six-cow `cowB`; four-cow `cowC` and `cowD` are six-cow `cowD` and
+`cowE`. See `05_six_cows_full/cow_crosswalk.csv`.
+
+Raw 9-axis coverage: only the 31 sessions shared with the four-cow subset (12,736 of
+28,911 windows, 44%). The remaining 31 sessions exist only as 3-axis derived windows.

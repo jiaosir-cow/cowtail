@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "algorithm": "sha256",
-  "file_count": 1942,
+  "file_count": 1963,
   "files": {
     ".gitignore": {
       "size_bytes": 83,
@@ -7727,6 +7727,86 @@
       "size_bytes": 1235,
       "sha256": "eb564eb7ad5374d41261ce3e644f7c1f5476ba0ac74298de07be9d97d2b6451d"
     },
+    "05_six_cows_full/README.md": {
+      "size_bytes": 3061,
+      "sha256": "a301d2ef2569d3f4a9d5efe10782e8e038930f71de91f98d5394e7486debda71"
+    },
+    "05_six_cows_full/acceleration.npy": {
+      "size_bytes": 88814720,
+      "sha256": "1f72f4ed1cb3711b19d0c9afac6cd089d6c36ab246d48b46b7fe78f7e24e0cc8"
+    },
+    "05_six_cows_full/class_support.csv": {
+      "size_bytes": 205,
+      "sha256": "76c16ebb4c34282e97d5d7955ae6a30af29017bc0d43f70c96d17b568f66df95"
+    },
+    "05_six_cows_full/cowA/labels.csv": {
+      "size_bytes": 30578,
+      "sha256": "31080d2ea546028aa94446ff85445041ec0d6cdc3c50aa56e51d87b819fb713c"
+    },
+    "05_six_cows_full/cowA/window_indices.npy": {
+      "size_bytes": 50864,
+      "sha256": "201043c41ec9f8a17abad9dfa8288af7aeab8562345f7ddd009eb578eeb9b4e1"
+    },
+    "05_six_cows_full/cowB/labels.csv": {
+      "size_bytes": 70925,
+      "sha256": "a6b33c6880a6894edc16a336e3cfabaef6565da97b48310327e577b05365ca44"
+    },
+    "05_six_cows_full/cowB/window_indices.npy": {
+      "size_bytes": 158856,
+      "sha256": "1b0f2a6813b995b4b7800b7c063eaad680dbc6cdb908e217ee43bc33be4a1f0b"
+    },
+    "05_six_cows_full/cowC/labels.csv": {
+      "size_bytes": 7581,
+      "sha256": "4d105f736b5de8197747ccd5c801329e7918749bda02f45f2a93c276c83fad5f"
+    },
+    "05_six_cows_full/cowC/window_indices.npy": {
+      "size_bytes": 12632,
+      "sha256": "ec794f6a0b16e300afdbb4a5e65da3769d7af9ad08396fd4ddf7325e85ec88dc"
+    },
+    "05_six_cows_full/cowD/labels.csv": {
+      "size_bytes": 2615,
+      "sha256": "6eed80b043e117ff1dd56d0a7ee285852a50b07359902fa095c416a2e406ec80"
+    },
+    "05_six_cows_full/cowD/window_indices.npy": {
+      "size_bytes": 2752,
+      "sha256": "e0cce382094840eacdbc0f1620303e6f22c93db33b58222d7a0e8220679ae56a"
+    },
+    "05_six_cows_full/cowE/labels.csv": {
+      "size_bytes": 1756,
+      "sha256": "8f3200cc4938f78969a23780ffd6ee4006572f1931c5833b23d785114d5f6e1d"
+    },
+    "05_six_cows_full/cowE/window_indices.npy": {
+      "size_bytes": 4560,
+      "sha256": "29e98c20a2c511a278587d6a7ef8673c77ffc1e40375b4a2ae1ada60b49bde4b"
+    },
+    "05_six_cows_full/cowF/labels.csv": {
+      "size_bytes": 1172,
+      "sha256": "84ed9b55fb6391bbb904c1d56a360be822370016fa753366883256b2cb545d70"
+    },
+    "05_six_cows_full/cowF/window_indices.npy": {
+      "size_bytes": 2392,
+      "sha256": "dfd0e12d90442908d90dce2056b788e5703ed14289a8d92724180634d8396022"
+    },
+    "05_six_cows_full/cow_crosswalk.csv": {
+      "size_bytes": 408,
+      "sha256": "4580977745d587321897f29dc8669cdbdd9bcac36df01b4627e8b62d3b4258d1"
+    },
+    "05_six_cows_full/events.csv": {
+      "size_bytes": 113842,
+      "sha256": "7b14407d5faef9b6ee62df9839936d5e25c0df33358fdbd65d1ed0a6489d04bf"
+    },
+    "05_six_cows_full/source_window_indices.npy": {
+      "size_bytes": 231416,
+      "sha256": "bb6f2a5ffb8d0fc71ddf01c8e0ba10fb0f67807c371136e3e3d263f3c5f65d19"
+    },
+    "05_six_cows_full/test_truth.csv": {
+      "size_bytes": 3027102,
+      "sha256": "967c986f2b7f905752d732329f9efe368c35e594923ce599e8d6e7baab394646"
+    },
+    "05_six_cows_full/windows.csv": {
+      "size_bytes": 8009249,
+      "sha256": "48fe87e7f0a97f121cde8fb5e93e116c3c5a4e04d07e512736f9e9bf0775da50"
+    },
     "FINAL_VERIFICATION.json": {
       "size_bytes": 1051,
       "sha256": "b809f2f8b85fdfc9335edfd3bb26900f6cf2c4369c4afc869d0454012670fc17"
@@ -7740,8 +7820,12 @@
       "sha256": "13d52df9e8a633c6f9039fc8b6e51ef4a66834a1de7b7e9acb16c1143848a353"
     },
     "README.md": {
-      "size_bytes": 5883,
-      "sha256": "01239e171124765030817fb11db167192cc63d878352b1dfc682b766f9bd4c49"
+      "size_bytes": 8012,
+      "sha256": "43fb5b738e018acde162bb69bdbfa327d34913910d015140b8bdd7e235f70add"
+    },
+    "code/build_six_cows_public.py": {
+      "size_bytes": 6769,
+      "sha256": "22bd773fcde831e00a2e69a1817f235f7ef0059c03a08b816ed058f54b53ba89"
     },
     "code/load_example.py": {
       "size_bytes": 4536,
@@ -7752,8 +7836,8 @@
       "sha256": "8a02bbea78bfe1a075b5455137d62d6d0c6041c8b228f6fa059830721b6a87fe"
     },
     "docs/data_dictionary.md": {
-      "size_bytes": 11402,
-      "sha256": "dd740a02eddb4293b82101bef98e20304286abf615692edaec80d53d3590c0c4"
+      "size_bytes": 12914,
+      "sha256": "0c540b1ee6811c276e8f5ba858dc6ac4927e6fa39d14ef8ac6f78c542f802b69"
     },
     "整理四牛数据.py": {
       "size_bytes": 9458,

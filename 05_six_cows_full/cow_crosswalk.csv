@@ -1,0 +1,7 @@
+display_cow,six_cow,windows_in_package,windows_of_that_cow,relation
+cowA,cowA,6342,6342,same animal and same windows
+cowB,cowB,5512,19841,11-session slice of cowB (legacy analysis group C1); not the whole cow
+cowC,cowD,328,328,renamed only
+cowD,cowE,554,554,renamed only
+,cowC,0,1563,no raw 9-axis release; not in the four-cow test package
+,cowF,0,283,no raw 9-axis release; not in the four-cow test package

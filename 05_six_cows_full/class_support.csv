@@ -1,0 +1,7 @@
+﻿cow_id,split,FEEDING,LYING,STANDING,WALKING
+cowA,train,2170,2034,2041,97
+cowB,test,4177,9006,6412,246
+cowC,test,793,538,222,10
+cowD,train,58,211,39,20
+cowE,train,0,353,194,7
+cowF,test,259,0,22,2
