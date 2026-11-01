@@ -1,0 +1,61 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below, together with the companion manuscript."
+type: dataset
+title: "CowTail-4: A Tail-Mounted Nine-Axis IMU Behaviour Dataset for Dairy Cattle"
+version: "1.0"
+license: CC-BY-4.0
+license-url: "https://github.com/jiaosir-cow/cowtail/blob/main/LICENSE"
+repository-code: "https://github.com/jiaosir-cow/cowtail"
+url: "https://github.com/jiaosir-cow/cowtail"
+abstract: >-
+  A fully labelled field dataset of dairy-cattle behaviour recorded at the tail
+  root with a nine-axis inertial sensor. It provides raw sensor streams, the
+  annotation layer used to derive reference labels, and the model-input windows
+  used in the companion manuscript: 4 cows, 31 sessions, 12,736 non-overlapping
+  windows of 5.12 s at 50 Hz, and four behaviour classes (standing, lying,
+  walking, feeding).
+keywords:
+  - cattle
+  - dairy cattle
+  - inertial measurement unit
+  - accelerometer
+  - animal behaviour
+  - behaviour recognition
+  - precision livestock farming
+  - dataset
+authors:
+  - family-names: Yang
+    given-names: Zhanhai
+  - family-names: Jiao
+    given-names: Tengyu
+  - family-names: Zhang
+    given-names: Jianqi
+  - family-names: Zhang
+    given-names: Xiangqing
+    email: zxq1991@mail.nwpu.edu.cn
+  - family-names: Zhang
+    given-names: Yalong
+  - family-names: Jiang
+    given-names: Qinglin
+  - family-names: Zhang
+    given-names: Yihui
+preferred-citation:
+  type: article
+  title: "Reusing public collar models for cattle behaviour recognition from tail acceleration with limited labels"
+  authors:
+    - family-names: Yang
+      given-names: Zhanhai
+    - family-names: Jiao
+      given-names: Tengyu
+    - family-names: Zhang
+      given-names: Jianqi
+    - family-names: Zhang
+      given-names: Xiangqing
+    - family-names: Zhang
+      given-names: Yalong
+    - family-names: Jiang
+      given-names: Qinglin
+    - family-names: Zhang
+      given-names: Yihui
+  journal: animal
+  year: 2026
