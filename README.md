@@ -62,7 +62,7 @@ recognition from tail acceleration with limited labels*.
 
 ```
 cowtail/
-├── 01_数据/                  model-input windows, window table, normalisation scale
+├── 01_数据/                  master window table, per-cow arrays, normalisation scale
 ├── 02_实验结果/              archived metrics and confusion counts
 ├── 03_模型与预测/            checkpoints and per-window predictions
 ├── 04_原始传感与标签/        raw nine-axis streams and reference intervals
@@ -81,19 +81,28 @@ Folder names are kept in Chinese to match the annotation software's on-disk conv
 ## 🚀 Quick start
 
 ```python
-import json
 import numpy as np
+import pandas as pd
 
-X = np.load("01_数据/acceleration.npy")        # (N, 3, 256) — window-normalised
-meta = json.load(open("01_数据/window_table.json", encoding="utf-8"))
+X = np.load("01_数据/acceleration.npy")          # (12736, 3, 256), window-normalised
+meta = pd.read_csv("01_数据/windows.csv", encoding="utf-8-sig")
 
-print(X.shape)                  # (12736, 3, 256)
-print(meta[0]["label"], meta[0]["session_id"])
+print(X.shape)                                   # (12736, 3, 256)
+print(meta[["display_cow", "session_id", "original_state"]].head())
 ```
 
-`acceleration.npy` is **normalised per window**. Multiply by the stored `scale_g` to recover
-approximate acceleration in *g*. Raw nine-axis streams live in `04_原始传感与标签/` and join on
+`acceleration.npy` is **normalised per window**; multiply a window by its stored `scale_g` to
+recover approximate acceleration in *g*. Per-cow arrays sit alongside it as
+`01_数据/<cow>/acceleration.npy`. Raw nine-axis streams live in `04_原始传感与标签/` and join on
 `session_id`.
+
+The end-to-end example follows one labelled window back to its raw session and checks that both
+paths describe the same motion:
+
+```bash
+python code/load_example.py            # first WALKING window
+python code/load_example.py cowA 100   # cow, row_index
+```
 
 ## 📝 Annotation protocol
 
