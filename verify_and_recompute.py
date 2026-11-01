@@ -1,7 +1,7 @@
 """Portable, read-only verification of this folder; never train or run a model.
 
 Python dependencies for --recompute-four-state: numpy, pandas, scikit-learn.
-Run python -B 核验与复算.py --recompute-four-state from any working directory.
+Run python -B verify_and_recompute.py --recompute-four-state from any working directory.
 """
 from __future__ import annotations
 import argparse
@@ -35,11 +35,11 @@ def recompute():
     import numpy as np
     import pandas as pd
     from sklearn.metrics import accuracy_score,f1_score,matthews_corrcoef
-    data=ROOT/'01_数据'
-    archived=ROOT/'03_模型与预测/四分类_旧牛号留出_90单元_仅1000步'
+    data=ROOT/'01_data'
+    archived=ROOT/'03_models_predictions/four_class_old_cow_holdout_90units_1000steps'
     w=pd.read_csv(data/'windows.csv',keep_default_na=False)
     old=pd.read_csv(archived/'inputs/windows.csv',keep_default_na=False)
-    expected=pd.read_csv(ROOT/'02_实验结果/四分类_统一旧牛号留出协议/metrics_by_replicate.csv',keep_default_na=False)
+    expected=pd.read_csv(ROOT/'02_results/four_class_unified_old_cow_holdout/metrics_by_replicate.csv',keep_default_na=False)
     check(len(w)==12736 and w.window_id.is_unique,'Wrong selected dataset')
     combined=np.load(data/'acceleration.npy',mmap_mode='r',allow_pickle=False)
     source=np.load(archived/'inputs/acceleration.npy',mmap_mode='r',allow_pickle=False)

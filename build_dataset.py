@@ -49,7 +49,7 @@ def rename_display(frame):
     return f
 
 def main():
-    data=ROOT/'01_数据'
+    data=ROOT/'01_data'
     check(not (data/'DATA_MANIFEST.json').exists(),'Dataset already prepared; preserve the existing package')
     paths={n:SOURCE/n for n in ['windows.csv','events.csv','acceleration.npy']}
     paths['canonical_annotations']=ANNOTATIONS
@@ -114,13 +114,13 @@ def main():
         (folder/'README.md').write_text(f'# {cow}\n\n本目录包含本案例所用的传感窗口、标签、全部对应母标签及来源索引。\n\n'
             f'可用区间：{len(ce)}；窗口：{len(cw)}；全部对应母标签：{len(ca)}。\n\n'
             '`row_index`对应本目录acceleration.npy，`package_row_index`对应上级合并数组。原始标签内容及来源牛号保持不变。\n\n'
-            '身份声明和来源对应见CASE.json；实验结果见根目录02_实验结果。\n'+
+            '身份声明和来源对应见CASE.json；实验结果见根目录02_results。\n'+
             ('\n本案例没有采食真值，不能作为完整四分类验证。\n' if cow=='cowD' else ''),encoding='utf-8')
     summary=[]
     for v in summaries:
         row={k:val for k,val in v.items() if not isinstance(val,(dict,list))}
         row.update({s:v['class_window_support'][s] for s in STATES});summary.append(row)
-    write_csv(data/'四牛标签与窗口数量.csv',pd.DataFrame(summary))
+    write_csv(data/'four_cow_label_and_window_counts.csv',pd.DataFrame(summary))
     write_json(ROOT/'身份与命名约定.json',{
         'recorded_at_utc':datetime.now(timezone.utc).isoformat(),'display_cows':['cowA','cowB','cowC','cowD'],
         'display_rename':{'cowA':'cowA','cowB':'cowB','cowC':'cowC','cowD':'cowD'},

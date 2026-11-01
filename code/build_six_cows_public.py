@@ -4,7 +4,7 @@
 Inputs (author-side only, not distributed):
   datasets/six_cows_field_record_20261018/   six-cow windows, events, labels
   datasets/BCF_repartition_B1_C1_F1_G1_20261027/  analysis-slice assignment
-  四牛案例资料_20261027/01_数据/session_identity_mapping.csv  device/session numbering
+  四牛案例资料_20261027/01_data/session_identity_mapping.csv  device/session numbering
 
 It renumbers devices and sessions, renames animals to cowA-cowF, drops registry
 identifiers and internal paths, and leaves every numeric column untouched.
@@ -43,7 +43,7 @@ ID2COW = {}
 
 def build_maps():
     # 会话编号：先沿用四牛包使用的 31 个（原始映射文件里按时间排序即当初的编号顺序）
-    om = pd.read_csv(os.path.join(FOUR, "01_数据", "session_identity_mapping.csv"),
+    om = pd.read_csv(os.path.join(FOUR, "01_data", "session_identity_mapping.csv"),
                      encoding="utf-8-sig")
     known = sorted(om.session_id.unique())
     sess = {s: f"SESSION_{i+1:02d}" for i, s in enumerate(known)}

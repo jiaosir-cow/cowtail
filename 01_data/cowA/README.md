@@ -6,4 +6,4 @@
 
 `row_index`对应本目录acceleration.npy，`package_row_index`对应上级合并数组。原始标签内容及来源牛号保持不变。
 
-身份声明和来源对应见CASE.json；实验结果见根目录02_实验结果。
+身份声明和来源对应见CASE.json；实验结果见根目录02_results。

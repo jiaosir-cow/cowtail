@@ -221,7 +221,7 @@ def main():
     outputs = {path.name: sha(path) for path in args.output.glob("*.csv")}
     act = summary.loc[summary.source.eq("ACT")].set_index("group")
     lines = [
-        "# 全部保留组：公开模型直接识别行走的复核", "",
+        "# 全部保留组：public_model_walking_direct的复核", "",
         "所有 28,911 个已标注窗口都只用于本地测试。模型为已有公开数据训练得到的冻结模型；本次没有新训练、尾圈标签学习或阈值调参。",
         "这里是行走/非行走二分类，不能当作站立、卧躺、行走、采食四分类成绩。", "",
         "B1、C1、F1、G1 是原 B/C/F 数据按完整会话重分的分析组。其总数据和预测未改变，所以合并成绩与重分前完全相同。分组不能创造总体准确率提升。",
@@ -235,8 +235,8 @@ def main():
         row = act.loc[group]
         lines.append(f"| {group} | {int(row.windows)} | {int(row.walking_windows)} | {row.walking_ap_mean:.2%} | {row.precision_mean:.2%} | {row.recall_mean:.2%} | {row.walking_f1_mean:.2%} | {row.rms_walking_ap_mean:.2%} |")
     lines += ["", "其余 JBB、UFRO、MULTI 来源的全部种子、旧 B/C/F 对照及四类真值数量均保存在 CSV。未按分组效果删除样本、来源或负向结果。", "", "四个新组都有四类真值；这只说明可评估四分类，不代表本项二分类模型已经具备四分类能力。"]
-    (args.output / "结果说明.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    outputs["结果说明.md"] = sha(args.output / "结果说明.md")
+    (args.output / "results_notes.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    outputs["results_notes.md"] = sha(args.output / "results_notes.md")
     verification = {
         "status": "PASS", "created_at_utc": datetime.now(timezone.utc).isoformat(),
         "script_sha256": sha(Path(__file__)), "source_archive_frozen_sha256": pin,

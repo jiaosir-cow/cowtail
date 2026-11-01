@@ -13,13 +13,13 @@ If a value here disagrees with a file, the file is wrong — please open an issu
 ## 1. Directory layout
 
 ```
-01_数据/                          package-level tables and model input
+01_data/                          package-level tables and model input
   acceleration.npy                (12736, 3, 256) float32
   windows.csv                     12,736 rows, 1 row per window
   events.csv                      468 annotated intervals
   canonical_annotations.csv       468 annotation records (full annotation layer)
   session_identity_mapping.csv    31 sessions -> device + cow
-  四牛标签与窗口数量.csv           per-cow summary counts
+  four_cow_label_and_window_counts.csv           per-cow summary counts
   DATA_MANIFEST.json              shapes, counts, class support
   cowA/  cowB/  cowC/  cowD/
     acceleration.npy              (N_cow, 3, 256) float32
@@ -31,9 +31,9 @@ If a value here disagrees with a file, the file is wrong — please open an issu
     package_row_indices.npy       int64 (N_cow,) row -> package acceleration.npy
     source_dataset_row_indices.npy int64 (N_cow,)
 
-02_实验结果/                      reported metrics (per class, per replicate, confusion)
-03_模型与预测/                    archived predictions and per-unit metrics
-04_原始传感与标签/                raw sensor streams and the original label files
+02_results/                      reported metrics (per class, per replicate, confusion)
+03_models_predictions/                    archived predictions and per-unit metrics
+04_raw_sensors_labels/                raw sensor streams and the original label files
   <cow>/sensor_sessions/<device>/SESSION_NN.json
   <cow>/source_labels/source_dataset/<device>/SESSION_NN.events.csv
   <cow>/source_labels/source_dataset/<device>/SESSION_NN.events_meta.json
@@ -42,7 +42,7 @@ If a value here disagrees with a file, the file is wrong — please open an issu
 Per cow: `cowA` 6,342 windows / 17 sessions, `cowB` 5,512 / 11,
 `cowC` 328 / 2, `cowD` 554 / 1.
 
-**Package array order is not alphabetical.** `01_数据/acceleration.npy` stores the
+**Package array order is not alphabetical.** `01_data/acceleration.npy` stores the
 cows in this order: `cowA` (rows 0–6341), `cowC` (6342–6669), `cowD` (6670–7223),
 `cowB` (7224–12735). Always index it through `package_row_index`, never by assuming
 `cowA, cowB, cowC, cowD`.
@@ -76,8 +76,8 @@ One row per window, same order as the matching `acceleration.npy`.
 
 | column | type | meaning |
 |---|---|---|
-| `row_index` | int | in a **per-cow** file: 0-based row in that cow's `acceleration.npy`; in the **package** file: row in `01_数据/acceleration.npy` (equals `package_row_index`) |
-| `package_row_index` | int | row in `01_数据/acceleration.npy` — use this to look up package data |
+| `row_index` | int | in a **per-cow** file: 0-based row in that cow's `acceleration.npy`; in the **package** file: row in `01_data/acceleration.npy` (equals `package_row_index`) |
+| `package_row_index` | int | row in `01_data/acceleration.npy` — use this to look up package data |
 | `source_row_index` | int | provenance index upstream; treat as opaque |
 | `continuous_row_index` | int | provenance index in the continuous stream; opaque |
 | `window_id` | str | SHA-256 identifier, stable across releases |
@@ -123,12 +123,12 @@ This normalisation was part of the original model input contract. Do not compare
 raw amplitudes across windows without undoing it, and do not report `acceleration.npy`
 values as physical acceleration.
 
-The package file `01_数据/acceleration.npy` is the concatenation of the four
+The package file `01_data/acceleration.npy` is the concatenation of the four
 per-cow arrays; use `package_row_indices.npy` to map back.
 
 ---
 
-## 5. Raw 9-axis sensor files (`04_原始传感与标签`)
+## 5. Raw 9-axis sensor files (`04_raw_sensors_labels`)
 
 One JSON per session: `{"imu": ..., "motion": ..., "temperature": ...}`.
 All three values are Base64 strings; the decoded bytes are **little-endian int16**.

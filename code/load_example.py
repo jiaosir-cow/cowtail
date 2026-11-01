@@ -3,7 +3,7 @@
 """Minimal end-to-end loader for the four-cow release.
 
 Shows the three things a user needs on day one:
-  1. read a labelled window from 01_数据/acceleration.npy
+  1. read a labelled window from 01_data/acceleration.npy
   2. resolve which raw session it came from
   3. decode that session's 9-axis stream and slice the same 256 samples
 
@@ -39,17 +39,17 @@ def main():
     cow = sys.argv[1] if len(sys.argv) > 1 else None
     row = int(sys.argv[2]) if len(sys.argv) > 2 else None
 
-    pkg = pd.read_csv(os.path.join(ROOT, "01_数据", "windows.csv"),
+    pkg = pd.read_csv(os.path.join(ROOT, "01_data", "windows.csv"),
                       encoding="utf-8-sig", low_memory=False)
     if cow is None:
         cand = pkg[pkg.original_state == "WALKING"]
         rec = cand.iloc[0] if len(cand) else pkg.iloc[0]
         cow = rec.display_cow
-        per = pd.read_csv(os.path.join(ROOT, "01_数据", cow, "windows.csv"),
+        per = pd.read_csv(os.path.join(ROOT, "01_data", cow, "windows.csv"),
                           encoding="utf-8-sig", low_memory=False)
         sel = per[per.window_id == rec.window_id]      # 按 window_id 找回该牛表里的本地行
     else:
-        per = pd.read_csv(os.path.join(ROOT, "01_数据", cow, "windows.csv"),
+        per = pd.read_csv(os.path.join(ROOT, "01_data", cow, "windows.csv"),
                           encoding="utf-8-sig", low_memory=False)
         sel = per[per.row_index == row] if row is not None else per.head(1)
     if not len(sel):
@@ -57,11 +57,11 @@ def main():
     rec = sel.iloc[0]
 
     cow = rec.display_cow
-    x = np.load(os.path.join(ROOT, "01_数据", cow, "acceleration.npy"), mmap_mode="r")
+    x = np.load(os.path.join(ROOT, "01_data", cow, "acceleration.npy"), mmap_mode="r")
     win = np.asarray(x[int(rec.row_index)])            # (3, 256), scale-normalised
     win_g = win * float(rec.scale_g)                    # back to approximate g
 
-    raw_path = os.path.join(ROOT, "04_原始传感与标签", cow, "sensor_sessions",
+    raw_path = os.path.join(ROOT, "04_raw_sensors_labels", cow, "sensor_sessions",
                             rec.device_id, rec.session_id + ".json")
     elapsed_ms, acc, gyro, mag = load_session(raw_path)
 

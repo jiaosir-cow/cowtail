@@ -60,10 +60,10 @@ acceleration with limited labels*。
 
 ```
 cowtail/
-├── 01_数据/                  窗口总表、单牛数组、归一化尺度
-├── 02_实验结果/              归档的指标与混淆计数
-├── 03_模型与预测/            检查点与逐窗口预测
-├── 04_原始传感与标签/        九轴原始流与参考区间
+├── 01_data/                  窗口总表、单牛数组、归一化尺度
+├── 02_results/              归档的指标与混淆计数
+├── 03_models_predictions/            检查点与逐窗口预测
+├── 04_raw_sensors_labels/        九轴原始流与参考区间
 ├── 05_six_cows_full/         扩展的六牛现场数据（训练 + 测试）
 ├── code/                     加载示例与清单生成脚本
 ├── docs/                     字段字典与外部数据源说明
@@ -82,15 +82,15 @@ cowtail/
 import numpy as np
 import pandas as pd
 
-X = np.load("01_数据/acceleration.npy")          # (12736, 3, 256)，逐窗口归一化
-meta = pd.read_csv("01_数据/windows.csv", encoding="utf-8-sig")
+X = np.load("01_data/acceleration.npy")          # (12736, 3, 256)，逐窗口归一化
+meta = pd.read_csv("01_data/windows.csv", encoding="utf-8-sig")
 
 print(X.shape)                                   # (12736, 3, 256)
 print(meta[["display_cow", "session_id", "original_state"]].head())
 ```
 
 `acceleration.npy` 是**逐窗口归一化**后的三轴加速度，乘回该行的 `scale_g` 才是近似 g 值。
-单牛数组在 `01_数据/<cow>/acceleration.npy`。九轴原始数据在 `04_原始传感与标签/`，通过
+单牛数组在 `01_data/<cow>/acceleration.npy`。九轴原始数据在 `04_raw_sensors_labels/`，通过
 `session_id` 与窗口总表对应。
 
 完整示例可从一条已标注窗口追到它所在的原始会话，并校验两条路径描述的是同一段运动：
@@ -123,7 +123,7 @@ python code/load_example.py cowA 100   # 牛编号, 行号
 
 ```bash
 python code/make_manifest.py      # 重新生成
-python 核验与复算.py              # 只读核验
+python verify_and_recompute.py              # 只读核验
 ```
 
 ## 📚 引用

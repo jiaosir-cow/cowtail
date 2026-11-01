@@ -102,7 +102,7 @@ def main() -> None:
         "notes": ["Original sensor JSON, original CSV, and original events_meta bytes are copied unchanged.", "Display aliases do not replace source animal identifiers or prove independent animal identity.", "Canonical labels include source row selection and adjudication; source CSVs may contain additional rows not selected in the canonical table.", "Derived per-event clips, videos, software environments and caches are not necessary for this full-session raw archive and are not copied."]
     }
     (ROOT / "RAW_ASSETS_VERIFIED.json").write_text(json.dumps(verification, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (ROOT / "说明.md").write_text("""# 原始传感与标签资料
+    (ROOT / "notes.md").write_text("""# 原始传感与标签资料
 
 本目录保存 cowA、cowB、cowC、cowD 四个展示案例所对应的完整原始传感会话、原始标签 CSV 及其 events_meta 文件。cowB 对应原 cowB 的展示记录；源文件中的牛号、设备号、时间、标注内容保持原样。
 

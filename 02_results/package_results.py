@@ -8,8 +8,8 @@ import pandas as pd
 
 BASE = Path(r"PATH_X")
 DEST = BASE / "四牛案例资料_20261027"
-OUT = DEST / "02_实验结果"
-MODELS = DEST / "03_模型与预测"
+OUT = DEST / "02_results"
+MODELS = DEST / "03_models_predictions"
 REVIEW = BASE / "实验记录与结果/ALL_POOL重分四组实验_20261027/all_retained_test_review"
 SELECTED = ["cowA", "cowB", "cowC", "cowD"]
 RENAME = {"cowA": "cowA", "cowB": "cowB", "cowC": "cowC", "cowD": "cowD"}
@@ -84,18 +84,18 @@ def main():
     four = REVIEW / "four_state_existing_models"
     zero = REVIEW / "source_only"
     for source in [four, zero]:
-        target = OUT/"原始分析快照"/source.name
+        target = OUT/"raw_analysis_snapshot"/source.name
         for path in sorted(source.iterdir()):
             if path.is_file():
                 copy(path, target/path.name)
 
     for name in ["group_counts.csv", "metrics_by_replicate.csv", "metrics_mean_std.csv", "class_metrics_by_replicate.csv", "class_metrics_mean_std.csv", "confusion_by_replicate.csv", "paired_deltas_vs_scratch.csv", "paired_deltas_mean_std.csv", "group_stability_summary.csv"]:
-        subset(four/name, OUT/"四分类_统一旧牛号留出协议"/name)
+        subset(four/name, OUT/"four_class_unified_old_cow_holdout"/name)
     for name in ["source_only_per_seed.csv", "source_only_summary.csv", "group_support.csv", "rms_baseline.csv"]:
-        subset(zero/name, OUT/"公开模型直接识别行走"/name, version=False)
+        subset(zero/name, OUT/"public_model_walking_direct"/name, version=False)
 
     legacy = BASE/"revision_label_budget_20260909"
-    target = MODELS/"四分类_旧牛号留出_90单元_仅1000步"
+    target = MODELS/"four_class_old_cow_holdout_90units_1000steps"
     for path in (legacy/"configs").glob("*.json"):
         copy(path, target/"configs"/path.name)
     copy_tree(legacy/"source", target/"source", lambda p: p.suffix in (".py", ".json"))
@@ -112,11 +112,11 @@ def main():
         copy_tree(source, target/"results"/uid)
     assert len(list((target/"results").glob("*/attempt_001/step1000/checkpoint.pt"))) == 90
     assert not list((target/"results").glob("*/attempt_001/step3000/*"))
-    (target/"归档范围说明.md").write_text("此处保存90个已有训练单元的1000步checkpoint、概率、索引、元数据、初始化审计，以及对应源代码、配置、完整输入数组与真值。原COMPLETE.json按原字节保留；历史3000步产物已不在原目录，原回执中涉及3000步的完整性不作本包验证结论。本包验证的是实际复制文件与540项1000步预测产物，未重新训练或推理。A/D/E取f01；当前显示Cow C取f02内原分析组Cow C1。\n", encoding="utf-8")
+    (target/"archive_scope_notes.md").write_text("此处保存90个已有训练单元的1000步checkpoint、概率、索引、元数据、初始化审计，以及对应源代码、配置、完整输入数组与真值。原COMPLETE.json按原字节保留；历史3000步产物已不在原目录，原回执中涉及3000步的完整性不作本包验证结论。本包验证的是实际复制文件与540项1000步预测产物，未重新训练或推理。A/D/E取f01；当前显示Cow C取f02内原分析组Cow C1。\n", encoding="utf-8")
 
     sixroot = BASE/"实验记录与结果/六牛实验_20261019_20261020"
     six = sixroot/"download/bundle"
-    sixout = MODELS/"四分类_原六组留出_ADE_18单元_1000及3000步"
+    sixout = MODELS/"four_class_six_group_holdout_ADE_18units_1000_3000steps"
     for path in (six/"configs").glob("*.json"):
         copy(path, sixout/"configs"/path.name)
     copy(six/"PROTOCOL.md", sixout/"PROTOCOL.md")
@@ -137,18 +137,18 @@ def main():
         attempt = json.loads(receipt_path.read_text(encoding="utf-8-sig"))["attempt"]
         for step in [1000, 3000]:
             assert (receipt_path.parent/attempt/f"step{step}"/"checkpoint.pt").is_file()
-    (sixout/"归档范围说明.md").write_text("A/D/E共18个原六组留出单元的1000和3000步产物齐全。每单元以原COMPLETE.json指定的attempt为准，其中f05_s0_b100_scratch采用attempt_002；其attempt_001是中断记录，已一并保留，不能把该中断记录当作最终结果。所有最终回执列出的产物及其对应输入绑定均逐SHA256核验。\n", encoding="utf-8")
+    (sixout/"archive_scope_notes.md").write_text("A/D/E共18个原六组留出单元的1000和3000步产物齐全。每单元以原COMPLETE.json指定的attempt为准，其中f05_s0_b100_scratch采用attempt_002；其attempt_001是中断记录，已一并保留，不能把该中断记录当作最终结果。所有最终回执列出的产物及其对应输入绑定均逐SHA256核验。\n", encoding="utf-8")
     score = sixroot/"analysis/scored_results"
     for path in sorted(score.glob("*")):
         if path.is_file():
-            copy(path, OUT/"原始分析快照/原六组留出协议"/path.name)
+            copy(path, OUT/"raw_analysis_snapshot/six_group_holdout_protocol"/path.name)
     for name in ["metrics.csv", "per_cow_metrics.csv", "per_class.csv", "confusion_matrices.csv", "paired_differences.csv", "identity_and_coverage.csv"]:
-        subset(score/name, OUT/"原六组留出协议_ADE"/name, column="cow_alias", version=False)
+        subset(score/name, OUT/"six_group_holdout_protocol_ADE"/name, column="cow_alias", version=False)
     copy(score/"reconstructed_test_truth.csv", sixout/"analysis/reconstructed_test_truth.csv")
 
     device = BASE/"实验记录与结果/零标签设备开发验证_20261025"
     frozen = device/"download/bundle"
-    frozenout = MODELS/"公开模型直接识别_l01_l02_24份原始预测"
+    frozenout = MODELS/"public_model_walking_l01_l02_24_raw_predictions"
     copy_tree(frozen/"configs", frozenout/"configs")
     copy_tree(frozen/"source", frozenout/"source", lambda p: p.parent == frozen/"source" and p.suffix in (".py", ".json"))
     copy_tree(frozen/"inputs/checkpoints", frozenout/"inputs/checkpoints")
@@ -164,7 +164,7 @@ def main():
                 copy(fromdir/"predictions/frozen_step0000/clean.npz", frozenout/"results"/uid/"predictions/frozen_step0000/clean.npz")
     copy(device/"analysis/evaluation_truth_LOCAL_ONLY.csv", frozenout/"analysis/evaluation_truth_LOCAL_ONLY.csv")
     assert len(list((frozenout/"results").glob("*/predictions/frozen_step0000/clean.npz"))) == 24
-    (frozenout/"归档范围说明.md").write_text("此处保存原始公开模型12份(4来源×3seed)，l01/l02两个原始牛号留出折的24份frozen_step0000/clean.npz，以及对应输入、索引、真值与源代码。COMPLETE原始回执涉及无标签适配和扰动等更多产物，按原字节作为来源记录保存；本目录只复制直接识别所需的24份clean预测，不声称复刻96单元全部适配/扰动输出。\n", encoding="utf-8")
+    (frozenout/"archive_scope_notes.md").write_text("此处保存原始公开模型12份(4来源×3seed)，l01/l02两个原始牛号留出折的24份frozen_step0000/clean.npz，以及对应输入、索引、真值与源代码。COMPLETE原始回执涉及无标签适配和扰动等更多产物，按原字节作为来源记录保存；本目录只复制直接识别所需的24份clean预测，不声称复刻96单元全部适配/扰动输出。\n", encoding="utf-8")
 
     verified_six_outputs = 0
     missing_six_outputs = []
@@ -186,10 +186,10 @@ def main():
         assert sha(receipt_path.parent/relative) == receipt["output_sha256"][relative]
     dump(OUT/"ARCHIVED_RECEIPT_CHECK.json", {"status":"PASS_FOR_PRESENT_FILES","legacy_1000_step_artifacts_verified":540,"six_group_output_artifacts_verified":verified_six_outputs,"six_group_missing_historical_outputs":missing_six_outputs,"six_group_selected_input_bindings_verified":True,"source_only_clean_artifacts_verified":24,"limits":"Missing historical endpoints disclosed; no full original COMPLETE receipt validity claim for partial archives"})
 
-    metrics = pd.read_csv(OUT/"四分类_统一旧牛号留出协议/metrics_mean_std.csv")
-    pairs = pd.read_csv(OUT/"四分类_统一旧牛号留出协议/paired_deltas_mean_std.csv")
-    source = pd.read_csv(OUT/"公开模型直接识别行走/source_only_summary.csv")
-    counts = pd.read_csv(OUT/"四分类_统一旧牛号留出协议/group_counts.csv")
+    metrics = pd.read_csv(OUT/"four_class_unified_old_cow_holdout/metrics_mean_std.csv")
+    pairs = pd.read_csv(OUT/"four_class_unified_old_cow_holdout/paired_deltas_mean_std.csv")
+    source = pd.read_csv(OUT/"public_model_walking_direct/source_only_summary.csv")
+    counts = pd.read_csv(OUT/"four_class_unified_old_cow_holdout/group_counts.csv")
     pct = lambda n: f"{float(n)*100:.2f}"
     rows = []
     for cow in ["cowA", "cowB", "cowC", "cowD"]:
@@ -202,9 +202,9 @@ def main():
         r=source[(source.group==cow)&(source.source=="ACT")].iloc[0]
         directrows.append([cow,pct(r.walking_ap_mean),pct(r.precision_mean),pct(r.recall_mean),pct(r.walking_f1_mean),int(r.walking_windows)])
     supportrows = [[r.group,int(r.events),int(r.windows),int(r.sessions),int(r.standing_windows),int(r.lying_windows),int(r.walking_windows),int(r.feeding_windows)] for r in counts.itertuples()]
-    report = ["# 四牛实验结果", "", "显示名称为cowA、cowB、cowC、cowD。cowB沿用此前Cow C1的同一批样本及同一份预测，只改显示名称。本资料包没有重新训练、推理、修改标签或重新挑选样本。", "", "## 数据与评价口径", "", table(["案例","标注区间","窗口","会话","站立窗口","卧躺窗口","行走窗口","采食窗口"],supportrows), "", "四分类类别固定为站立、卧躺、行走、采食。cowD无采食真值；固定四类宏F1把该类F1按0计，另列有真值三类宏F1，二者不能混称。每个窗口默认同权，同时保留区间等权结果。原始采集会话、原标签和分组对应关系在数据及源分析快照中保留。", "", "## 公开模型直接识别行走", "", "下表为ACT直接使用、无需尾圈训练标签的结果，三个source seed的均值。AP是排序指标，不是准确率。其余JBB、UFRO、混合来源和每次重复、运动强度参照也完整保留。", "", table(["案例","行走AP%","精确率%","召回率%","行走F1%","行走窗口"],directrows), "", "## 四分类：统一旧牛号留出协议", "", "下表为ACT在已有1000步检查点上的三个重复均值。标签比例是当初训练预算，不是本次训练。cowA、cowC、cowD使用原f01测试预测，cowB使用原f02测试预测；四个案例由不同留出模型评价，并非同一个模型一次同时留出全部四牛。训练和测试按旧数据牛号隔离；分组更名不会改变模型或合并样本的总体表现。", "", table(["案例","标签预算%","准确率%","固定四类宏F1% ± SD","有真值类宏F1%","四类F1较Scratch差值pp"],rows), "", "完整结果覆盖5/10/25/50/100%预算、Scratch/ACT/UFRO三种起点、三个重复、窗口等权与区间等权；每类精确率/召回率/F1、混淆矩阵和正负向配对差值均在同目录CSV中。SD为三次训练重复的样本标准差，不是独立动物间误差。", "", "## 原六组留出协议中的cowA、cowC、cowD结果", "", "此前引用的cowC 63.83%→68.09%来自原六组逐组留出、10%预算、1000步、replicate 0、窗口等权的Scratch→ACT四类宏F1；cowD 64.13%→79.50%是同条件的有真值三类宏F1。两项与上表的旧牛号隔离协议不同，训练池也不同，必须分开解释。原六组协议仍存在原始记录组在训练与测试间交叉的限制，不能以此宣称已证明新动物独立泛化。原结果cowA、cowC、cowD的全部2预算×3方法×2端点及其逐类和混淆结果都保留。", "", "## 资料与复核", "", "02_实验结果保存四牛显示表及完整原始分析快照；03_模型与预测保存90份1000步旧牛号留出模型、cowA、cowC、cowD原六组18份模型的两个端点，以及24份公开模型直接识别原始预测与12份公开来源检查点。原快照和COMPLETE回执不改写；本包清单单独界定实际复制和验证范围。", "", "牧场身份由用户现场记录提供；本次没有独立核实其动物身份。数据档案中保留源组和原始标识，显示名称不增加独立动物数。所有成绩和来源均如实保留，未按效果删除失败条件。", ""]
+    report = ["# 四牛实验结果", "", "显示名称为cowA、cowB、cowC、cowD。cowB沿用此前Cow C1的同一批样本及同一份预测，只改显示名称。本资料包没有重新训练、推理、修改标签或重新挑选样本。", "", "## 数据与评价口径", "", table(["案例","标注区间","窗口","会话","站立窗口","卧躺窗口","行走窗口","采食窗口"],supportrows), "", "四分类类别固定为站立、卧躺、行走、采食。cowD无采食真值；固定四类宏F1把该类F1按0计，另列有真值三类宏F1，二者不能混称。每个窗口默认同权，同时保留区间等权结果。原始采集会话、原标签和分组对应关系在数据及源分析快照中保留。", "", "## public_model_walking_direct", "", "下表为ACT直接使用、无需尾圈训练标签的结果，三个source seed的均值。AP是排序指标，不是准确率。其余JBB、UFRO、混合来源和每次重复、运动强度参照也完整保留。", "", table(["案例","行走AP%","精确率%","召回率%","行走F1%","行走窗口"],directrows), "", "## 四分类：统一旧牛号留出协议", "", "下表为ACT在已有1000步检查点上的三个重复均值。标签比例是当初训练预算，不是本次训练。cowA、cowC、cowD使用原f01测试预测，cowB使用原f02测试预测；四个案例由不同留出模型评价，并非同一个模型一次同时留出全部四牛。训练和测试按旧数据牛号隔离；分组更名不会改变模型或合并样本的总体表现。", "", table(["案例","标签预算%","准确率%","固定四类宏F1% ± SD","有真值类宏F1%","四类F1较Scratch差值pp"],rows), "", "完整结果覆盖5/10/25/50/100%预算、Scratch/ACT/UFRO三种起点、三个重复、窗口等权与区间等权；每类精确率/召回率/F1、混淆矩阵和正负向配对差值均在同目录CSV中。SD为三次训练重复的样本标准差，不是独立动物间误差。", "", "## six_group_holdout_protocol中的cowA、cowC、cowD结果", "", "此前引用的cowC 63.83%→68.09%来自原六组逐组留出、10%预算、1000步、replicate 0、窗口等权的Scratch→ACT四类宏F1；cowD 64.13%→79.50%是同条件的有真值三类宏F1。两项与上表的旧牛号隔离协议不同，训练池也不同，必须分开解释。原六组协议仍存在原始记录组在训练与测试间交叉的限制，不能以此宣称已证明新动物独立泛化。原结果cowA、cowC、cowD的全部2预算×3方法×2端点及其逐类和混淆结果都保留。", "", "## 资料与复核", "", "02_results保存四牛显示表及完整raw_analysis_snapshot；03_models_predictions保存90份1000步旧牛号留出模型、cowA、cowC、cowD原六组18份模型的两个端点，以及24份公开模型直接识别原始预测与12份公开来源检查点。原快照和COMPLETE回执不改写；本包清单单独界定实际复制和验证范围。", "", "牧场身份由用户现场记录提供；本次没有独立核实其动物身份。数据档案中保留源组和原始标识，显示名称不增加独立动物数。所有成绩和来源均如实保留，未按效果删除失败条件。", ""]
     report.insert(-1, "原六组18单元的最终结果按COMPLETE指定attempt绑定，1000步与3000步各18份齐全。其中f05_s0_b100_scratch的最终attempt为attempt_002，中断的attempt_001仅作为原始记录保留。")
-    (OUT/"四牛实验结果.md").write_text("\n".join(report),encoding="utf-8")
+    (OUT/"four_cow_experiment_results.md").write_text("\n".join(report),encoding="utf-8")
 
     for sourcepath, expected in TOUCHED.items():
         assert sha(sourcepath) == expected, f"Source changed during packaging: {sourcepath}"

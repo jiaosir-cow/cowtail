@@ -328,9 +328,9 @@ def main():
                "- `AUDIT.json`与`verified_prediction_manifest.csv`：本次输入与保留预测的哈希、映射和无泄漏核验。",
                "- 执行 `python score_existing_models.py` 即可从原预测重建此目录报告与表格；不导入torch。", "",
                "**历史完整性限制：**原始3000步端点曾按要求清理，历史整套完成审计已经失效。本报告仅验证当前仍保留的1000步预测及所用元数据/索引，不声称原训练包的全部历史文件仍完整。", ""]
-    report_path = OUT / "新分组四分类效果.md"
+    report_path = OUT / "new_grouping_four_class_results.md"
     report_path.write_text("\n".join(report), encoding="utf-8")
-    (OUT / "结果说明.md").write_text("完整报告见 [新分组四分类效果](新分组四分类效果.md)。\n", encoding="utf-8")
+    (OUT / "results_notes.md").write_text("完整报告见 [新分组四分类效果](new_grouping_four_class_results.md)。\n", encoding="utf-8")
     for name, entry in input_hashes.items():
         require(sha(inputs[name]) == entry["sha256"], f"Read-only input changed during scoring: {name}")
     for entry in manifests:

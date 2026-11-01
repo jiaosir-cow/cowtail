@@ -62,10 +62,10 @@ recognition from tail acceleration with limited labels*.
 
 ```
 cowtail/
-├── 01_数据/                  master window table, per-cow arrays, normalisation scale
-├── 02_实验结果/              archived metrics and confusion counts
-├── 03_模型与预测/            checkpoints and per-window predictions
-├── 04_原始传感与标签/        raw nine-axis streams and reference intervals
+├── 01_data/                  master window table, per-cow arrays, normalisation scale
+├── 02_results/              archived metrics and confusion counts
+├── 03_models_predictions/            checkpoints and per-window predictions
+├── 04_raw_sensors_labels/        raw nine-axis streams and reference intervals
 ├── 05_six_cows_full/         extended six-cow field set (training + test)
 ├── code/                     loader example and manifest builder
 ├── docs/                     data dictionary and external-source notes
@@ -84,8 +84,8 @@ Folder names are kept in Chinese to match the annotation software's on-disk conv
 import numpy as np
 import pandas as pd
 
-X = np.load("01_数据/acceleration.npy")          # (12736, 3, 256), window-normalised
-meta = pd.read_csv("01_数据/windows.csv", encoding="utf-8-sig")
+X = np.load("01_data/acceleration.npy")          # (12736, 3, 256), window-normalised
+meta = pd.read_csv("01_data/windows.csv", encoding="utf-8-sig")
 
 print(X.shape)                                   # (12736, 3, 256)
 print(meta[["display_cow", "session_id", "original_state"]].head())
@@ -93,7 +93,7 @@ print(meta[["display_cow", "session_id", "original_state"]].head())
 
 `acceleration.npy` is **normalised per window**; multiply a window by its stored `scale_g` to
 recover approximate acceleration in *g*. Per-cow arrays sit alongside it as
-`01_数据/<cow>/acceleration.npy`. Raw nine-axis streams live in `04_原始传感与标签/` and join on
+`01_data/<cow>/acceleration.npy`. Raw nine-axis streams live in `04_raw_sensors_labels/` and join on
 `session_id`.
 
 The end-to-end example follows one labelled window back to its raw session and checks that both
@@ -132,7 +132,7 @@ python code/load_example.py cowA 100   # cow, row_index
 
 ```bash
 python code/make_manifest.py      # regenerate
-python 核验与复算.py              # read-only verification
+python verify_and_recompute.py              # read-only verification
 ```
 
 ## 📚 Citation
