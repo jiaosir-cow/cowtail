@@ -154,9 +154,8 @@ If you use this dataset, please cite the manuscript and the dataset record:
 
 - **Data:** CC BY 4.0 — see [`LICENSE`](LICENSE).
 - **Code:** MIT — see [`LICENSE-CODE`](LICENSE-CODE).
-- **Ethics:** procedures were non-invasive (external tail-root mounting only, no blood sampling).
-  Written approval was provided by the Experimental Farm of Yangzhou University; the full committee
-  reference is given in the companion manuscript.
+- **Ethics:** this study was approved by the Ethics Committee of the Experimental Farm of Yangzhou
+  University. Procedures were non-invasive (external tail-root mounting only, no blood sampling).
 
 ## ✉️ Contact
 

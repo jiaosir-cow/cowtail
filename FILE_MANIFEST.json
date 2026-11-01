@@ -7824,12 +7824,12 @@
       "sha256": "13d52df9e8a633c6f9039fc8b6e51ef4a66834a1de7b7e9acb16c1143848a353"
     },
     "README.md": {
-      "size_bytes": 7480,
-      "sha256": "9144bb13f5127cb288e4df0f8f5228aabf091467473df69c044e09334bbc43c5"
+      "size_bytes": 7428,
+      "sha256": "11b63c6b9c7a75b32977e837f5f25af90e93db3c44d246bf61c5d54d1c307893"
     },
     "README.zh-CN.md": {
-      "size_bytes": 6808,
-      "sha256": "edf24afb075327692f8a445602d98c227aa1c2c75b4329e5e156b38c05137bdb"
+      "size_bytes": 6781,
+      "sha256": "ea9c6f201fc0be1accc889cb56c07bb08f39cc301505f2d86e394ec9d2c503d3"
     },
     "assets/brand/cowmata-logo.svg": {
       "size_bytes": 3385,
