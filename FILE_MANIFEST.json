@@ -24,8 +24,8 @@
       "sha256": "42f07b7a8f9535d0aa54cac540e0b963c08227700b07268b206803b08bd92cd9"
     },
     "01_data/cowA/README.md": {
-      "size_bytes": 405,
-      "sha256": "0596a7796e71f5df0ae3599f94da564552e267dd1d3503a102b16d219b4a80f9"
+      "size_bytes": 506,
+      "sha256": "e93665115cb67b3eb190ec948502cb2943def7ea892f065f8863e94824614809"
     },
     "01_data/cowA/acceleration.npy": {
       "size_bytes": 19482752,
@@ -64,8 +64,8 @@
       "sha256": "46b0486c6f34852882c9fb3e7d3d58ae99e79d7f153a0a64003f62c3140fc0f2"
     },
     "01_data/cowB/README.md": {
-      "size_bytes": 405,
-      "sha256": "15a65841f161724f486f149bdc66336ba56b2efdce430400549818553cd18017"
+      "size_bytes": 506,
+      "sha256": "04a64b74e00bf987ebe04bdf7de213cd8b2f9cfbed0a110953f04a5f8831171a"
     },
     "01_data/cowB/acceleration.npy": {
       "size_bytes": 16932992,
@@ -104,8 +104,8 @@
       "sha256": "13d1b426c745398652fbb099a77ac4e9b683b6a2168ac9867cb447ccce171ab2"
     },
     "01_data/cowC/README.md": {
-      "size_bytes": 402,
-      "sha256": "440e845e9a16f92ad7d3e21ea355e1fe22b3e5e8e24b57fc9022ce3b2152d074"
+      "size_bytes": 503,
+      "sha256": "5796cd60167e4ad26748b8f76964a1fdef2b1d6d1d9c5392c6ff84634cc24997"
     },
     "01_data/cowC/acceleration.npy": {
       "size_bytes": 1007744,
@@ -144,8 +144,8 @@
       "sha256": "08adcf9fa5b857bc17cbae9b7caac23e6444fb6761eab1903ea4f8c84f2d6680"
     },
     "01_data/cowD/README.md": {
-      "size_bytes": 472,
-      "sha256": "dd570cf1e2b5c7e4d30b4b8f93bb1e12520fcc3e770a1ed5f5a0443e5c3ebfaa"
+      "size_bytes": 603,
+      "sha256": "d6638ce93f41935359271eb9b2314671332264ff6921a85e592b497e9e3505dd"
     },
     "01_data/cowD/acceleration.npy": {
       "size_bytes": 1702016,
@@ -240,8 +240,8 @@
       "sha256": "fbe0114d0a82759cec4d6c449f7f2725d7f3d4f22953d0b2948367c623722ca5"
     },
     "02_results/four_cow_experiment_results.md": {
-      "size_bytes": 4920,
-      "sha256": "5024364d6e8e66f9ba4f4721956113d627734738091ab37a922f2e816c47baa8"
+      "size_bytes": 6321,
+      "sha256": "52d8711a1db332d0201f778e20abe4366c7f83e754d3378d94e020867bc1d056"
     },
     "02_results/package_results.py": {
       "size_bytes": 17898,
@@ -300,8 +300,8 @@
       "sha256": "bae394c9a26ac51144b3f776ba078fc68903fb4b005f1e2c9acb154438f9c913"
     },
     "02_results/raw_analysis_snapshot/four_state_existing_models/new_grouping_four_class_results.md": {
-      "size_bytes": 9871,
-      "sha256": "d4149668eb1db6441f9651b95e4cad928a96044d108a7e22575b52cdef65d154"
+      "size_bytes": 11544,
+      "sha256": "182dbf9d45ef84fd4ed7b981dcb478646fcba6034b086b18e95ef1e95e468d74"
     },
     "02_results/raw_analysis_snapshot/four_state_existing_models/new_old_pool_invariance.csv": {
       "size_bytes": 5958,
@@ -316,8 +316,8 @@
       "sha256": "0b7d26c666ec51b948147a7b269402e95ae9a46c6a26fdf71c8071923c82d4be"
     },
     "02_results/raw_analysis_snapshot/four_state_existing_models/results_notes.md": {
-      "size_bytes": 82,
-      "sha256": "c5aab4829468b6fe3be34082e938f14837f02a428861e619ad2907e50dea22dc"
+      "size_bytes": 95,
+      "sha256": "664ab4afe2504dda555b93278702889ce13d0ae89fca034977db24891949c5c2"
     },
     "02_results/raw_analysis_snapshot/four_state_existing_models/score_existing_models.py": {
       "size_bytes": 31322,
@@ -396,8 +396,8 @@
       "sha256": "f4a69e1cdc9c27836a58dea9d6bf7ce482b3a557079feb84675c39425e96cdfa"
     },
     "02_results/raw_analysis_snapshot/source_only/results_notes.md": {
-      "size_bytes": 2242,
-      "sha256": "2733606d0f74336586c09363c167e869000c039dea7680b7126db3743772efe9"
+      "size_bytes": 2668,
+      "sha256": "ac3431f44a8f99bfcdecd601e6941c00a72297712098ab6a2f5c02c9d19e379f"
     },
     "02_results/raw_analysis_snapshot/source_only/rms_baseline.csv": {
       "size_bytes": 721,
@@ -448,8 +448,8 @@
       "sha256": "cc4c73c729a43af69089eda0e4bd53993f97e0629b4ef82501e78cd7b4a68bb6"
     },
     "03_models_predictions/four_class_old_cow_holdout_90units_1000steps/archive_scope_notes.md": {
-      "size_bytes": 467,
-      "sha256": "9ee875445602ba79fe81eb7026ed4eff8354e0471bbfeee6be170fca3faa3777"
+      "size_bytes": 719,
+      "sha256": "5487243e8d1b84232860727cdf107e570f5dc1440d0fdf857a2f6ff20c3d9737"
     },
     "03_models_predictions/four_class_old_cow_holdout_90units_1000steps/configs/FROZEN_PROTOCOL.json": {
       "size_bytes": 5554,
@@ -5400,8 +5400,8 @@
       "sha256": "71247f9cc550e5d4f046d7abaeb83f3a119b76ee147e8d76f15ae3d49dbf5c01"
     },
     "03_models_predictions/four_class_six_group_holdout_ADE_18units_1000_3000steps/archive_scope_notes.md": {
-      "size_bytes": 339,
-      "sha256": "054eb6519cdc385b08c7909cc143ab37fc4e130c07f1f041405690f9d2ac249b"
+      "size_bytes": 474,
+      "sha256": "baa5c8e054bc4419c6a578446694fb418a15b0ae1a19a677b70b89d5f079bf2f"
     },
     "03_models_predictions/four_class_six_group_holdout_ADE_18units_1000_3000steps/configs/FROZEN_PROTOCOL.json": {
       "size_bytes": 85,
@@ -6960,8 +6960,8 @@
       "sha256": "e7dc58195a08a664d0e1cf65dfd6eb96b6d07c8c8fbbf815dae833addf9f6380"
     },
     "03_models_predictions/public_model_walking_l01_l02_24_raw_predictions/archive_scope_notes.md": {
-      "size_bytes": 393,
-      "sha256": "0d412b7f39997f27de1fbcb44bb69e2cf94c775d05d8ad2e40d719a3d0db94ab"
+      "size_bytes": 577,
+      "sha256": "071b0ee8a9e20bac5bb99ef1f5ba377bcde7d8cc0af3bf44448134d31eed7be8"
     },
     "03_models_predictions/public_model_walking_l01_l02_24_raw_predictions/configs/FROZEN_PROTOCOL.json": {
       "size_bytes": 115,
@@ -7712,8 +7712,8 @@
       "sha256": "56987e8fa29552a837a545cd901f0b0aa2a7f2c083f0c10ca51b2b2b6527c0c6"
     },
     "04_raw_sensors_labels/notes.md": {
-      "size_bytes": 1235,
-      "sha256": "eb564eb7ad5374d41261ce3e644f7c1f5476ba0ac74298de07be9d97d2b6451d"
+      "size_bytes": 1505,
+      "sha256": "fdd54fd90f2c9001e0c6771bac07362c5062d02ba9d4e1df3d3126c00b7b2332"
     },
     "04_raw_sensors_labels/raw_asset_counts.csv": {
       "size_bytes": 425,
@@ -7728,8 +7728,8 @@
       "sha256": "42ad7317b7f5d09c43259fb389337c9ca90c6c9b345abf58c4a4dace02de23de"
     },
     "05_six_cows_full/README.md": {
-      "size_bytes": 3047,
-      "sha256": "699058a87a7a19c3c2d33daf05129f21f5a1a7f98203f2f3c3450d785bd426f1"
+      "size_bytes": 3521,
+      "sha256": "92419d7af71731d30c034ae89ce4d63ded7d960eb0963896e3c0dfbac9aadf89"
     },
     "05_six_cows_full/acceleration.npy": {
       "size_bytes": 88814720,

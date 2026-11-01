@@ -1,1 +1,6 @@
-此处保存原始公开模型12份(4来源×3seed)，l01/l02两个原始牛号留出折的24份frozen_step0000/clean.npz，以及对应输入、索引、真值与源代码。COMPLETE原始回执涉及无标签适配和扰动等更多产物，按原字节作为来源记录保存；本目录只复制直接识别所需的24份clean预测，不声称复刻96单元全部适配/扰动输出。
+This directory holds the 12 original public models (4 sources × 3 seeds), the 24
+`frozen_step0000/clean.npz` files for the two original cow-identifier holdout folds l01/l02, and the
+corresponding inputs, indices, ground truth and source code. The original COMPLETE receipt covers
+more products, including unlabelled adaptation and perturbation runs, and is preserved byte-for-byte
+as a provenance record. This directory copies only the 24 clean predictions needed for direct
+recognition; it does not claim to reproduce all adaptation and perturbation outputs of the 96 units.

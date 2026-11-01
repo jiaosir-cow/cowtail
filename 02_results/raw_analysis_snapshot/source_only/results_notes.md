@@ -1,16 +1,26 @@
-# 全部保留组：public_model_walking_direct的复核
+# All retained groups: a re-check of public_model_walking_direct
 
-所有 28,911 个已标注窗口都只用于本地测试。模型为已有公开数据训练得到的冻结模型；本次没有新训练、尾圈标签学习或阈值调参。
-这里是行走/非行走二分类，不能当作站立、卧躺、行走、采食四分类成绩。
+All 28,911 annotated windows are used only for local testing. The model is a frozen model trained on
+existing public data; there is no new training, no tail-label learning and no threshold tuning here.
+This is a walking / non-walking binary task and must not be read as a four-class
+standing/lying/walking/feeding score.
 
-B1、C1、F1、G1 是原 B/C/F 数据按完整会话重分的分析组。其总数据和预测未改变，所以合并成绩与重分前完全相同。分组不能创造总体准确率提升。
-旧实验已查看过这批测试标签；本次是对既有测试结果的回顾性重分分析，不是全新的独立测试集。
+B1, C1, F1 and G1 are analysis groups formed by re-cutting the original B/C/F data along complete
+sessions. Their windows and predictions are unchanged, so the pooled scores are exactly the same as
+before the re-cut. Regrouping cannot create an improvement in overall accuracy.
+The old experiments had already looked at these test labels; this is a retrospective re-grouping of
+existing test results, not a fresh independent test set.
 
-AP 衡量行走片段的排序质量，不是准确率。精确率、召回率和 F1 使用原模型固定 margin ≥ 0 规则。下表为三个公开模型随机种子的均值。
+AP measures the ranking quality of walking segments, not accuracy. Precision, recall and F1 use the
+original model's fixed rule of margin ≥ 0. The table below averages three random seeds of the public
+model.
 
-此前 ACT 的 93.03% 是原六组各自 AP 的等权平均；下表全体 89.79% 是把所有窗口合在一起计算 AP。两者统计口径不同，不是模型退化。重新分组会改变等权平均的权重，所以不能据此声称性能改善。
+The earlier ACT figure of 93.03% was an equal-weight mean of the per-group AP under the original six
+groups; the 89.79% for all retained windows below computes AP over all windows pooled. The two are
+different statistics, not a degradation of the model. Regrouping changes the weights of the
+equal-weight mean, so it cannot be used to claim a performance improvement.
 
-| 分组 | 窗口数 | 行走窗口 | ACT 行走AP | ACT精确率 | ACT召回率 | ACT行走F1 | 简单运动强度AP |
+| group | windows | walking windows | ACT walking AP | ACT precision | ACT recall | ACT walking F1 | motion-RMS AP |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | cowA | 6342 | 97 | 97.95% | 82.54% | 96.56% | 88.58% | 96.35% |
 | cowC | 328 | 20 | 99.69% | 96.97% | 100.00% | 98.41% | 100.00% |
@@ -22,6 +32,9 @@ AP 衡量行走片段的排序质量，不是准确率。精确率、召回率�
 | All retained | 28911 | 382 | 89.79% | 60.89% | 91.36% | 72.29% | 62.88% |
 | Pooled ALL_POOL (old and new identical) | 21687 | 258 | 85.84% | 53.47% | 88.50% | 65.77% | 48.82% |
 
-其余 JBB、UFRO、MULTI 来源的全部种子、旧 B/C/F 对照及四类真值数量均保存在 CSV。未按分组效果删除样本、来源或负向结果。
+Every seed of the remaining JBB, UFRO and MULTI sources, the original B/C/F comparisons and the
+four-class ground-truth counts are all kept in the CSVs. No sample, source or negative result was
+deleted on the basis of how a group scored.
 
-四个新组都有四类真值；这只说明可评估四分类，不代表本项二分类模型已经具备四分类能力。
+All four new groups have ground truth for all four classes; that only means four-class scoring is
+possible, not that this binary model already has four-class capability.

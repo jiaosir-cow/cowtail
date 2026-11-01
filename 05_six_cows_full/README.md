@@ -1,41 +1,46 @@
-# 05_six_cows_full — 六牛全量数据集（训练池 + 测试池）
+# 05_six_cows_full — full six-cow dataset (training pool + test pool)
 
-这是论文所用现场数据的**完整集合**，共 6 头牛、28,911 个窗口、62 个采集会话、
-2 个尾戴九轴项圈。`01_data`–`04_raw_sensors_labels` 是它的一个测试子集，见文末对照。
+This is the **complete set** of field data used in the manuscript: 6 cows, 28,911 windows,
+62 recording sessions and 2 tail-mounted nine-axis collars. `01_data`–`04_raw_sensors_labels` is a
+test subset of it; the crosswalk is at the end of this file.
 
-## 内容
+## Contents
 
 ```
-acceleration.npy           (28911, 3, 256) float32  逐窗归一化三轴加速度
-source_window_indices.npy  int64 (28911,)           上游窗口索引
-windows.csv                28,911 行，一窗一行
-events.csv                 781 个标注区间
-test_truth.csv             窗口级真值
-class_support.csv          每头牛 × split × 类别的窗口数
-cow_crosswalk.csv          与 `01_data` 四牛包的命名对照
+acceleration.npy           (28911, 3, 256) float32  per-window normalised tri-axial acceleration
+source_window_indices.npy  int64 (28911,)           upstream window indices
+windows.csv                28,911 rows, one row per window
+events.csv                 781 annotated intervals
+test_truth.csv             window-level ground truth
+class_support.csv          window count per cow x split x class
+cow_crosswalk.csv          name crosswalk against the four-cow package in `01_data`
 cowA/ … cowF/labels.csv + window_indices.npy
 ```
 
-窗口定义与 `01_data` 完全一致：50 Hz、256 点、5.12 秒、逐窗按中位模长归一化
-（乘回 `scale_g` 才是近似 g）。字段含义见 `../docs/data_dictionary.md`。
+The window definition matches `01_data` exactly: 50 Hz, 256 samples, 5.12 s, normalised per window
+by the median magnitude (multiply by `scale_g` to recover approximate g). Field meanings are in
+`../docs/data_dictionary.md`.
 
-## 训练 / 测试拆分
+## Training / test split
 
-`split` 列来自论文的固定记录桶（按旧记录标识划分，不按结果调整）：
+The `split` column comes from the manuscript's fixed record buckets, assigned by the old recording
+identifier rather than adjusted to results:
 
-| split | 记录桶 | 牛 | 窗口 | 会话 |
+| split | record bucket | cows | windows | sessions |
 |---|---|---|---:|---:|
 | `train` | 20201-3 | cowA 6,342 / cowD 328 / cowE 554 | 7,224 | 20 |
 | `test` | 21074-1 | cowB 19,841 / cowC 1,563 / cowF 283 | 21,687 | 42 |
 
-`analysis_slice` 列保留论文上报时用的七个分析切片：训练池为 `A`、`D`、`E`，
-测试池再按整会话切成 `B1`（6,114）、`C1`（5,512）、`F1`（5,216）、`G1`（4,845）。
-**这四个切片是同一记录桶的分析分组，不是四头新增的独立动物**，不能当作四只牛的
-重复样本做统计推断，也不能把切片之间的差异解释为个体差异。
+The `analysis_slice` column preserves the seven analysis slices reported in the manuscript: the
+training pool is `A`, `D` and `E`; the test pool is cut by whole session into `B1` (6,114),
+`C1` (5,512), `F1` (5,216) and `G1` (4,845). **These four slices are analysis groups inside one
+record bucket, not four additional independent animals.** Do not treat them as repeated samples
+from four cows for statistical inference, and do not interpret differences between slices as
+individual differences.
 
-## 每头牛
+## Per cow
 
-| 牛 | split | 窗口 | 会话 | STANDING | LYING | WALKING | FEEDING |
+| cow | split | windows | sessions | STANDING | LYING | WALKING | FEEDING |
 |---|---|---:|---:|---:|---:|---:|---:|
 | cowA | train | 6,342 | 17 | 2,041 | 2,034 | 97 | 2,170 |
 | cowB | test | 19,841 | 38 | 6,412 | 9,006 | 246 | 4,177 |
@@ -44,22 +49,25 @@ cowA/ … cowF/labels.csv + window_indices.npy
 | cowE | train | 554 | 1 | 194 | 353 | 7 | 0 |
 | cowF | test | 283 | 1 | 22 | 0 | 2 | 259 |
 
-`cowE` 没有采食真值，`cowF` 没有躺卧真值；不要把它们当完整四类验证集。
+`cowE` has no feeding ground truth and `cowF` has no lying ground truth; do not use them as
+complete four-class validation sets.
 
-## 与四牛包（01–04）的关系
+## Relationship to the four-cow package (01–04)
 
-`01_data` 里的 12,736 个窗口是这个集合的严格子集，但命名不同：
+The 12,736 windows in `01_data` are a strict subset of this set, but the names differ:
 
-| 四牛包 | 六牛包 | 包内窗口 | 该牛总窗口 | 说明 |
+| four-cow package | six-cow package | windows in package | total windows for that cow | note |
 |---|---|---:|---:|---|
-| cowA | cowA | 6,342 | 6,342 | 同一头牛，窗口相同 |
-| cowB | cowB | 5,512 | 19,841 | 只是 cowB 的 11 个会话切片（旧 C1 组），不是整头牛 |
-| cowC | cowD | 328 | 328 | 仅改名 |
-| cowD | cowE | 554 | 554 | 仅改名 |
+| cowA | cowA | 6,342 | 6,342 | same animal, same windows |
+| cowB | cowB | 5,512 | 19,841 | only the 11-session slice of cowB (the old C1 group), not the whole animal |
+| cowC | cowD | 328 | 328 | display name changed only |
+| cowD | cowE | 554 | 554 | display name changed only |
 
-**引用时请说明用的是哪一套命名**，否则 `cowB`/`cowC`/`cowD` 会指到不同的动物。
+**State which naming scheme you used when citing**, otherwise `cowB`/`cowC`/`cowD` will point to
+different animals.
 
-## 原始九轴覆盖
+## Raw nine-axis coverage
 
-`04_raw_sensors_labels` 只含四牛包的 31 个会话（12,736 窗口，占全量 44%）。
-其余 31 个会话只有本目录的三轴派生窗口，原始九轴未随本仓库发布。
+`04_raw_sensors_labels` contains only the 31 sessions of the four-cow package (12,736 windows, 44%
+of the full set). The remaining 31 sessions have only the three-axis derived windows in this
+directory; their raw nine-axis streams are not released with this repository.

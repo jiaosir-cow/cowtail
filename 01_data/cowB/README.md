@@ -1,9 +1,12 @@
 # cowB
 
-本目录包含本案例所用的传感窗口、标签、全部对应母标签及来源索引。
+This directory holds the sensor windows, labels, all corresponding parent annotations and the source
+index used for this case.
 
-可用区间：127；窗口：5512；全部对应母标签：148。
+Eligible intervals: 127; windows: 5512; parent annotations: 148.
 
-`row_index`对应本目录acceleration.npy，`package_row_index`对应上级合并数组。原始标签内容及来源牛号保持不变。
+`row_index` indexes `acceleration.npy` in this directory; `package_row_index` indexes the merged
+array one level up. The original label content and source cow identifiers are unchanged.
 
-身份声明和来源对应见CASE.json；实验结果见根目录02_results。
+Identity statements and the source crosswalk are in `CASE.json`; results are in `02_results` at the
+repository root.

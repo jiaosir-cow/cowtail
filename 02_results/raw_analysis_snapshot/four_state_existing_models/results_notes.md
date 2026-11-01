@@ -1,1 +1,1 @@
-完整报告见 [新分组四分类效果](new_grouping_four_class_results.md)。
+See the full report: [new_grouping_four_class_results.md](new_grouping_four_class_results.md).

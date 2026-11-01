@@ -1,11 +1,20 @@
-# 原始传感与标签资料
+# Raw sensor and label assets
 
-本目录保存 cowA、cowB、cowC、cowD 四个展示案例所对应的完整原始传感会话、原始标签 CSV 及其 events_meta 文件。cowB 是 cowB 的展示名称；源文件中的牛号、设备号、时间、标注内容保持原样。
+This directory holds the complete raw sensor sessions, raw label CSVs and their `events_meta` files
+for the four display cases cowA, cowB, cowC and cowD. The cow identifiers, device numbers, times and
+annotation content inside the source files are unchanged.
 
-- 完整传感会话：31 个，按展示案例和原设备号保存。
-- 原始标签 CSV：38 个；对应元数据：38 个。
-- 这些会话对应的规范标注：468 条，已逐行核对源 CSV 中的行序号、行为码、标注层、会话和起止时间，全部一致。规范标注表在资料包的数据部分保存；原 CSV 还可能包括规范表未选用的其他标注行。
-- 107 个源文件复制前、复制后和目标文件的 SHA-256 全部一致。详见 `raw_asset_index.csv`、`canonical_source_row_verification.csv` 和 `RAW_ASSETS_VERIFIED.json`。
-- 历史路径通过固定盘符迁移及 `new` 到 `标签` 的目录迁移恢复，无任意版本替换。
-- 原始 JSON 中 IMU 为编码字符串；本次只做原字节归档，未另行声称完成轴向解码或硬件校准验证。
-- 未复制视频、运行环境、缓存和派生事件切片；完整传感会话与对应原始标签均已保存。
+- Complete sensor sessions: 31, stored by display case and original device number.
+- Raw label CSVs: 38; corresponding metadata files: 38.
+- Canonical annotations for these sessions: 468, each checked line by line against the row index,
+  behaviour code, annotation layer, session and start/end times in the source CSVs, all consistent.
+  The canonical annotation table is stored in the data part of the package; the original CSVs may
+  also contain annotation rows that the canonical table did not select.
+- SHA-256 values for the 107 source files match before copying, after copying and in the target.
+  See `raw_asset_index.csv`, `canonical_source_row_verification.csv` and `RAW_ASSETS_VERIFIED.json`.
+- Historical paths were recovered through a fixed-drive migration and a directory move from `new`
+  to `labels`; no arbitrary version substitution was performed.
+- The IMU payload in the raw JSON is an encoded string; this package archives the original bytes only
+  and makes no separate claim of completed axis decoding or hardware calibration verification.
+- Video, runtime environments, caches and derived event slices were not copied; the complete sensor
+  sessions and their raw labels are all included.

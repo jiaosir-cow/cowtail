@@ -1,34 +1,48 @@
-# 四牛实验结果
+# Four-cow results
 
-显示名称为cowA、cowB、cowC、cowD。cowB沿用此前Cow C1的同一批样本及同一份预测，只改显示名称。本资料包没有重新训练、推理、修改标签或重新挑选样本。
+Display names are cowA, cowB, cowC and cowD. cowB reuses the same samples and the same predictions
+as the earlier Cow C1 set; only the display name changed. This package involved no retraining,
+no new inference, no label edits and no reselection of samples.
 
-## 数据与评价口径
+## Data and scoring conventions
 
-| 案例 | 标注区间 | 窗口 | 会话 | 站立窗口 | 卧躺窗口 | 行走窗口 | 采食窗口 |
+| case | annotated intervals | windows | sessions | standing windows | lying windows | walking windows | feeding windows |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | cowA | 209 | 6342 | 17 | 2041 | 2034 | 97 | 2170 |
 | cowC | 17 | 328 | 2 | 39 | 211 | 20 | 58 |
 | cowD | 11 | 554 | 1 | 194 | 353 | 7 | 0 |
 | cowB | 127 | 5512 | 11 | 1368 | 2060 | 74 | 2010 |
 
-四分类类别固定为站立、卧躺、行走、采食。cowD无采食真值；固定四类宏F1把该类F1按0计，另列有真值三类宏F1，二者不能混称。每个窗口默认同权，同时保留区间等权结果。原始采集会话、原标签和分组对应关系在数据及源分析快照中保留。
+The four classes are fixed as standing, lying, walking and feeding. cowD has no feeding ground
+truth; the fixed four-class macro-F1 counts that class's F1 as zero, and a separate three-class
+macro-F1 over classes with ground truth is reported as well. The two must not be conflated. Every
+window is weighted equally by default, and interval-equal-weight results are retained alongside.
+The original recording sessions, original labels and grouping crosswalk are preserved in the data
+and in the source-analysis snapshot.
 
 ## public_model_walking_direct
 
-下表为ACT直接使用、无需尾圈训练标签的结果，三个source seed的均值。AP是排序指标，不是准确率。其余JBB、UFRO、混合来源和每次重复、运动强度参照也完整保留。
+The table below gives results for ACT used directly, without any tail-supervised training labels,
+averaged over three source seeds. AP is a ranking metric, not accuracy. The remaining JBB, UFRO and
+pooled-source results, every repetition and the motion-intensity reference are all retained.
 
-| 案例 | 行走AP% | 精确率% | 召回率% | 行走F1% | 行走窗口 |
+| case | walking AP % | precision % | recall % | walking F1 % | walking windows |
 | --- | --- | --- | --- | --- | --- |
 | cowA | 97.95 | 82.54 | 96.56 | 88.58 | 97 |
 | cowB | 94.35 | 74.28 | 91.44 | 80.91 | 74 |
 | cowC | 99.69 | 96.97 | 100.00 | 98.41 | 20 |
 | cowD | 95.63 | 64.81 | 100.00 | 77.83 | 7 |
 
-## 四分类：统一旧牛号留出协议
+## Four classes: unified old-cow-identifier holdout protocol
 
-下表为ACT在已有1000步检查点上的三个重复均值。标签比例是当初训练预算，不是本次训练。cowA、cowC、cowD使用原f01测试预测，cowB使用原f02测试预测；四个案例由不同留出模型评价，并非同一个模型一次同时留出全部四牛。训练和测试按旧数据牛号隔离；分组更名不会改变模型或合并样本的总体表现。
+The table below gives ACT means over three repetitions at the existing 1,000-step checkpoints. The
+label percentages are the original training budgets, not new training performed for this package.
+cowA, cowC and cowD use the original f01 test predictions; cowB uses the original f02 test
+predictions. The four cases are therefore evaluated by different holdout models: this is not one
+model holding out all four cows at once. Training and test are separated by the old data cow
+identifier; renaming the groups neither changes the models nor the pooled performance.
 
-| 案例 | 标签预算% | 准确率% | 固定四类宏F1% ± SD | 有真值类宏F1% | 四类F1较Scratch差值pp |
+| case | label budget % | accuracy % | fixed four-class macro-F1 % ± SD | macro-F1 over classes with truth % | four-class F1 vs scratch, pp |
 | --- | --- | --- | --- | --- | --- |
 | cowA | 5 | 64.69 | 57.62 ± 9.91 | 57.62 | -0.01 |
 | cowA | 10 | 57.59 | 52.32 ± 7.67 | 52.32 | +2.79 |
@@ -51,15 +65,36 @@
 | cowD | 50 | 85.62 | 60.88 ± 9.42 | 81.17 | -3.61 |
 | cowD | 100 | 97.65 | 63.91 ± 4.67 | 85.22 | -1.71 |
 
-完整结果覆盖5/10/25/50/100%预算、Scratch/ACT/UFRO三种起点、三个重复、窗口等权与区间等权；每类精确率/召回率/F1、混淆矩阵和正负向配对差值均在同目录CSV中。SD为三次训练重复的样本标准差，不是独立动物间误差。
+The complete results cover the 5/10/25/50/100% budgets, all three starting points
+(scratch/ACT/UFRO), three repetitions, and both window-equal and interval-equal weighting; per-class
+precision, recall and F1, the confusion matrices and the paired positive/negative differences are
+all in the CSVs in the same directory. SD is the sample standard deviation across three training
+repetitions, not an error term across independent animals.
 
-## six_group_holdout_protocol中的cowA、cowC、cowD结果
+## cowA, cowC and cowD under the six_group_holdout_protocol
 
-此前引用的cowC 63.83%→68.09%来自原六组逐组留出、10%预算、1000步、replicate 0、窗口等权的Scratch→ACT四类宏F1；cowD 64.13%→79.50%是同条件的有真值三类宏F1。两项与上表的旧牛号隔离协议不同，训练池也不同，必须分开解释。原六组协议仍存在原始记录组在训练与测试间交叉的限制，不能以此宣称已证明新动物独立泛化。原结果cowA、cowC、cowD的全部2预算×3方法×2端点及其逐类和混淆结果都保留。
+The previously quoted cowC figure of 63.83% → 68.09% comes from the original six-group per-group
+holdout at 10% budget, 1,000 steps, replicate 0, window-equal weighting, scratch → ACT four-class
+macro-F1; cowD's 64.13% → 79.50% is the three-class macro-F1 over classes with ground truth under
+the same conditions. Both differ from the old-cow-identifier holdout protocol in the table above and
+use a different training pool, so they must be interpreted separately. The original six-group
+protocol still has the limitation that original record groups cross between training and test, so
+it cannot be used to claim demonstrated generalisation to new, independent animals. All 2 budgets ×
+3 methods × 2 endpoints for the original cowA, cowC and cowD results are retained, together with
+their per-class and confusion results.
 
-## 资料与复核
+## Materials and verification
 
-02_results保存四牛显示表及完整raw_analysis_snapshot；03_models_predictions保存90份1000步旧牛号留出模型、cowA、cowC、cowD原六组18份模型的两个端点，以及24份公开模型直接识别原始预测与12份公开来源检查点。原快照和COMPLETE回执不改写；本包清单单独界定实际复制和验证范围。
+`02_results` holds the four-cow display tables and the complete `raw_analysis_snapshot`;
+`03_models_predictions` holds the 90 old-cow-holdout models at 1,000 steps, both endpoints of the
+18 original six-group models for cowA, cowC and cowD, the 24 raw predictions from direct public-model
+recognition, and the 12 public-source checkpoints. The original snapshot and the COMPLETE receipts
+are not rewritten; this package's manifest defines separately what was actually copied and verified.
 
-牧场身份由用户现场记录提供；本次没有独立核实其动物身份。数据档案中保留源组和原始标识，显示名称不增加独立动物数。所有成绩和来源均如实保留，未按效果删除失败条件。
-原六组18单元的最终结果按COMPLETE指定attempt绑定，1000步与3000步各18份齐全。其中f05_s0_b100_scratch的最终attempt为attempt_002，中断的attempt_001仅作为原始记录保留。
+Farm identity was supplied by the user's field records; animal identity was not independently
+verified here. Source groups and original identifiers are retained in the data archive; adding
+display names does not increase the number of independent animals. All scores and sources are
+retained as they are; no failure condition was deleted on the basis of its result.
+The final results for the 18 six-group units are bound to the attempts designated by COMPLETE, with
+18 files at 1,000 steps and 18 at 3,000 steps. The final attempt for `f05_s0_b100_scratch` is
+`attempt_002`; the interrupted `attempt_001` is retained only as a raw record.

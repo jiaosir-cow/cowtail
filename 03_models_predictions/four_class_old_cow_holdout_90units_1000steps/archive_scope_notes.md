@@ -1,1 +1,8 @@
-此处保存90个已有训练单元的1000步checkpoint、概率、索引、元数据、初始化审计，以及对应源代码、配置、完整输入数组与真值。原COMPLETE.json按原字节保留；历史3000步产物已不在原目录，原回执中涉及3000步的完整性不作本包验证结论。本包验证的是实际复制文件与540项1000步预测产物，未重新训练或推理。A/D/E取f01；当前显示Cow C取f02内原分析组Cow C1。
+This directory holds the 1,000-step checkpoints, probabilities, indices, metadata and
+initialisation audit for the 90 existing training units, together with the corresponding source code,
+configurations, full input arrays and ground truth. The original `COMPLETE.json` is preserved
+byte-for-byte. The historical 3,000-step products are no longer in the original directory, so the
+integrity of the 3,000-step parts of the original receipt is not a conclusion of this package. What
+this package verifies is the files actually copied and the 540 one-off 1,000-step prediction
+products; nothing was retrained or re-inferred. A/D/E use f01; the current display name Cow C uses
+the original analysis group Cow C1 inside f02.
