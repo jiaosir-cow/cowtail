@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "algorithm": "sha256",
-  "file_count": 1966,
+  "file_count": 1968,
   "files": {
     ".gitignore": {
       "size_bytes": 83,
@@ -7823,13 +7823,21 @@
       "size_bytes": 1077,
       "sha256": "13d52df9e8a633c6f9039fc8b6e51ef4a66834a1de7b7e9acb16c1143848a353"
     },
+    "NOTICE": {
+      "size_bytes": 731,
+      "sha256": "1321faf01c8950fc17564e27d05b40ac9355f892ec44ddfc81734e619dd1888b"
+    },
     "README.md": {
-      "size_bytes": 7428,
-      "sha256": "11b63c6b9c7a75b32977e837f5f25af90e93db3c44d246bf61c5d54d1c307893"
+      "size_bytes": 7384,
+      "sha256": "4f481a53514bb7f76fff97545d04df239fac889ba810c0b6baf919b1af7d7ea7"
     },
     "README.zh-CN.md": {
-      "size_bytes": 6781,
-      "sha256": "ea9c6f201fc0be1accc889cb56c07bb08f39cc301505f2d86e394ec9d2c503d3"
+      "size_bytes": 6880,
+      "sha256": "96544ea2b09e6dc4f59e151df4338cbaf9bb9cbd696941e950ccc15bf155a587"
+    },
+    "assets/README.md": {
+      "size_bytes": 795,
+      "sha256": "43d5d4b06e8e4c9d492d941efbf4f0258452d20430fcf1c036428828b57c5888"
     },
     "assets/brand/cowmata-logo.svg": {
       "size_bytes": 3385,

@@ -84,7 +84,7 @@ cowD 没有采食真值（`01_data/four_cow_label_and_window_counts.csv` 中 `FE
 
 ## 伦理与局限
 
-- **许可。** 数据 CC BY 4.0（[`LICENSE`](LICENSE)）。代码 MIT（[`LICENSE-CODE`](LICENSE-CODE)）。
+- **许可。** 数据 CC BY 4.0（[`LICENSE`](LICENSE)）。源代码以 MIT 许可证发布（[`LICENSE-CODE`](LICENSE-CODE)）。COWMATA 名称和徽标文件 [`assets/brand/`](assets/brand/) 是公司品牌资产，未经 MIT 重新授权。请参阅 [`NOTICE`](NOTICE) 和 [`assets/README.md`](assets/README.md)。
 - **伦理。** 扬州大学实验牧场伦理委员会已批准。全程非侵入：仅尾根外挂，无采血。
 - **范围。** 4 头牛、单一牧场、单日采集。不要把这几头牛当作群体样本。
 - **不平衡。** 行走有 198 个窗口。引用行走 F1 时必须同时给出这个样本数。
@@ -101,8 +101,10 @@ cowtail/
 ├── 03_models_predictions/    检查点与逐窗口预测
 ├── 04_raw_sensors_labels/    九轴原始流与参考区间
 ├── 05_six_cows_full/         另一份现场数据包（见该目录自己的 README）
+├── assets/brand/             COWMATA 字标；不在代码的 MIT 许可内
 ├── code/                     加载示例与清单生成脚本
 ├── docs/                     字段字典与外部数据源说明
+├── NOTICE                    品牌资产说明
 ├── FILE_MANIFEST.json        每个文件的大小与 SHA-256
 ├── FINAL_VERIFICATION.json   本快照的核验记录
 ├── LICENSE                   数据许可（CC BY 4.0）

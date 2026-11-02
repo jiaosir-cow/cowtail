@@ -84,7 +84,7 @@ The same record is in [`CITATION.cff`](CITATION.cff).
 
 ## Ethics and limitations
 
-- **Licence.** Data: CC BY 4.0 ([`LICENSE`](LICENSE)). Code: MIT ([`LICENSE-CODE`](LICENSE-CODE)).
+- **Licence.** Data: CC BY 4.0 ([`LICENSE`](LICENSE)). Source code: MIT ([`LICENSE-CODE`](LICENSE-CODE)). The COWMATA name and the logo files in [`assets/brand/`](assets/brand/) are company brand assets and are not relicensed under MIT. See [`NOTICE`](NOTICE) and [`assets/README.md`](assets/README.md).
 - **Ethics.** Approved by the Ethics Committee of the Experimental Farm of Yangzhou University. Procedures were non-invasive: external tail-root mounting only, no blood sampling.
 - **Scope.** Four cows from a single farm, recorded on one day. These animals are not a population sample.
 - **Balance.** Walking has 198 windows. Do not quote a walking F1 without that support count.
@@ -101,8 +101,10 @@ cowtail/
 ├── 03_models_predictions/    checkpoints and per-window predictions
 ├── 04_raw_sensors_labels/    raw nine-axis streams and reference intervals
 ├── 05_six_cows_full/         separate field package (see its own README)
+├── assets/brand/             COWMATA wordmark; not covered by the MIT code licence
 ├── code/                     loader example and manifest builder
 ├── docs/                     data dictionary and external-source notes
+├── NOTICE                    brand-asset notice
 ├── FILE_MANIFEST.json        every file with size and SHA-256
 ├── FINAL_VERIFICATION.json   verification record for the released snapshot
 ├── LICENSE                   data licence (CC BY 4.0)
