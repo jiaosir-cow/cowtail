@@ -35,9 +35,11 @@ meta = pd.read_csv("01_data/windows.csv", encoding="utf-8-sig")
 
 print(X.shape)                                   # (12736, 3, 256)
 print(meta[["display_cow", "session_id", "original_state"]].head())
+row = meta.iloc[0]
+approx_g = X[int(row.row_index)] * float(row.scale_g)
 ```
 
-`acceleration.npy` 按窗口归一化。乘该行的 `scale_g` 得到近似 *g*。单牛数组在 `01_data/<cow>/acceleration.npy`。九轴原始流在 `04_raw_sensors_labels/`，用 `session_id` 与窗口表对应。
+`acceleration.npy` 按窗口归一化。`01_data/windows.csv` 的 `row_index` 就是这个数组的行号，乘同一行的 `scale_g` 得到近似 *g*。总数组**不是**按 cowA–cowD 排列：cowA（0–6341 行）、cowC（6342–6669）、cowD（6670–7223）、cowB（7224–12735）。单牛数组在 `01_data/<cow>/acceleration.npy`。九轴原始流在 `04_raw_sensors_labels/`，用 `session_id` 与窗口表对应。
 
 ## 数据规模
 
@@ -107,7 +109,7 @@ cowtail/
 └── LICENSE-CODE              代码许可（MIT）
 ```
 
-`05_six_cows_full/README.md` 写的是那一份数据自己的规模和划分，不要把它的数字当成上面的四牛表。字段定义见 [`docs/data_dictionary.md`](docs/data_dictionary.md)。
+`05_six_cows_full/README.md` 写的是那一份数据自己的规模和划分，不要把它的数字当成上面的四牛表。两边的同名牛也不是同一头：四牛包的 cowB 只是六牛包 cowB 的一个切片，四牛包的 cowC 是六牛包的 cowD，四牛包的 cowD 是六牛包的 cowE。拼接两份数据前先看那份 README 里的对照表。字段定义见 [`docs/data_dictionary.md`](docs/data_dictionary.md)。
 
 ## 标注流程
 

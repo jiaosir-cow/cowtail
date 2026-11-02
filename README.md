@@ -35,9 +35,11 @@ meta = pd.read_csv("01_data/windows.csv", encoding="utf-8-sig")
 
 print(X.shape)                                   # (12736, 3, 256)
 print(meta[["display_cow", "session_id", "original_state"]].head())
+row = meta.iloc[0]
+approx_g = X[int(row.row_index)] * float(row.scale_g)
 ```
 
-`acceleration.npy` is normalised per window. Multiply a window by its `scale_g` to recover approximate acceleration in *g*. Per-cow arrays are `01_data/<cow>/acceleration.npy`. Raw nine-axis streams are in `04_raw_sensors_labels/` and join on `session_id`.
+`acceleration.npy` is normalised per window. `row_index` in `01_data/windows.csv` is the row of that array; multiply by the same row's `scale_g` to recover approximate acceleration in *g*. The package array is **not** stored in cowA–cowD order: cowA (rows 0–6341), cowC (6342–6669), cowD (6670–7223), cowB (7224–12735). Per-cow arrays are `01_data/<cow>/acceleration.npy`. Raw nine-axis streams are in `04_raw_sensors_labels/` and join on `session_id`.
 
 ## Dataset
 
@@ -107,7 +109,7 @@ cowtail/
 └── LICENSE-CODE              code licence (MIT)
 ```
 
-`05_six_cows_full/README.md` states that package's own counts and split notes. Do not treat those figures as the four-cow table above. Field definitions are in [`docs/data_dictionary.md`](docs/data_dictionary.md).
+`05_six_cows_full/README.md` states that package's own counts and split notes. Do not treat those figures as the four-cow table above. The same display names are not the same animals: four-cow cowB is one slice of six-cow cowB, four-cow cowC is six-cow cowD, and four-cow cowD is six-cow cowE. Use the crosswalk table in that README before joining the two packages. Field definitions are in [`docs/data_dictionary.md`](docs/data_dictionary.md).
 
 ## Annotation protocol
 
