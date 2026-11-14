@@ -1,81 +1,104 @@
-<div align="center">
-  <img src="assets/brand/cowmata-logo.svg" width="300" alt="COWMATA">
+<p align="center">
+  <img src="assets/brand/cowmata-logo.svg" width="280" alt="COWMATA">
+</p>
 
-# CowTail-4
+<h1 align="center">CowTail-4</h1>
 
-**牛尾根九轴惯性传感器行为数据集（完整标注）。**
+<p align="center"><b>四头奶牛的尾根九轴惯性行为数据集。</b></p>
 
-[English](README.md) · [简体中文](README.zh-CN.md)
+<p align="center">
+  <a href="README.md"><b>English</b></a>
+  &nbsp;·&nbsp;
+  <a href="README.zh-CN.md"><b>简体中文</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/zxq309/COWMATA-Pro"><b>COWMATA Pro</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/jiaosir-cow/cowtail/issues"><b>问题</b></a>
+</p>
 
-<img alt="data licence" src="https://img.shields.io/badge/data-CC%20BY%204.0-green">
-<img alt="code licence" src="https://img.shields.io/badge/code-MIT-blue">
+<p align="center">
+  <img alt="data licence" src="https://img.shields.io/badge/data-CC%20BY%204.0-2ea44f">
+  <img alt="code licence" src="https://img.shields.io/badge/code-MIT-1f6feb">
+  <img alt="windows" src="https://img.shields.io/badge/windows-12%2C736-555555">
+  <img alt="sessions" src="https://img.shields.io/badge/sessions-31-555555">
+  <img alt="sampling" src="https://img.shields.io/badge/sampling-50%20Hz-555555">
+</p>
 
-</div>
+这是与 [COWMATA Pro](https://github.com/zxq309/COWMATA-Pro) 配套的公开数据仓库。
 
-CowTail-4 是论文 *Cattle behaviour recognition: Collar-to-tail transfer for prediction-guided annotation* 所发布的尾根数据集。论文使用十头可用牛。cowA–cowD 是所报告的测试牛。另外六头只提供训练数据，不作为报告中的测试牛；本发布把它们记为 train1–train6。所报告测试牛的原始传感流、标注层和模型输入窗口都在仓库里，因此一条已发表结果可以追溯到具体记录、标签和窗口。
+**Yang, Zhanhai · Jiao, Tengyu · Zhang, Jianqi · Zhang, Xiangqing · Zhang, Yalong · Jiang, Qinglin · Zhang, Yihui**
 
-## 60 秒开始
+## 概览
 
-在仓库根目录执行。依赖见 [`requirements.txt`](requirements.txt)（`numpy`、`pandas`）：
+31 个会话、12,736 个互不重叠的 5.12 s 窗口，单一牧场，一天。尾根传感器为九轴，采样率 50 Hz，每窗 256 点。类别为站立、躺卧、行走、采食。仓库里有九轴原始流、参考区间和模型输入数组。视频不公开。
+
+## 仓库里有什么
+
+- **窗口数组** — `01_data/acceleration.npy`，形状 `(12736, 3, 256)`，逐窗口归一化。
+- **窗口表** — `01_data/windows.csv`。`row_index` 对应数组行号，乘同一行的 `scale_g` 得到近似 *g*。
+- **九轴原始流** — `04_raw_sensors_labels/`，用 `session_id` 与窗口表对应。
+- **六牛现场包** — `05_six_cows_full/`，与上面的四牛命名不是同一套。
+- **校验** — `FILE_MANIFEST.json` 给出每个文件的大小和 SHA-256。`python verify_and_recompute.py` 核对快照。
+
+## 数据
+
+| | |
+|---|---|
+| 动物 | cowA–cowD |
+| 设备 | 2 个尾根记录仪，在个体间轮换 |
+| 会话 | 31 |
+| 通道 | 加速度、角速度、磁场 |
+| 采样 | 50 Hz |
+| 窗口 | 256 点，5.12 s，互不重叠 |
+| 窗口数 | 12,736 |
+| 类别 | 站立、躺卧、行走、采食 |
+| 标签 | 三名标注员，再经兽医专业研究生复核 |
+| 对齐 | 视频与传感器残余误差 ≤ 0.1 s |
+
+- **站立** — 四肢支撑的直立，含站立反刍。
+- **躺卧** — 胸卧或侧卧。
+- **行走** — 向前的位移（198 个窗口）。
+- **采食** — 在料槽摄入饲料。反刍、舔舐和单纯头部活动不算采食。cowD 没有采食标签。
+
+站立与采食重叠时，两条都保留。四分类表每个窗口只用一条标签。公开标识为 `DEVICE_NN`、`SESSION_NN` 和相对毫秒。字段见 [`docs/data_dictionary.md`](docs/data_dictionary.md)。
+
+## 读取
+
+在仓库根目录执行。依赖见 [`requirements.txt`](requirements.txt)（`numpy`、`pandas`）。
 
 ```bash
 pip install -r requirements.txt
-python code/load_example.py            # 第一条 WALKING 窗口
+python code/load_example.py            # 第一条行走窗口
 python code/load_example.py cowA 100   # 牛编号, 行号
 ```
-
-也可以直接读数组：
 
 ```python
 import numpy as np
 import pandas as pd
 
-X = np.load("01_data/acceleration.npy")          # (12736, 3, 256)，逐窗口归一化
+X = np.load("01_data/acceleration.npy")   # (12736, 3, 256)，逐窗口归一化
 meta = pd.read_csv("01_data/windows.csv", encoding="utf-8-sig")
-
-print(X.shape)                                   # (12736, 3, 256)
-print(meta[["display_cow", "session_id", "original_state"]].head())
 row = meta.iloc[0]
 approx_g = X[int(row.row_index)] * float(row.scale_g)
 ```
 
-`01_data/acceleration.npy` 只含所报告的测试牛，并按窗口归一化。`01_data/windows.csv` 的 `row_index` 就是这个数组的行号，乘同一行的 `scale_g` 得到近似 *g*。总数组**不是**按 cowA–cowD 排列：cowA（0–6341 行）、cowC（6342–6669）、cowD（6670–7223）、cowB（7224–12735）。单牛数组在 `01_data/<cow>/acceleration.npy`。这四头的九轴原始流在 `04_raw_sensors_labels/`，用 `session_id` 与窗口表对应。六头只参与训练的牛在 [`01_data/additional_training/`](01_data/additional_training/README.md)。名册见 [`01_data/study_roles.csv`](01_data/study_roles.csv)。
+总数组顺序：cowA 0–6341，cowC 6342–6669，cowD 6670–7223，cowB 7224–12735。单牛数组在 `01_data/<cow>/acceleration.npy`。
 
-## 论文中的动物
+## 目录
 
-| 角色 | 动物 | 位置 |
-|---|---|---|
-| 报告测试，M1 | cowA、cowC、cowD | `01_data/` |
-| 报告测试，M2 | cowB | `01_data/` |
-| 只参与训练 | train1–train6（101 个区间，879 个窗口） | `01_data/additional_training/` |
+```text
+cowtail/
+├── 01_data/                  窗口表、单牛数组、尺度
+├── 02_results/               归档指标
+├── 03_models_predictions/    检查点与逐窗口预测
+├── 04_raw_sensors_labels/    九轴原始流与参考区间
+├── 05_six_cows_full/         另一份六牛现场数据
+├── code/                     加载示例
+├── docs/                     字段说明
+└── FILE_MANIFEST.json        每个文件的大小与 SHA-256
+```
 
-M1 测试 cowA、cowC 和 cowD。M2 测试 cowB。每头被报告的测试牛都不进入评价它的那个模型的训练数据。这六头可以给两组评价提供训练样本。train1–train6 是按窗口数从多到少排列的发布名，不是论文里的牛名，也不是 `05_six_cows_full` 里的 cowA–cowF。
-
-## 所报告的测试牛
-
-| 项目 | 数值 |
-|---|---|
-| 动物 | 4 头奶牛（论文中记为 cowA–cowD） |
-| 设备 | 2 个尾根记录仪，在不同个体间轮换佩戴 |
-| 采集会话 | 31 个，单日，单一牧场 |
-| 传感通道 | 9 轴：三轴加速度、三轴角速度、三轴磁场 |
-| 采样率 | 50 Hz（原生） |
-| 窗口 | 256 点 = 5.12 s，互不重叠 |
-| 已标注窗口 | 12,736 个 |
-| 行为类别 | 站立 · 躺卧 · 行走 · 采食 |
-| 参考真值 | 三名标注员独立标注 + 兽医专业研究生复核 |
-| 视频—传感器对齐 | 锁定后残余误差 ≤ 0.1 s |
-
-参考标签的类别定义：
-
-- **站立**——四肢支撑的直立姿态，包含站立反刍。反刍不单独设类。
-- **躺卧**——胸卧或侧卧。
-- **行走**——向前的位移运动。该类有 198 个窗口，单类指标不稳定。
-- **采食**——在料槽处实际摄入饲料。反刍、舔舐和单纯头部活动不计为采食。
-
-cowD 没有采食真值（`01_data/four_cow_label_and_window_counts.csv` 中 `FEEDING` 为 0）。cowD 上的采食指标无法解释，论文的四分类评价已将其排除。
-
-视频不公开。公开文件只使用 `DEVICE_NN` / `SESSION_NN` 和相对毫秒，因为画面中有可辨识的牧场工作人员和牧场动物标识。
+四牛 cowA 即六牛 cowA。四牛 cowB 是六牛 cowB 的一个切片。四牛 cowC 是六牛 cowD。四牛 cowD 是六牛 cowE。对照表见 [`05_six_cows_full/README.md`](05_six_cows_full/README.md)。
 
 ## 引用
 
@@ -90,58 +113,16 @@ cowD 没有采食真值（`01_data/four_cow_label_and_window_counts.csv` 中 `FE
 }
 ```
 
-同一条记录见 [`CITATION.cff`](CITATION.cff)。
+同一条记录见 [`CITATION.cff`](CITATION.cff)。论文发表后请同时引用论文。标注软件见 [COWMATA Pro](https://github.com/zxq309/COWMATA-Pro)。
 
-## 伦理与局限
+## 许可
 
-- **许可。** 数据 CC BY 4.0（[`LICENSE`](LICENSE)）。源代码以 MIT 许可证发布（[`LICENSE-CODE`](LICENSE-CODE)）。COWMATA 名称和徽标文件 [`assets/brand/`](assets/brand/) 是公司品牌资产，未经 MIT 重新授权。请参阅 [`NOTICE`](NOTICE) 和 [`assets/README.md`](assets/README.md)。
-- **伦理。** 扬州大学实验牧场伦理委员会已批准。全程非侵入：仅尾根外挂，无采血。
-- **范围。** 同一牧场的 10 头可用牛：4 头所报告的测试牛，6 头只参与训练。所报告测试牛的记录来自同一天。不要把这些牛当作群体样本。
-- **不平衡。** 行走有 198 个窗口。引用行走 F1 时必须同时给出这个样本数。
-- **缺失真值。** cowD 无采食真值。
-- **匿名化。** 绝对时间、设备 MAC、原始牛号、视频文件名和标注人姓名已移除。除数据所有者外，不能把区间重新连回录像。
-- **不是福利诊断。** 标签描述可观察状态，不是健康结论。
+数据 [CC BY 4.0](LICENSE)。代码 [MIT](LICENSE-CODE)。COWMATA 名称和 [`assets/brand/`](assets/brand/) 中的文件仍是公司品牌资产，见 [`NOTICE`](NOTICE)。
 
-## 目录
+## 致谢
 
-```
-cowtail/
-├── 01_data/                  所报告的测试牛，以及 additional_training/ 和 study_roles.csv
-├── 02_results/               归档的指标与混淆计数
-├── 03_models_predictions/    检查点与逐窗口预测
-├── 04_raw_sensors_labels/    九轴原始流与参考区间
-├── 05_six_cows_full/         旧导出；不是论文的十头牛名册（见该目录自己的 README）
-├── assets/brand/             COWMATA 字标；不在代码的 MIT 许可内
-├── code/                     加载示例与清单生成脚本
-├── docs/                     字段字典与外部数据源说明
-├── NOTICE                    品牌资产说明
-├── FILE_MANIFEST.json        每个文件的大小与 SHA-256
-├── FINAL_VERIFICATION.json   本快照的核验记录
-├── LICENSE                   数据许可（CC BY 4.0）
-└── LICENSE-CODE              代码许可（MIT）
-```
-
-[`01_data/study_roles.csv`](01_data/study_roles.csv) 是论文里的动物名册。`05_six_cows_full/README.md` 描述的是一份旧导出，不要把它当成这十头牛，也不要把里面的 cowA–cowF 当成 train1–train6。在那份旧导出里，四牛包的 cowB 只是其中 cowB 的一个切片，四牛包的 cowC 是其中的 cowD，四牛包的 cowD 是其中的 cowE。字段定义见 [`docs/data_dictionary.md`](docs/data_dictionary.md)。
-
-## 标注流程
-
-- 每条记录由三名标注员独立标注。
-- 一名兽医专业研究生复核全部标签并裁决分歧。
-- 站立与采食同时发生时，该区间标注两遍：先站立，后采食，两条都保留。
-- 每个会话的视频与传感器时钟只对齐一次并锁定，残余对齐误差 ≤ 0.1 s。
-- 四分类评价对每个窗口只使用一条无歧义的冻结标签。重叠的双标签留在标注层，不参与打分。
-
-## 完整性
-
-`FILE_MANIFEST.json` 记录每个文件的大小与 SHA-256。
-
-```bash
-python code/make_manifest.py      # 重新生成
-python verify_and_recompute.py    # 只读核验
-```
+扬州大学实验牧场伦理委员会已批准。仅尾根外挂。绝对时间、设备 MAC、原始牛号、视频文件名和标注人姓名已移除。
 
 ## 联系
 
-张相庆（通讯作者）— jiaosirty@stu.yau.edu.cn
-
-问题请提交 GitHub Issue。
+张向前（通讯作者）— jiaosirty@stu.yau.edu.cn
