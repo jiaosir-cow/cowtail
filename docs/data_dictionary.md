@@ -3,7 +3,8 @@
 This document defines every file, column, unit and binary layout in this release.
 If a value here disagrees with a file, the file is wrong — please open an issue.
 
-- Animals: 4 cows (`cowA`–`cowD`), 2 tail-mounted 9-axis collars (`DEVICE_01`, `DEVICE_02`)
+- Manuscript roster: 10 usable cows. Reported test cattle are `cowA`–`cowD`. Six training-only animals are `train1`–`train6` in `01_data/additional_training/` (see `01_data/study_roles.csv`).
+- This section describes the reported test package: 4 cows, 2 tail-mounted 9-axis collars (`DEVICE_01`, `DEVICE_02`)
 - Collection: 31 sessions on a single day, 50 Hz, 5.12 s non-overlapping windows
 - Labelled windows: 12,736 across four behaviours
 - Repository layout version: `schema = 1`
@@ -257,9 +258,9 @@ cannot be linked to any earlier archive, recompute them with a salt (§8, item 6
 
 ---
 
-## 9. Six-cow dataset (`05_six_cows_full`)
+## 9. Older six-name export (`05_six_cows_full`)
 
-The complete field collection, 28,911 windows over 6 cows and 62 sessions. Same
+This export is not the manuscript roster and its `cowA`–`cowF` labels are not `train1`–`train6`. It has 28,911 windows under 6 display labels and 62 sessions. Same
 window contract as §4 (50 Hz, 256 samples, 5.12 s, per-window `scale_g`
 normalisation). Extra columns compared with §3:
 
@@ -280,3 +281,11 @@ slice `C1` of six-cow `cowB`; four-cow `cowC` and `cowD` are six-cow `cowD` and
 
 Raw 9-axis coverage: only the 31 sessions shared with the four-cow subset (12,736 of
 28,911 windows, 44%). The remaining 31 sessions exist only as 3-axis derived windows.
+
+---
+
+## 10. Additional training cattle (`01_data/additional_training`)
+
+Six animals, 101 intervals, 879 windows. The manuscript does not name them. Release labels `train1`–`train6` follow descending window count. They are training-only animals, not reported test cases, and not the display labels in §9.
+
+`acceleration.npy` is `(879, 3, 256)` float32 in train1…train6 order, with the same per-window `scale_g` contract as §4. `windows.csv` and `events.csv` use session ids `train1_S01` and so on; those ids are local to this directory. No raw nine-axis stream is released here. Counts and row ranges are in `animals.csv`. The ten-cow roster is `01_data/study_roles.csv`.

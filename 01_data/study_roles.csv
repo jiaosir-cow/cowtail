@@ -1,0 +1,11 @@
+﻿display_cow,role,reported_evaluation,windows,eligible_intervals,sessions,STANDING,LYING,WALKING,FEEDING,nine_axis_raw_released
+cowA,reported_test,M1,6342,209,17,2041,2034,97,2170,True
+cowB,reported_test,M2,5512,127,11,1368,2060,74,2010,True
+cowC,reported_test,M1,328,17,2,39,211,20,58,True
+cowD,reported_test,M1,554,11,1,194,353,7,0,True
+train1,additional_training,,620,48,13,184,103,166,167,False
+train2,additional_training,,153,12,6,126,0,27,0,False
+train3,additional_training,,56,19,9,0,0,56,0,False
+train4,additional_training,,27,9,4,0,0,27,0,False
+train5,additional_training,,14,7,5,0,0,14,0,False
+train6,additional_training,,9,6,3,0,0,9,0,False

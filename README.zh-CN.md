@@ -12,7 +12,7 @@
 
 </div>
 
-CowTail-4 是论文 *Reusing public collar models for cattle behaviour recognition from tail acceleration with limited labels* 所发布的四头牛尾根数据集。仓库里同时有原始传感流、标注层和模型输入窗口，因此一条已发表结果可以追溯到具体记录、标签和窗口。
+CowTail-4 是论文 *Cattle behaviour recognition: Collar-to-tail transfer for prediction-guided annotation* 所发布的尾根数据集。论文使用十头可用牛。cowA–cowD 是所报告的测试牛。另外六头只提供训练数据，不作为报告中的测试牛；本发布把它们记为 train1–train6。所报告测试牛的原始传感流、标注层和模型输入窗口都在仓库里，因此一条已发表结果可以追溯到具体记录、标签和窗口。
 
 ## 60 秒开始
 
@@ -39,9 +39,19 @@ row = meta.iloc[0]
 approx_g = X[int(row.row_index)] * float(row.scale_g)
 ```
 
-`acceleration.npy` 按窗口归一化。`01_data/windows.csv` 的 `row_index` 就是这个数组的行号，乘同一行的 `scale_g` 得到近似 *g*。总数组**不是**按 cowA–cowD 排列：cowA（0–6341 行）、cowC（6342–6669）、cowD（6670–7223）、cowB（7224–12735）。单牛数组在 `01_data/<cow>/acceleration.npy`。九轴原始流在 `04_raw_sensors_labels/`，用 `session_id` 与窗口表对应。
+`01_data/acceleration.npy` 只含所报告的测试牛，并按窗口归一化。`01_data/windows.csv` 的 `row_index` 就是这个数组的行号，乘同一行的 `scale_g` 得到近似 *g*。总数组**不是**按 cowA–cowD 排列：cowA（0–6341 行）、cowC（6342–6669）、cowD（6670–7223）、cowB（7224–12735）。单牛数组在 `01_data/<cow>/acceleration.npy`。这四头的九轴原始流在 `04_raw_sensors_labels/`，用 `session_id` 与窗口表对应。六头只参与训练的牛在 [`01_data/additional_training/`](01_data/additional_training/README.md)。名册见 [`01_data/study_roles.csv`](01_data/study_roles.csv)。
 
-## 数据规模
+## 论文中的动物
+
+| 角色 | 动物 | 位置 |
+|---|---|---|
+| 报告测试，M1 | cowA、cowC、cowD | `01_data/` |
+| 报告测试，M2 | cowB | `01_data/` |
+| 只参与训练 | train1–train6（101 个区间，879 个窗口） | `01_data/additional_training/` |
+
+M1 测试 cowA、cowC 和 cowD。M2 测试 cowB。每头被报告的测试牛都不进入评价它的那个模型的训练数据。这六头可以给两组评价提供训练样本。train1–train6 是按窗口数从多到少排列的发布名，不是论文里的牛名，也不是 `05_six_cows_full` 里的 cowA–cowF。
+
+## 所报告的测试牛
 
 | 项目 | 数值 |
 |---|---|
@@ -86,7 +96,7 @@ cowD 没有采食真值（`01_data/four_cow_label_and_window_counts.csv` 中 `FE
 
 - **许可。** 数据 CC BY 4.0（[`LICENSE`](LICENSE)）。源代码以 MIT 许可证发布（[`LICENSE-CODE`](LICENSE-CODE)）。COWMATA 名称和徽标文件 [`assets/brand/`](assets/brand/) 是公司品牌资产，未经 MIT 重新授权。请参阅 [`NOTICE`](NOTICE) 和 [`assets/README.md`](assets/README.md)。
 - **伦理。** 扬州大学实验牧场伦理委员会已批准。全程非侵入：仅尾根外挂，无采血。
-- **范围。** 4 头牛、单一牧场、单日采集。不要把这几头牛当作群体样本。
+- **范围。** 同一牧场的 10 头可用牛：4 头所报告的测试牛，6 头只参与训练。所报告测试牛的记录来自同一天。不要把这些牛当作群体样本。
 - **不平衡。** 行走有 198 个窗口。引用行走 F1 时必须同时给出这个样本数。
 - **缺失真值。** cowD 无采食真值。
 - **匿名化。** 绝对时间、设备 MAC、原始牛号、视频文件名和标注人姓名已移除。除数据所有者外，不能把区间重新连回录像。
@@ -96,11 +106,11 @@ cowD 没有采食真值（`01_data/four_cow_label_and_window_counts.csv` 中 `FE
 
 ```
 cowtail/
-├── 01_data/                  窗口总表、单牛数组、归一化尺度
+├── 01_data/                  所报告的测试牛，以及 additional_training/ 和 study_roles.csv
 ├── 02_results/               归档的指标与混淆计数
 ├── 03_models_predictions/    检查点与逐窗口预测
 ├── 04_raw_sensors_labels/    九轴原始流与参考区间
-├── 05_six_cows_full/         另一份现场数据包（见该目录自己的 README）
+├── 05_six_cows_full/         旧导出；不是论文的十头牛名册（见该目录自己的 README）
 ├── assets/brand/             COWMATA 字标；不在代码的 MIT 许可内
 ├── code/                     加载示例与清单生成脚本
 ├── docs/                     字段字典与外部数据源说明
@@ -111,7 +121,7 @@ cowtail/
 └── LICENSE-CODE              代码许可（MIT）
 ```
 
-`05_six_cows_full/README.md` 写的是那一份数据自己的规模和划分，不要把它的数字当成上面的四牛表。两边的同名牛也不是同一头：四牛包的 cowB 只是六牛包 cowB 的一个切片，四牛包的 cowC 是六牛包的 cowD，四牛包的 cowD 是六牛包的 cowE。拼接两份数据前先看那份 README 里的对照表。字段定义见 [`docs/data_dictionary.md`](docs/data_dictionary.md)。
+[`01_data/study_roles.csv`](01_data/study_roles.csv) 是论文里的动物名册。`05_six_cows_full/README.md` 描述的是一份旧导出，不要把它当成这十头牛，也不要把里面的 cowA–cowF 当成 train1–train6。在那份旧导出里，四牛包的 cowB 只是其中 cowB 的一个切片，四牛包的 cowC 是其中的 cowD，四牛包的 cowD 是其中的 cowE。字段定义见 [`docs/data_dictionary.md`](docs/data_dictionary.md)。
 
 ## 标注流程
 
@@ -132,6 +142,6 @@ python verify_and_recompute.py    # 只读核验
 
 ## 联系
 
-张相庆（通讯作者）— zxq1991@mail.nwpu.edu.cn
+张相庆（通讯作者）— jiaosirty@stu.yau.edu.cn
 
 问题请提交 GitHub Issue。

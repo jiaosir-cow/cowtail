@@ -8,12 +8,11 @@ license-url: "https://github.com/jiaosir-cow/cowtail/blob/main/LICENSE"
 repository-code: "https://github.com/jiaosir-cow/cowtail"
 url: "https://github.com/jiaosir-cow/cowtail"
 abstract: >-
-  A fully labelled field dataset of dairy-cattle behaviour recorded at the tail
-  root with a nine-axis inertial sensor. It provides raw sensor streams, the
-  annotation layer used to derive reference labels, and the model-input windows
-  used in the companion manuscript: 4 cows, 31 sessions, 12,736 non-overlapping
-  windows of 5.12 s at 50 Hz, and four behaviour classes (standing, lying,
-  walking, feeding).
+  Tail-root behaviour data for the companion manuscript's ten usable cows.
+  The four reported test cattle, cowA–cowD, have raw nine-axis streams and
+  12,736 model windows. Six further animals, released as train1–train6, supply
+  additional training data only: 101 intervals and 879 three-axis windows.
+  Behaviour classes are standing, lying, walking and feeding.
 keywords:
   - cattle
   - dairy cattle

@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "algorithm": "sha256",
-  "file_count": 1968,
+  "file_count": 1974,
   "files": {
     ".gitignore": {
       "size_bytes": 83,
@@ -14,6 +14,26 @@
     "01_data/acceleration.npy": {
       "size_bytes": 39125120,
       "sha256": "14ce391a56712fbc75c37d981e202fece5eccc7e052c1bcbb7f9208d6c1442a4"
+    },
+    "01_data/additional_training/README.md": {
+      "size_bytes": 2056,
+      "sha256": "5d88cc0d9dd5ed157a36c5fe08b9242ea768fe6a5fee29e9f6b4f32ac181ce30"
+    },
+    "01_data/additional_training/acceleration.npy": {
+      "size_bytes": 2700416,
+      "sha256": "130ddbe6a632636f17637060b05250cd924bf70127f76fb4d12049ed4ae75ca2"
+    },
+    "01_data/additional_training/animals.csv": {
+      "size_bytes": 492,
+      "sha256": "765602f220d0e4a8879628c806daeb7b8bd4e354f37c054335822f4807eea9e0"
+    },
+    "01_data/additional_training/events.csv": {
+      "size_bytes": 15138,
+      "sha256": "318a0056b8d6532a668de06e3860862421a0ae272009bd55362cc3c8330e25a4"
+    },
+    "01_data/additional_training/windows.csv": {
+      "size_bytes": 248919,
+      "sha256": "b6b9a61b9f0e479a32a80bf298a5dc03dc86d8c89a940ea8ac45eda35eb41eb1"
     },
     "01_data/canonical_annotations.csv": {
       "size_bytes": 289691,
@@ -190,6 +210,10 @@
     "01_data/session_identity_mapping.csv": {
       "size_bytes": 874,
       "sha256": "4592bb677b815ed5a01b6a2bb5cc2db84564c8c97c5973140b2da097848e4faf"
+    },
+    "01_data/study_roles.csv": {
+      "size_bytes": 654,
+      "sha256": "94c58fb1e87607141ddcfae8ab807a917726f6327269c3c5aac5e2f7eb25294b"
     },
     "01_data/windows.csv": {
       "size_bytes": 3482905,
@@ -7728,8 +7752,8 @@
       "sha256": "42ad7317b7f5d09c43259fb389337c9ca90c6c9b345abf58c4a4dace02de23de"
     },
     "05_six_cows_full/README.md": {
-      "size_bytes": 3521,
-      "sha256": "92419d7af71731d30c034ae89ce4d63ded7d960eb0963896e3c0dfbac9aadf89"
+      "size_bytes": 3920,
+      "sha256": "927d8a0bdb9b052a1bdbceaa1df3fed2c54d5423cf3639990b49b37aede99854"
     },
     "05_six_cows_full/acceleration.npy": {
       "size_bytes": 88814720,
@@ -7808,8 +7832,8 @@
       "sha256": "48fe87e7f0a97f121cde8fb5e93e116c3c5a4e04d07e512736f9e9bf0775da50"
     },
     "CITATION.cff": {
-      "size_bytes": 1974,
-      "sha256": "7b6ef24d5c65fe4d08cd9c55fdb5065bdef5533b46b40226ca7c4ddac965a8a5"
+      "size_bytes": 1991,
+      "sha256": "f6131d536af0fb3cd0646225f0344fb5a6c1c11e5314d226f586aec1d53ea681"
     },
     "FINAL_VERIFICATION.json": {
       "size_bytes": 1051,
@@ -7828,12 +7852,12 @@
       "sha256": "1321faf01c8950fc17564e27d05b40ac9355f892ec44ddfc81734e619dd1888b"
     },
     "README.md": {
-      "size_bytes": 7384,
-      "sha256": "4f481a53514bb7f76fff97545d04df239fac889ba810c0b6baf919b1af7d7ea7"
+      "size_bytes": 5491,
+      "sha256": "f480461d7fcf8982c79b062465b56cea4965a2d9c337f50bd475ebb2c98d1bfe"
     },
     "README.zh-CN.md": {
-      "size_bytes": 6880,
-      "sha256": "96544ea2b09e6dc4f59e151df4338cbaf9bb9cbd696941e950ccc15bf155a587"
+      "size_bytes": 8044,
+      "sha256": "d6542d7574b6041680ebee8bbcd4f4d116d1405f7395d16d6fe1fbde4f99822f"
     },
     "assets/README.md": {
       "size_bytes": 795,
@@ -7860,8 +7884,8 @@
       "sha256": "8a02bbea78bfe1a075b5455137d62d6d0c6041c8b228f6fa059830721b6a87fe"
     },
     "docs/data_dictionary.md": {
-      "size_bytes": 12901,
-      "sha256": "8a52d1f8ddb1307bacf6939e203a0b7098cf4f281b192288246e553c4f8df37a"
+      "size_bytes": 13901,
+      "sha256": "7076f802ba889f3b84539e506408f97cbcbc1334b157f6058638100597651d49"
     },
     "docs/external_datasets.md": {
       "size_bytes": 1313,

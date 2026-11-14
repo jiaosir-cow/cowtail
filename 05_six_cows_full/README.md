@@ -1,8 +1,8 @@
 # 05_six_cows_full — full six-cow dataset (training pool + test pool)
 
-This is the **complete set** of field data used in the manuscript: 6 cows, 28,911 windows,
-62 recording sessions and 2 tail-mounted nine-axis collars. `01_data`–`04_raw_sensors_labels` is a
-test subset of it; the crosswalk is at the end of this file.
+This is an older export. It is not the manuscript roster. The manuscript uses ten usable cows: the reported test cattle cowA–cowD in `01_data`, and six training-only animals, train1–train6, in `01_data/additional_training`. Names in this folder match neither set.
+
+The files here contain 6 display labels, 28,911 windows, 62 recording sessions and 2 tail-mounted nine-axis collars. `01_data`–`04_raw_sensors_labels` is a subset of these windows, not of the ten-cow roster. The crosswalk at the end of this file compares this folder with the four reported test cattle only.
 
 ## Contents
 
