@@ -1,3 +1,4 @@
+
 cff-version: 1.2.0
 message: "If you use this dataset, please cite it as below, together with the companion manuscript."
 type: dataset
@@ -31,7 +32,7 @@ authors:
     given-names: Jianqi
   - family-names: Zhang
     given-names: Xiangqing
-    email: zxq1991@mail.nwpu.edu.cn
+        email: jiaosirty@stu.yau.edu.cn
   - family-names: Zhang
     given-names: Yalong
   - family-names: Jiang
