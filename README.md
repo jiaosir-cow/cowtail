@@ -1,16 +1,34 @@
-<div align="center">
-  <img src="assets/brand/cowmata-logo.svg" width="300" alt="COWMATA">
+<p align="center">
+  <img src="assets/brand/cowmata-logo.svg" width="280" alt="COWMATA">
+</p>
 
-# CowTail-4
+<h1 align="center">CowTail-4</h1>
 
-**Tail-root IMU behaviour dataset for the manuscript's ten usable cows.**
+<p align="center"><b>Tail-root IMU behaviour dataset for the manuscript's ten usable cows.</b></p>
 
-[English](README.md) · [简体中文](README.zh-CN.md)
+<p align="center">
+  <a href="README.md"><b>English</b></a>
+  &nbsp;·&nbsp;
+  <a href="README.zh-CN.md"><b>简体中文</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/zxq309/COWMATA-Pro"><b>COWMATA Pro</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/jiaosir-cow/cowtail/issues"><b>Questions</b></a>
+</p>
 
-<img alt="data licence" src="https://img.shields.io/badge/data-CC%20BY%204.0-green">
-<img alt="code licence" src="https://img.shields.io/badge/code-MIT-blue">
+<p align="center">
+  <img alt="data licence" src="https://img.shields.io/badge/data-CC%20BY%204.0-2ea44f">
+  <img alt="code licence" src="https://img.shields.io/badge/code-MIT-1f6feb">
+  <img alt="cows" src="https://img.shields.io/badge/cows-10-555555">
+  <img alt="sessions" src="https://img.shields.io/badge/sessions-31-555555">
+  <img alt="sampling" src="https://img.shields.io/badge/sampling-50%20Hz-555555">
+</p>
 
-</div>
+This is the public data repository released with [COWMATA Pro](https://github.com/zxq309/COWMATA-Pro).
+
+**Yang, Zhanhai · Jiao, Tengyu · Zhang, Jianqi · Zhang, Xiangqing · Zhang, Yalong · Jiang, Qinglin · Zhang, Yihui**
+
+## Overview
 
 The manuscript uses ten usable cows. cowA–cowD are the reported test cattle: 12,736 non-overlapping 5.12 s windows from 31 sessions, with raw nine-axis streams. train1–train6 are six further animals used only as additional training data: 101 intervals and 879 windows, in [`01_data/additional_training/`](01_data/additional_training/README.md). The roster is [`01_data/study_roles.csv`](01_data/study_roles.csv).
 
@@ -97,11 +115,13 @@ Check the snapshot with `python verify_and_recompute.py`.
 }
 ```
 
-The same record is in [`CITATION.cff`](CITATION.cff). Also cite the companion manuscript when it is published.
+The same record is in [`CITATION.cff`](CITATION.cff). Also cite the companion manuscript when it is published. Annotation software: [COWMATA Pro](https://github.com/zxq309/COWMATA-Pro).
 
 ## Licence
 
 Data: [CC BY 4.0](LICENSE). Code: [MIT](LICENSE-CODE). The COWMATA name and the files in [`assets/brand/`](assets/brand/) stay company brand assets. See [`NOTICE`](NOTICE).
+
+## Acknowledgement
 
 Approved by the Ethics Committee of the Experimental Farm of Yangzhou University. External tail-root mounting only. Ten usable cows on one farm; the reported test recordings are from one day. Labels name observable states. Absolute time, device MAC addresses, original cattle IDs, video filenames, and annotator names are removed.
 
