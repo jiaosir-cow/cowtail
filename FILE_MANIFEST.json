@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "algorithm": "sha256",
-  "file_count": 17,
+  "file_count": 16,
   "files": {
     ".gitignore": {
       "size_bytes": 91,
@@ -24,16 +24,12 @@
       "sha256": "1321faf01c8950fc17564e27d05b40ac9355f892ec44ddfc81734e619dd1888b"
     },
     "README.md": {
-      "size_bytes": 2941,
-      "sha256": "8192bb52b63bd072daf208b55dcb44a0b492f1587241c12bc5b07d935539fab7"
-    },
-    "README.zh-CN.md": {
-      "size_bytes": 2835,
-      "sha256": "97deba364a041b9e6356a0815970ab3d50dd9993c53d3f04229deb499e922eba"
+      "size_bytes": 2875,
+      "sha256": "8525a19af0bc5b08b668ccb18afec9c65892dcd53f4d1521061d2b8709cead71"
     },
     "assets/README.md": {
-      "size_bytes": 795,
-      "sha256": "43d5d4b06e8e4c9d492d941efbf4f0258452d20430fcf1c036428828b57c5888"
+      "size_bytes": 549,
+      "sha256": "5ed7999cb40de9662e92f4a81a63187eaeb065626d6fa1897f95a66e2c01d65b"
     },
     "assets/brand/cowmata-logo.png": {
       "size_bytes": 21529,
@@ -44,32 +40,32 @@
       "sha256": "0ca41bed0b571f123efe86f56b01450db3e4ef6e169657ab3d10449754345a67"
     },
     "code/load_example.py": {
-      "size_bytes": 682,
-      "sha256": "4fca1ca52cb384b89f01f8a5ad1681929159dc62f3947976356689b2d8c148c4"
+      "size_bytes": 687,
+      "sha256": "5d6c92b039639b75d8fb8c7e78b3e3a0fd0cc2b1590990b633eea62aafee8e1a"
     },
     "code/make_manifest.py": {
       "size_bytes": 1394,
       "sha256": "c365850d08236502be48d88ee54486b6ade808652557d1632cb40a82d23fc8d2"
     },
+    "feeding/windows.npy": {
+      "size_bytes": 23421056,
+      "sha256": "27665595c37923dbf1357b99e726047365a7978fd0e000c9dfeac6188f84c68c"
+    },
+    "lying/windows.npy": {
+      "size_bytes": 37616768,
+      "sha256": "45a84552a5c4e8a94507eeefffa07f2eddc461872ec76e22bf5b74910ee87a49"
+    },
     "requirements.txt": {
       "size_bytes": 26,
       "sha256": "3b1aafa7418d2da4a1c87a5ee67e391a1490bc3a0daa0f584fffd9b62417387d"
     },
-    "站立/windows.npy": {
+    "standing/windows.npy": {
       "size_bytes": 28385408,
       "sha256": "79b2993d560c503f89dad06c808a1636a4bae3f5f9bc755b04feea55aa83aea3"
     },
-    "行走/windows.npy": {
+    "walking/windows.npy": {
       "size_bytes": 2092160,
       "sha256": "b8d865b0874d8a81799f7bf1806d9353bc5c6fc823a72e496daf716ade8291d8"
-    },
-    "起卧/windows.npy": {
-      "size_bytes": 37616768,
-      "sha256": "45a84552a5c4e8a94507eeefffa07f2eddc461872ec76e22bf5b74910ee87a49"
-    },
-    "采食/windows.npy": {
-      "size_bytes": 23421056,
-      "sha256": "27665595c37923dbf1357b99e726047365a7978fd0e000c9dfeac6188f84c68c"
     }
   }
 }

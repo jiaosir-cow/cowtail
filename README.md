@@ -9,8 +9,6 @@
 <p align="center">
   <a href="README.md"><b>English</b></a>
   &nbsp;·&nbsp;
-  <a href="README.zh-CN.md"><b>简体中文</b></a>
-  &nbsp;·&nbsp;
   <a href="https://github.com/zxq309/COWMATA-Pro"><b>COWMATA Pro</b></a>
   &nbsp;·&nbsp;
   <a href="https://github.com/jiaosir-cow/cowtail/issues"><b>Questions</b></a>
@@ -33,21 +31,21 @@ Each folder is one behaviour. All labelled windows are mixed in that folder. The
 
 | Folder | Behaviour | Windows | File |
 |---|---|---:|---|
-| `站立` | standing, including standing rumination | 9,240 | `windows.npy` |
-| `起卧` | lying | 12,245 | `windows.npy` |
-| `行走` | walking | 681 | `windows.npy` |
-| `采食` | feeding at the trough | 7,624 | `windows.npy` |
+| `standing` | standing, including standing rumination | 9,240 | `windows.npy` |
+| `lying` | lying | 12,245 | `windows.npy` |
+| `walking` | walking | 681 | `windows.npy` |
+| `feeding` | feeding at the trough | 7,624 | `windows.npy` |
 
 29,790 windows in total. Each array is `float32` with shape `(windows, 3, 256)`: x, y, z acceleration in approximate *g*, 50 Hz, 5.12 s, non-overlapping. Rumination, licking, and head movement alone are not feeding.
 
 ```bash
 pip install -r requirements.txt
-python code/load_example.py 行走
+python code/load_example.py walking
 ```
 
 ```python
 import numpy as np
-x = np.load("行走/windows.npy")   # (681, 3, 256)
+x = np.load("walking/windows.npy")   # (681, 3, 256)
 ```
 
 ## Citation

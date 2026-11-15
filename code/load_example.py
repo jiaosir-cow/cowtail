@@ -4,7 +4,7 @@
 
 Run from the repository root:
     python code/load_example.py
-    python code/load_example.py 行走
+    python code/load_example.py walking
 """
 import os
 import sys
@@ -12,11 +12,11 @@ import sys
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FOLDERS = ("站立", "起卧", "行走", "采食")
+FOLDERS = ("standing", "lying", "walking", "feeding")
 
 
 def main():
-    name = sys.argv[1] if len(sys.argv) > 1 else "行走"
+    name = sys.argv[1] if len(sys.argv) > 1 else "walking"
     if name not in FOLDERS:
         raise SystemExit("choose one of: " + ", ".join(FOLDERS))
     path = os.path.join(ROOT, name, "windows.npy")
