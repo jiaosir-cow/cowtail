@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "algorithm": "sha256",
-  "file_count": 16,
+  "file_count": 17,
   "files": {
     ".gitignore": {
       "size_bytes": 91,
@@ -25,15 +25,19 @@
     },
     "README.md": {
       "size_bytes": 2941,
-      "sha256": "646f3cd5be6f3d2bb1306218b0de8d91cddefc25d587ddb2e1942955e56475f3"
+      "sha256": "8192bb52b63bd072daf208b55dcb44a0b492f1587241c12bc5b07d935539fab7"
     },
     "README.zh-CN.md": {
       "size_bytes": 2835,
-      "sha256": "4b589dc6d7f1eb9bc959ec6cede2093707f9778390d85b222cbbdd99508abc85"
+      "sha256": "97deba364a041b9e6356a0815970ab3d50dd9993c53d3f04229deb499e922eba"
     },
     "assets/README.md": {
       "size_bytes": 795,
       "sha256": "43d5d4b06e8e4c9d492d941efbf4f0258452d20430fcf1c036428828b57c5888"
+    },
+    "assets/brand/cowmata-logo.png": {
+      "size_bytes": 21529,
+      "sha256": "431713ff1d622229fa3476eaa30e91e00863b0c1ab17898384b685aa544673df"
     },
     "assets/brand/cowmata-logo.svg": {
       "size_bytes": 3394,

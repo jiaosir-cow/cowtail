@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/brand/cowmata-logo.svg" width="280" alt="COWMATA">
+  <img src="assets/brand/cowmata-logo.png" width="280" alt="COWMATA">
 </p>
 
 <h1 align="center">CowTail</h1>
