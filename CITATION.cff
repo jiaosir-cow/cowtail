@@ -1,18 +1,16 @@
 cff-version: 1.2.0
-message: "If you use this dataset, please cite it as below, together with the companion manuscript."
+message: "If you use this dataset, please cite it as below."
 type: dataset
-title: "CowTail-4: A Tail-Mounted Nine-Axis IMU Behaviour Dataset for Dairy Cattle"
+title: "CowTail: Tail-Root Acceleration Windows by Cattle Behaviour"
 version: "1.0"
 license: CC-BY-4.0
 license-url: "https://github.com/jiaosir-cow/cowtail/blob/main/LICENSE"
 repository-code: "https://github.com/jiaosir-cow/cowtail"
 url: "https://github.com/jiaosir-cow/cowtail"
 abstract: >-
-  Tail-root behaviour data for the companion manuscript's ten usable cows.
-  The four reported test cattle, cowA–cowD, have raw nine-axis streams and
-  12,736 model windows. Six further animals, released as train1–train6, supply
-  additional training data only: 101 intervals and 879 three-axis windows.
-  Behaviour classes are standing, lying, walking and feeding.
+  Tail-root acceleration windows from dairy cattle, pooled by behaviour.
+  Four folders hold standing, lying, walking and feeding. Animal identity
+  is not included. Each window is 3 by 256 samples at 50 Hz.
 keywords:
   - cattle
   - dairy cattle
@@ -38,23 +36,3 @@ authors:
     given-names: Qinglin
   - family-names: Zhang
     given-names: Yihui
-preferred-citation:
-  type: article
-  title: "Reusing public collar models for cattle behaviour recognition from tail acceleration with limited labels"
-  authors:
-    - family-names: Yang
-      given-names: Zhanhai
-    - family-names: Jiao
-      given-names: Tengyu
-    - family-names: Zhang
-      given-names: Jianqi
-    - family-names: Zhang
-      given-names: Xiangqing
-    - family-names: Zhang
-      given-names: Yalong
-    - family-names: Jiang
-      given-names: Qinglin
-    - family-names: Zhang
-      given-names: Yihui
-  journal: animal
-  year: 2026

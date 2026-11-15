@@ -1,7 +1,0 @@
-﻿display_cow,role,windows,eligible_intervals,sessions,STANDING,LYING,WALKING,FEEDING,nine_axis_raw_released,row_start,row_stop_inclusive
-train1,additional_training,620,48,13,184,103,166,167,False,0,619
-train2,additional_training,153,12,6,126,0,27,0,False,620,772
-train3,additional_training,56,19,9,0,0,56,0,False,773,828
-train4,additional_training,27,9,4,0,0,27,0,False,829,855
-train5,additional_training,14,7,5,0,0,14,0,False,856,869
-train6,additional_training,9,6,3,0,0,9,0,False,870,878
